@@ -179,6 +179,7 @@ public class StudyBuddy {
     private JButton DigSkillsCyberSecQuizStartBtn;
     private JButton IotRetryBtn;
     private JButton DigSkillDataSciRetry;
+    private JButton DigSkillComSciRetry;
     private JButton confirmPasswordBtn;
     public String surname;
     public String forename;
@@ -702,7 +703,7 @@ public class StudyBuddy {
                 Background.add(Profile);
                 Background.repaint();
                 Background.revalidate();
-                NextBtnName.setEnabled(false);
+
             }
         });
 
@@ -990,21 +991,6 @@ public class StudyBuddy {
                  */
 
 
-                if (DigSkillsCompSciGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                }
-                /*Checks to see if the Digital Skills: Cyber = "Fail. (Attempt 1)"
-                 Subtracts 2  to total if Digital Skills: Cyber Security grade = "Fail. (Attempt 1)"
-                 */
-                else if (DigSkillsCompSciGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                }
-                /*Checks to see if the Digital Skills: Cyber = "Fail. (Attempt 2)"
-                 Subtracts 1  to total if Digital Skills: Cyber Security grade = "Fail. (Attempt 2)"
-                 */
-                else if (DigSkillsCompSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                }
 
 
             }
@@ -1056,15 +1042,6 @@ public class StudyBuddy {
                 Background.add(DigSkillsDataScience);
                 Background.repaint();
                 Background.revalidate();
-
-
-                if (DigSkillsDataGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                } else if (DigSkillsDataGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                } else if (DigSkillsDataGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                }
 
             }
         });
@@ -1139,7 +1116,7 @@ public class StudyBuddy {
                 Background.revalidate();
 
 
-                nextButtonIoT.setEnabled(false);
+
             }
         });
 
@@ -1208,8 +1185,6 @@ public class StudyBuddy {
                 Background.revalidate();
 
 
-                networkNextButton.setEnabled(false);
-
             }
         });
 
@@ -1264,8 +1239,6 @@ public class StudyBuddy {
                 Background.add(ComputerScience);
                 Background.repaint();
                 Background.revalidate();
-
-                compSciNextButton.setEnabled(false);
             }
         });
 
