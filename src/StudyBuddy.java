@@ -809,43 +809,6 @@ public class StudyBuddy {
                  Subtracts 3 to total if Digital Skills: Software Development Theory grade = "Pass."
                  */
 
-
-                if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                }
-                /*Checks to see if the Digital Skills: Software Development Theory grade = "Fail. (Attempt 1)"
-                 Subtracts 2 to total if Digital Skills: Software Development Theory grade = "Fail. (Attempt 1)"
-                 */
-                else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                }
-                /*Checks to see if the Digital Skills: Software Development Theory grade = "Fail. (Attempt 2)"
-                 Subtracts 1 to total if Digital Skills: Software Development Theory grade = "Fail. (Attempt 2)"
-                 */
-                else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                }
-
-                /*Checks to see if the Digital Skills: Software Development Practical grade = "Pass."
-                 Subtracts 3  to total if Digital Skills: Software Development Practical grade = "Pass."
-                 */
-                if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                }
-                /*Checks to see if the Digital Skills: Software Development Practical grade = "Fail. (Attempt 1)"
-                 Subtracts 2  to total if Digital Skills: Software Development Practical grade = "Fail. (Attempt 1)"
-                 */
-                else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                }
-                /*Checks to see if the Digital Skills: Software Development Practical grade = "Fail. (Attempt 2)"
-                 Subtracts 1  to total if Digital Skills: Software Development Practical grade = "Fail. (Attempt 2)"
-                 */
-                else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                }
-                NextBtnDigSkillsSoftware.setEnabled(false);
-
             }
         });
 
@@ -1863,9 +1826,31 @@ public class StudyBuddy {
                 iotPracticalGrade.setEnabled(true);
                 confirmBtnIoT.setEnabled(true);
 
-                }
+                if (iotTheoryGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    IotLbl.setText(String.valueOf(0));
 
+                }
+                if (iotPracticalGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    IotLbl.setText(String.valueOf(0));
+                }
+            }
         });
+
+
         DigSkillDataSciRetry.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1938,6 +1923,7 @@ public class StudyBuddy {
                 }
             }
         });
+
         DigSkilSoftDev.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1960,21 +1946,36 @@ public class StudyBuddy {
                     DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
 
 
-                    if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Pass.") {
-                        total = total - 3;
-                        DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
-                    } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 1)") {
-                        total = total - 2;
-                        DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
-                    } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 2)") {
-                        total = total - 1;
-                        DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
-                    }
+                }
+                if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
                 }
             }
         });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
