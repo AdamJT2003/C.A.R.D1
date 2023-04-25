@@ -180,6 +180,7 @@ public class StudyBuddy {
     private JButton IotRetryBtn;
     private JButton DigSkillDataSciRetry;
     private JButton DigSkillComSciRetry;
+    private JButton DigSkillCybSecRetry;
     private JButton confirmPasswordBtn;
     public String surname;
     public String forename;
@@ -850,6 +851,9 @@ public class StudyBuddy {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
+                DigSkillCybSecRetry.setEnabled(true);
+                DigSkillsCyberGrade.setEnabled(false);
+                NextBtnCyber.setEnabled(true);
                 confirmBtnDSCS.setEnabled(false);
 
                 int DigSkillsCyberSecure = 0;
@@ -1927,8 +1931,34 @@ public class StudyBuddy {
                 }
             }
         });
+        DigSkillCybSecRetry.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                confirmBtnDSCS.setEnabled(true);
+                NextBtnCyber.setEnabled(false);
+                DigSkillCybSecRetry.setEnabled(false);
+                DigSkillsCyberGrade.setEnabled(true);
+
+
+                if (DigSkillsCyberGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    dscsLbl.setText(String.valueOf(0));
+                } else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    dscsLbl.setText(String.valueOf(0));
+                } else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    dscsLbl.setText(String.valueOf(0));
+
+
+                }
+            }
+        });
     }
 }
+
+
 
 
 
