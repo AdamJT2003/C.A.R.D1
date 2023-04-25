@@ -194,7 +194,7 @@ public class StudyBuddy {
     /*
     main method
     displays the frame with name of Study Buddy
-    sets background for Study Buddy
+    sets background for Study Buddy//
     sets exit on close
     packs frames
     sets frame to visible
