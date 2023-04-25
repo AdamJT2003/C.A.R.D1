@@ -21,7 +21,7 @@ public class StudyBuddy {
     private JTextField forenameTxtField;
     private JTextField surnameTxtField;
     private JPanel DigitalSkillsSoftwareDev;
-    private JLabel DigitalSkillsSoftwareLbl;//
+    private JLabel DigitalSkillsSoftwareLbl;
     private JLabel DigitalSkillsSoftwarePracticalLbl;
     private JButton NextBtnDigSkillsSoftware;
     private JButton backBtnDigSkillsSoftware;
