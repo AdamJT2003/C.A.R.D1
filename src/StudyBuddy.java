@@ -181,6 +181,7 @@ public class StudyBuddy {
     private JButton DigSkillDataSciRetry;
     private JButton DigSkillComSciRetry;
     private JButton DigSkillCybSecRetry;
+    private JButton DigSkilSoftDev;
     private JButton confirmPasswordBtn;
     public String surname;
     public String forename;
@@ -713,8 +714,11 @@ public class StudyBuddy {
         confirmBtnDigSkillsSoftware.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                DigSkilSoftDev.setEnabled(true);
+                NextBtnDigSkillsSoftware.setEnabled(true);
+                DigSkillsSoftwareDevTheory.setEnabled(false);
                 confirmBtnDigSkillsSoftware.setEnabled(false);
+                DigSkillsSoftwareDevPrac.setEnabled(false);
                 //Initialise DigSkillsSoftwareDevScore as an integer with value 0
                 int DigSkillsSoftwareDevScore = 0;
 
@@ -1859,29 +1863,8 @@ public class StudyBuddy {
                 iotPracticalGrade.setEnabled(true);
                 confirmBtnIoT.setEnabled(true);
 
-                if (iotTheoryGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    IotLbl.setText(String.valueOf(0));
-                } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    IotLbl.setText(String.valueOf(0));
-                } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    IotLbl.setText(String.valueOf(0));
-
                 }
-                if (iotPracticalGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    IotLbl.setText(String.valueOf(0));
-                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    IotLbl.setText(String.valueOf(0));
-                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    IotLbl.setText(String.valueOf(0));
 
-                }
-            }
         });
         DigSkillDataSciRetry.addActionListener(new ActionListener() {
             @Override
@@ -1955,8 +1938,44 @@ public class StudyBuddy {
                 }
             }
         });
+        DigSkilSoftDev.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                confirmBtnDigSkillsSoftware.setEnabled(true);
+                NextBtnDigSkillsSoftware.setEnabled(false);
+                DigSkilSoftDev.setEnabled(false);
+                DigSkillsSoftwareDevTheory.setEnabled(true);
+                DigSkillsSoftwareDevPrac.setEnabled(true);
+
+
+                if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+
+
+                    if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Pass.") {
+                        total = total - 3;
+                        DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                    } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 1)") {
+                        total = total - 2;
+                        DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                    } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 2)") {
+                        total = total - 1;
+                        DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                    }
+                }
+            }
+        });
     }
 }
+
 
 
 
