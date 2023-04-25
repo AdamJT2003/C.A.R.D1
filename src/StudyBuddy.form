@@ -488,7 +488,7 @@
         </constraints>
         <properties>
           <background color="-9399905"/>
-          <visible value="false"/>
+          <visible value="true"/>
         </properties>
         <border type="none"/>
         <children>
@@ -557,6 +557,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <enabled value="false"/>
               <preferredSize width="220" height="30"/>
               <text value="Next"/>
             </properties>
@@ -570,6 +571,16 @@
               <text value=""/>
             </properties>
           </component>
+          <component id="f1cb5" class="javax.swing.JButton" binding="DigSkillDataSciRetry">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <enabled value="false"/>
+              <text value="Retry"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <grid id="ba19" binding="IoT" layout-manager="GridBagLayout">
@@ -578,7 +589,7 @@
         </constraints>
         <properties>
           <background color="-9399905"/>
-          <visible value="true"/>
+          <visible value="false"/>
         </properties>
         <border type="none"/>
         <children>
