@@ -578,7 +578,7 @@
         </constraints>
         <properties>
           <background color="-9399905"/>
-          <visible value="false"/>
+          <visible value="true"/>
         </properties>
         <border type="none"/>
         <children>
@@ -616,6 +616,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <enabled value="false"/>
               <preferredSize width="220" height="30"/>
               <text value="Next"/>
             </properties>
@@ -682,6 +683,16 @@
               <text value=""/>
             </properties>
           </component>
+          <component id="4e4d8" class="javax.swing.JButton" binding="IotRetryBtn">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <enabled value="false"/>
+              <text value="Retry"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <grid id="b2087" binding="NetworkInfrastructure" layout-manager="GridBagLayout">
@@ -730,6 +741,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <enabled value="false"/>
               <preferredSize width="220" height="30"/>
               <text value="Next"/>
             </properties>
@@ -754,6 +766,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <enabled value="false"/>
               <text value="Retry"/>
             </properties>
           </component>

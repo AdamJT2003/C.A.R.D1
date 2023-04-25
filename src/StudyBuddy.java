@@ -177,6 +177,7 @@ public class StudyBuddy {
     private JPanel DigSkillsCyberSecQuizStart;
     private JButton DigSkillsCyberSecQuizBackBtn;
     private JButton DigSkillsCyberSecQuizStartBtn;
+    private JButton IotRetryBtn;
     private JButton confirmPasswordBtn;
     public String surname;
     public String forename;
@@ -1063,6 +1064,14 @@ public class StudyBuddy {
         confirmBtnIoT.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+
+                IotRetryBtn.setEnabled(true);
+                nextButtonIoT.setEnabled(true);
+
+
+                confirmBtnIoT.setEnabled(false);
+                iotPracticalGrade.setEnabled(false);
+                iotTheoryGrade.setEnabled(false);
                 int Total3 = 0;
 
                 if (iotTheoryGrade.getSelectedItem() == "Pass.") {
@@ -1128,6 +1137,13 @@ public class StudyBuddy {
         confirmBtnNetworkInfrastructure.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                networkTheory.setEnabled(false);
+                networkPractical.setEnabled(false);
+
+                networkNextButton.setEnabled(true);
+                confirmBtnNetworkInfrastructure.setEnabled(false);
+                networkRetryBtn.setEnabled(true);
                 int Total3 = 0;
 
                 if (networkTheory.getSelectedItem() == "Pass.") {
@@ -1158,7 +1174,7 @@ public class StudyBuddy {
                 }
                 total = total + Total3;
                 NetworkLbl.setText(String.valueOf(Total3));
-                networkNextButton.setEnabled(true);
+
             }
         });
         // next btn to comp sci
@@ -1780,6 +1796,8 @@ public class StudyBuddy {
             @Override
             public void actionPerformed(ActionEvent e) {
                 confirmBtnNetworkInfrastructure.setEnabled(true);
+                networkTheory.setEnabled(true);
+                networkPractical.setEnabled(true);
 
                 networkRetryBtn.setEnabled(false);
                 networkNextButton.setEnabled(false);
@@ -1790,7 +1808,7 @@ public class StudyBuddy {
                 } else if (networkTheory.getSelectedItem() == "Fail. (Attempt 1)") {
                     total = total - 2;
                     NetworkLbl.setText(String.valueOf(0));
-                } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                } else if (networkTheory.getSelectedItem() == "Fail. (Attempt 2)") {
                     total = total - 1;
                     NetworkLbl.setText(String.valueOf(0));
 
@@ -1839,8 +1857,42 @@ public class StudyBuddy {
                 Background.revalidate();
             }
         });
+        IotRetryBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                nextButtonIoT.setEnabled(false);
+                IotRetryBtn.setEnabled(false);
+                iotTheoryGrade.setEnabled(true);
+                iotPracticalGrade.setEnabled(true);
+                confirmBtnIoT.setEnabled(true);
+
+                if (iotTheoryGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    IotLbl.setText(String.valueOf(0));
+
+                }
+                if (iotPracticalGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    IotLbl.setText(String.valueOf(0));
+
+                }
+            }
+        });
     }
 }
+
 
 
 
