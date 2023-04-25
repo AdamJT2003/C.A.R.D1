@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="StudyBuddy">
   <grid id="27dc6" binding="Background" layout-manager="CardLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="716" height="400"/>
+      <xy x="20" y="20" width="1343" height="447"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -2099,18 +2099,18 @@
               </component>
             </children>
           </grid>
-          <grid id="691da" binding="DigSkillsSoftDevQuestion1" layout-manager="GridBagLayout">
+          <grid id="14c08" binding="DigSkillsSoftDevQuestion1" layout-manager="GridBagLayout">
             <constraints>
-              <card name="Card1"/>
+              <card name="Card2"/>
             </constraints>
             <properties>
               <background color="-9399905"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="696f7" class="javax.swing.JTextPane">
+              <component id="434bd" class="javax.swing.JTextPane">
                 <constraints>
-                  <grid row="0" column="0" row-span="2" col-span="10" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                  <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="50"/>
                   </grid>
                   <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
@@ -2119,102 +2119,853 @@
                   <background color="-9277497"/>
                   <editable value="false"/>
                   <font size="24" style="1"/>
-                  <text value="Quiz Selection"/>
+                  <text value="Digital Skills: Software Development Question 1"/>
                 </properties>
               </component>
-              <component id="192f3" class="javax.swing.JLabel">
+              <component id="8a155" class="javax.swing.JButton" binding="nextQuestionBtnDigSkillsSoftDevQ1">
                 <constraints>
-                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
+                  <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="A"/>
+                  <label value="Next"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Next"/>
                 </properties>
               </component>
-              <component id="22a43" class="javax.swing.JLabel">
+              <component id="910ad" class="javax.swing.JButton" binding="confirmAnBtnsDigSkillsSoftDevQ1">
                 <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
+                  <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="B"/>
+                  <label value="Confirm"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Confirm"/>
                 </properties>
               </component>
-              <component id="b35c1" class="javax.swing.JLabel">
+              <component id="3661e" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsSoftDevQ1">
                 <constraints>
-                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-                <properties>
-                  <text value="C"/>
-                </properties>
-              </component>
-              <component id="dad5a" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-                <properties>
-                  <text value="D"/>
-                </properties>
-              </component>
-              <component id="76b6c" class="javax.swing.JRadioButton" binding="softwareRadioButton" default-binding="true">
-                <constraints>
-                  <grid row="3" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
                   <background color="-9399905"/>
-                  <preferredSize width="440" height="20"/>
+                  <preferredSize width="430" height="20"/>
                   <text value="Software"/>
                 </properties>
               </component>
-              <component id="139c4" class="javax.swing.JRadioButton" default-binding="true">
+              <component id="76fff" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="A"/>
+                </properties>
+              </component>
+              <component id="65b04" class="javax.swing.JRadioButton" binding="ansBRadioBtnDigSkillsSoftDevQ1">
+                <constraints>
+                  <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
                   <background color="-9399905"/>
-                  <preferredSize width="220" height="20"/>
+                  <preferredSize width="430" height="20"/>
                   <text value="Malware"/>
                 </properties>
               </component>
-              <component id="b7bb9" class="javax.swing.JRadioButton" default-binding="true">
+              <component id="81a02" class="javax.swing.JRadioButton" binding="ansCRadioBtnDigSkillsSoftDevQ1">
                 <constraints>
-                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
                   <background color="-9399905"/>
-                  <preferredSize width="220" height="20"/>
+                  <preferredSize width="430" height="20"/>
                   <text value="Firmware"/>
                 </properties>
               </component>
-              <component id="aed0e" class="javax.swing.JRadioButton" default-binding="true">
+              <component id="51190" class="javax.swing.JRadioButton" binding="ansDRadioBtnDigSkillsSoftDevQ1">
                 <constraints>
-                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
                   <background color="-9399905"/>
-                  <preferredSize width="220" height="20"/>
+                  <preferredSize width="430" height="20"/>
                   <text value="Adware"/>
                 </properties>
               </component>
-              <component id="8996" class="javax.swing.JButton" binding="nextAnswerDigSkillsSoftDevQ1">
+              <component id="9b244" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="7" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <preferredSize width="220" height="30"/>
-                  <text value="Button"/>
+                  <preferredSize width="10" height="16"/>
+                  <text value="B"/>
                 </properties>
               </component>
-              <component id="bec7c" class="javax.swing.JTextPane">
+              <component id="b78aa" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="7" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="C"/>
+                </properties>
+              </component>
+              <component id="844a7" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="D"/>
+                </properties>
+              </component>
+              <component id="ad6e7" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font name="Courier New" style="1"/>
+                  <foreground color="-16777216"/>
+                  <preferredSize width="440" height="35"/>
+                  <text value="Question 1: &#10;BIOS is a type of ______ware? (Choose one)"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="c09c5" binding="DigSkillsSoftDevQuestion2" layout-manager="GridBagLayout">
+            <constraints>
+              <card name="Card1"/>
+            </constraints>
+            <properties>
+              <background color="-9399905"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="9d3fc" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font size="24" style="1"/>
+                  <text value="Digital Skills: Software Development Question 2"/>
+                </properties>
+              </component>
+              <component id="3576" class="javax.swing.JButton">
+                <constraints>
+                  <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Next"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Next"/>
+                </properties>
+              </component>
+              <component id="b365c" class="javax.swing.JButton" binding="confirmAnsBtnDigSkillsSoftDevQ2">
+                <constraints>
+                  <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Confirm"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Confirm"/>
+                </properties>
+              </component>
+              <component id="f1220" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkilsSoftDevQ2">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Testing"/>
+                </properties>
+              </component>
+              <component id="9011" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="A"/>
+                </properties>
+              </component>
+              <component id="fce59" class="javax.swing.JRadioButton" binding="ansBRadioBtnDigSkillsSoftDevQ2">
+                <constraints>
+                  <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Development"/>
+                </properties>
+              </component>
+              <component id="a0b19" class="javax.swing.JRadioButton" binding="ansCRadioBtnDigSkillsSoftDevQ2">
+                <constraints>
+                  <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Planning"/>
+                </properties>
+              </component>
+              <component id="3f4f" class="javax.swing.JRadioButton" binding="ansDRadioBtnDigSkillsSoftDevQ2">
+                <constraints>
+                  <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Maintenance"/>
+                </properties>
+              </component>
+              <component id="4a4ae" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="B"/>
+                </properties>
+              </component>
+              <component id="86757" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="C"/>
+                </properties>
+              </component>
+              <component id="fae17" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="D"/>
+                </properties>
+              </component>
+              <component id="608f1" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font name="Courier New" style="1"/>
+                  <foreground color="-16777216"/>
+                  <preferredSize width="440" height="45"/>
+                  <text value="Question 2: &#10;At which stage of the Software Development Life Cycle (SDLC) would Software be a deliverable? (Choose one)"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="1998d" binding="DigSkillsSoftDevQuestion3" layout-manager="GridBagLayout">
+            <constraints>
+              <card name="Card3"/>
+            </constraints>
+            <properties>
+              <background color="-9399905"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="f1d05" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font name="Courier New" style="1"/>
+                  <foreground color="-16777216"/>
+                  <preferredSize width="440" height="45"/>
+                  <text value="Question 3: &#10;Which of these statements CORRECTLY describes algorithms? (Select all that apply)"/>
+                </properties>
+              </component>
+              <component id="f104c" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsSoftDevQ3">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Algorithms are a set of instructions for achieving goals"/>
+                </properties>
+              </component>
+              <component id="3238e" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="A"/>
+                </properties>
+              </component>
+              <component id="9239d" class="javax.swing.JRadioButton" binding="ansBRadioBtnDigSkillsSoftDevQ3">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="400" height="20"/>
+                  <text value="Algorithms may be demposed into component parts (procedures)"/>
+                </properties>
+              </component>
+              <component id="3e0fe" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="B"/>
+                </properties>
+              </component>
+              <component id="b395e" class="javax.swing.JRadioButton" binding="ansDRadioBtnDigSkillsSoftDevQ3">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="480" height="20"/>
+                  <text value="Different algorithms for the same task will have the same performance characteristics"/>
+                </properties>
+              </component>
+              <component id="fa759" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="D"/>
+                </properties>
+              </component>
+              <component id="4ef43" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="C"/>
+                </properties>
+              </component>
+              <component id="63a76" class="javax.swing.JRadioButton" binding="ansCRadioBtnDigSkillsSoftDevQ3">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="A single problem may be solved by several different algorithms."/>
+                </properties>
+              </component>
+              <component id="8bb5d" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font size="24" style="1"/>
+                  <text value="Digital Skills: Software Development Question 3"/>
+                </properties>
+              </component>
+              <component id="60544" class="javax.swing.JButton" binding="confirmAnsBtnDigSkillsSoftDevQ3">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Confirm"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Confirm"/>
+                </properties>
+              </component>
+              <component id="f2177" class="javax.swing.JButton" binding="nextQBtnDigSkillsSoftDevQ3">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Next"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Next"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="80b6f" binding="DigSkillsSoftDevQuestion4" layout-manager="GridBagLayout">
+            <constraints>
+              <card name="Card4"/>
+            </constraints>
+            <properties>
+              <background color="-9399905"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="e5fad" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font size="24" style="1"/>
+                  <text value="Digital Skills: Software Development Question 4"/>
+                </properties>
+              </component>
+              <component id="27a9" class="javax.swing.JButton" binding="nextQBtnDigSkillsSoftDevQ4">
+                <constraints>
+                  <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Next"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Next"/>
+                </properties>
+              </component>
+              <component id="2c988" class="javax.swing.JButton" binding="confirmAnsDigSkillsSoftDevQ4">
+                <constraints>
+                  <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Confirm"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Confirm"/>
+                </properties>
+              </component>
+              <component id="d6b22" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsSoftDevQ4">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="GANTT chart"/>
+                </properties>
+              </component>
+              <component id="b7c21" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="A"/>
+                </properties>
+              </component>
+              <component id="e3bf5" class="javax.swing.JRadioButton" binding="ansBRadioBtnDigSkillsSoftDevQ4">
+                <constraints>
+                  <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Software validation plants and scripts"/>
+                </properties>
+              </component>
+              <component id="c7bb4" class="javax.swing.JRadioButton" binding="ansCRadioBtnDigSkillsSoftDevQ4">
+                <constraints>
+                  <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Use case diagrams"/>
+                </properties>
+              </component>
+              <component id="a27df" class="javax.swing.JRadioButton" binding="ansDRadioBtnDigSkillsSoftDevQ4">
+                <constraints>
+                  <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Change management plan"/>
+                </properties>
+              </component>
+              <component id="cb1bb" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="B"/>
+                </properties>
+              </component>
+              <component id="e2152" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="C"/>
+                </properties>
+              </component>
+              <component id="75acd" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="D"/>
+                </properties>
+              </component>
+              <component id="25b5d" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font name="Courier New" style="1"/>
+                  <foreground color="-16777216"/>
+                  <preferredSize width="440" height="45"/>
+                  <text value="Question 4: &#10;What document TYPICALLY would a software tester create? (Choose all that apply)"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="c6c3" binding="DigSkillsSoftDevQuestion5" layout-manager="GridBagLayout">
+            <constraints>
+              <card name="Card5"/>
+            </constraints>
+            <properties>
+              <background color="-9399905"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="d08f8" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font size="24" style="1"/>
+                  <text value="Digital Skills: Software Development Question 1"/>
+                </properties>
+              </component>
+              <component id="c6512" class="javax.swing.JButton">
+                <constraints>
+                  <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Next"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Next"/>
+                </properties>
+              </component>
+              <component id="9391f" class="javax.swing.JButton" binding="confirmAnsBtnDigSkillsSoftDevQ5">
+                <constraints>
+                  <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Confirm"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Confirm"/>
+                </properties>
+              </component>
+              <component id="fd6a8" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsSoftDevQ5">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Scrum"/>
+                </properties>
+              </component>
+              <component id="523e6" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="A"/>
+                </properties>
+              </component>
+              <component id="2adf4" class="javax.swing.JRadioButton" binding="ansBRadioBtnDigSkillsSoftDevQ5">
+                <constraints>
+                  <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Extreme Programming"/>
+                </properties>
+              </component>
+              <component id="3a1e6" class="javax.swing.JRadioButton" binding="andCRadioBtnDigSkillsSoftDevQ5">
+                <constraints>
+                  <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Waterfall"/>
+                </properties>
+              </component>
+              <component id="f69b8" class="javax.swing.JRadioButton" binding="ansDRadioBtnDigSkillsSoftDevQ5">
+                <constraints>
+                  <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Kanban"/>
+                </properties>
+              </component>
+              <component id="39ab5" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="B"/>
+                </properties>
+              </component>
+              <component id="31318" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="C"/>
+                </properties>
+              </component>
+              <component id="a9ce3" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="D"/>
+                </properties>
+              </component>
+              <component id="4ffbc" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font name="Courier New" style="1"/>
+                  <foreground color="-16777216"/>
+                  <preferredSize width="440" height="35"/>
+                  <text value="Which of the followin is NOT an agile software development methdology? (Choose one)"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="86da8" binding="DigSkillsSoftDevQuestion6" layout-manager="GridBagLayout">
+            <constraints>
+              <card name="Card6"/>
+            </constraints>
+            <properties>
+              <background color="-9399905"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="f1153" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9277497"/>
+                  <editable value="false"/>
+                  <font size="24" style="1"/>
+                  <text value="Digital Skills: Software Development Question 6"/>
+                </properties>
+              </component>
+              <component id="554c0" class="javax.swing.JButton" binding="nextQBtnDigSkillsSoftDevQ6">
+                <constraints>
+                  <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Next"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Next"/>
+                </properties>
+              </component>
+              <component id="4288f" class="javax.swing.JButton" binding="confirmAnsBtnDigSkillsSoftDevQ6">
+                <constraints>
+                  <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <label value="Confirm"/>
+                  <preferredSize width="220" height="30"/>
+                  <text value="Confirm"/>
+                </properties>
+              </component>
+              <component id="f9d36" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsSoftDevQ6">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Software"/>
+                </properties>
+              </component>
+              <component id="a66ac" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="A"/>
+                </properties>
+              </component>
+              <component id="bda9f" class="javax.swing.JRadioButton" binding="ansBRadioBtnDigSkillsSoftDevQ6">
+                <constraints>
+                  <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Malware"/>
+                </properties>
+              </component>
+              <component id="189df" class="javax.swing.JRadioButton" binding="ansCRadioBtnDigSkillsSoftDevQ6">
+                <constraints>
+                  <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Firmware"/>
+                </properties>
+              </component>
+              <component id="2df0b" class="javax.swing.JRadioButton" binding="ansDRadioBtnDigSkillsSoftDevQ6">
+                <constraints>
+                  <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-9399905"/>
+                  <preferredSize width="430" height="20"/>
+                  <text value="Adware"/>
+                </properties>
+              </component>
+              <component id="3b298" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="B"/>
+                </properties>
+              </component>
+              <component id="e1534" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="C"/>
+                </properties>
+              </component>
+              <component id="4f528" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="10" height="16"/>
+                  <text value="D"/>
+                </properties>
+              </component>
+              <component id="b87bf" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="50"/>
                   </grid>
                   <gridbag top="0" left="0" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
@@ -2228,67 +2979,7 @@
                   <text value="Question 1: &#10;BIOS is a type of ______ware?"/>
                 </properties>
               </component>
-              <component id="666e6" class="javax.swing.JButton" binding="confirmAnswerDigSkillsSoftDevQ1">
-                <constraints>
-                  <grid row="7" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
-                </constraints>
-                <properties>
-                  <preferredSize width="220" height="30"/>
-                  <text value="Button"/>
-                </properties>
-              </component>
             </children>
-          </grid>
-          <grid id="14c08" binding="DigSkillsSoftDevQuestion2" layout-manager="GridBagLayout">
-            <constraints>
-              <card name="Card2"/>
-            </constraints>
-            <properties>
-              <background color="-9399905"/>
-            </properties>
-            <border type="none"/>
-            <children/>
-          </grid>
-          <grid id="e0957" binding="DigSkillsSoftDevQuestion3" layout-manager="GridBagLayout">
-            <constraints>
-              <card name="Card3"/>
-            </constraints>
-            <properties>
-              <background color="-9399905"/>
-            </properties>
-            <border type="none"/>
-            <children/>
-          </grid>
-          <grid id="4d5e9" binding="DigSkillsSoftDevQuestion4" layout-manager="GridBagLayout">
-            <constraints>
-              <card name="Card4"/>
-            </constraints>
-            <properties>
-              <background color="-9399905"/>
-            </properties>
-            <border type="none"/>
-            <children/>
-          </grid>
-          <grid id="17edc" binding="DigSkillsSoftDevQuestion5" layout-manager="GridBagLayout">
-            <constraints>
-              <card name="Card5"/>
-            </constraints>
-            <properties>
-              <background color="-9399905"/>
-            </properties>
-            <border type="none"/>
-            <children/>
-          </grid>
-          <grid id="d6ec4" binding="DigSkillsSoftDevQuestion6" layout-manager="GridBagLayout">
-            <constraints>
-              <card name="Card6"/>
-            </constraints>
-            <properties>
-              <background color="-9399905"/>
-            </properties>
-            <border type="none"/>
-            <children/>
           </grid>
         </children>
       </grid>
