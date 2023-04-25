@@ -1192,6 +1192,7 @@ public class StudyBuddy {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                compSciGrade.setEnabled(false);
                 confirmBtnComputerScience.setEnabled(false);
                 RetryCompScienceBtn.setEnabled(true);
 
@@ -1247,6 +1248,9 @@ public class StudyBuddy {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                CloudCompTheoryGrade.setEnabled(false);
+                cloudCompPrac.setEnabled(false);
+
                 NextBtnCloud.setEnabled(true);
                 confirmBtnCloudComputing.setEnabled(false);
                 RetryCloudBtn.setEnabled(true);
@@ -1285,6 +1289,9 @@ public class StudyBuddy {
         RetryCloudBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                CloudCompTheoryGrade.setEnabled(true);
+                cloudCompPrac.setEnabled(true);
                 confirmBtnCloudComputing.setEnabled(true);
 
                 RetryCloudBtn.setEnabled(false);
@@ -1341,6 +1348,11 @@ public class StudyBuddy {
         confirmBtnSoftwareDevelopment.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                SoftDevTheoryGrade.setEnabled(false);
+                SoftDevPracticalGrade.setEnabled(false);
+
+
                 int Total3 = 0;
 
                 if (SoftDevTheoryGrade.getSelectedItem() == "Pass.") {
@@ -1385,6 +1397,9 @@ public class StudyBuddy {
         SoftDevRetryBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                SoftDevTheoryGrade.setEnabled(true);
+                SoftDevPracticalGrade.setEnabled(true);
                 confirmBtnSoftwareDevelopment.setEnabled(true);
                 SoftDevRetryBtn.setEnabled(false);
                 NextBtnSoftDev.setEnabled(false);
@@ -1737,7 +1752,9 @@ public class StudyBuddy {
         RetryCompScienceBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 confirmBtnComputerScience.setEnabled(true);
+                compSciGrade.setEnabled(true);
 
                 RetryCompScienceBtn.setEnabled(false);
                 compSciNextButton.setEnabled(false);
