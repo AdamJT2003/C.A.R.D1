@@ -168,7 +168,7 @@ public class StudyBuddy {
     private JPanel DigSkillsCyberSecQuestion5;
     private JPanel DigSkillsCyberSecQuestion6;
     private JPanel DigSkillsCyberSecQuiz;
-    private JRadioButton radioButton1;
+    private JRadioButton softwareRadioButton;
     private JButton confirmAnswerDigSkillsSoftDevQ1;
     private JButton nextAnswerDigSkillsSoftDevQ1;
     private JPanel DigSkillsSoftDevQuizWelcome;
@@ -1957,6 +1957,15 @@ public class StudyBuddy {
                     total = total - 1;
                     DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
                 }
+            }
+        });
+        DigSkillsSoftDevQuizStartBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DigSkillsSoftDevQuiz.removeAll();
+                DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion1);
+                DigSkillsSoftDevQuiz.repaint();
+                DigSkillsSoftDevQuiz.revalidate();
             }
         });
     }
