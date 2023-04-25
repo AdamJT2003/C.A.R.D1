@@ -712,6 +712,8 @@ public class StudyBuddy {
         confirmBtnDigSkillsSoftware.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                confirmBtnDigSkillsSoftware.setEnabled(false);
                 //Initialise DigSkillsSoftwareDevScore as an integer with value 0
                 int DigSkillsSoftwareDevScore = 0;
 
@@ -848,6 +850,8 @@ public class StudyBuddy {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
+                confirmBtnDSCS.setEnabled(false);
+
                 int DigSkillsCyberSecure = 0;
 
                 /*Checks to see if the Digital Skills: Cyber Security grade = "Pass."
@@ -932,6 +936,12 @@ public class StudyBuddy {
         confirmBtnDigSkillsCompSci.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                DigSkillsCompSciGrade.setEnabled(false);
+                confirmBtnDigSkillsCompSci.setEnabled(false);
+                DigSkillComSciRetry.setEnabled(true);
+                nextBtnDigSkillsCompSci.setEnabled(true);
+
                 int DigSkillsCompSci = 0;
 
                 /*Checks to see if the Digital Skills: Computer Science = "Pass."
@@ -989,8 +999,6 @@ public class StudyBuddy {
                 /*Checks to see if the Digital Skills: Cyber Security = "Pass"
                  Subtracts 3  to total if Digital Skills: Cyber Security grade = "Pass."
                  */
-
-
 
 
             }
@@ -1114,7 +1122,6 @@ public class StudyBuddy {
                 Background.add(IoT);
                 Background.repaint();
                 Background.revalidate();
-
 
 
             }
@@ -1897,8 +1904,33 @@ public class StudyBuddy {
                 }
             }
         });
+        DigSkillComSciRetry.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                confirmBtnDigSkillsCompSci.setEnabled(true);
+                nextBtnDigSkillsCompSci.setEnabled(false);
+                DigSkillComSciRetry.setEnabled(false);
+                DigSkillsCompSciGrade.setEnabled(true);
+
+
+                if (DigSkillsCompSciGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    DigSkillsCompSciLbl.setText(String.valueOf(0));
+                } else if (DigSkillsCompSciGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    DigSkillsCompSciLbl.setText(String.valueOf(0));
+                } else if (DigSkillsCompSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    DigSkillsCompSciLbl.setText(String.valueOf(0));
+
+                }
+            }
+        });
     }
 }
+
+
 
 
 
