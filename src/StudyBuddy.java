@@ -176,7 +176,7 @@ public class StudyBuddy {
     private JButton DigSkilSoftDev;
     private JRadioButton ansARadioBtnDigSkillsSoftDevQ1;
     private JButton confirmAnBtnsDigSkillsSoftDevQ1;
-    private JButton nextQuestionBtnDigSkillsSoftDevQ1;
+    private JButton nextQBtnDigSkillsSoftDevQ1;
     private JPanel DigSkillsSoftDevQuestion2;
     private JPanel DigSkillsSoftDevQuestion3;
     private JPanel DigSkillsSoftDevQuestion4;
@@ -213,6 +213,15 @@ public class StudyBuddy {
     private JButton nextQBtnDigSkillsSoftDevQ6;
     private JButton confirmAnsBtnDigSkillsSoftDevQ6;
     private JButton confirmAnsBtnDigSkillsSoftDevQ2;
+    private JLabel ansALblDigSkillsSoftDevQ1;
+    private JLabel ansBLblDigSkillsSoftDevQ1;
+    private JLabel ansCLblDigSkillsSoftDevQ1;
+    private JLabel ansDLblDigSkillsSoftDevQ1;
+    private JButton nextQBtnDigSkillsSoftDevQ2;
+    private JLabel ansALblDigSkillsSoftDevQ2;
+    private JLabel ansBLblDigSkillsSoftDevQ2;
+    private JLabel ansCLblDigSkillsSoftDevQ2;
+    private JLabel ansDLblDigSkillsSoftDevQ2;
     private JButton confirmPasswordBtn;
     public String surname;
     public String forename;
@@ -226,6 +235,7 @@ public class StudyBuddy {
     double roundOffPassPercentage;
 
     public int percentagePass;
+    public int quizTotal;
 
     /*
     main method
@@ -1990,14 +2000,80 @@ public class StudyBuddy {
                 }
             }
         });
+
+        //Digital Skills Software Dev Quiz
         DigSkillsSoftDevQuizStartBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //When pressed, moves the page onto DigSkillsSoftDevQuestion1 jPanel
                 DigSkillsSoftDevQuiz.removeAll();
                 DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion1);
                 DigSkillsSoftDevQuiz.repaint();
                 DigSkillsSoftDevQuiz.revalidate();
+
+                //Disables nextQBtnDigSkillsSoftDevQ1
+                nextQBtnDigSkillsSoftDevQ1.setEnabled(false);
             }
+        });
+        //Digital Skills Software Dev Question 1
+        confirmAnBtnsDigSkillsSoftDevQ1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Checks the selected radio button and tells the user if their answer is correct or incorrect
+                if (ansCRadioBtnDigSkillsSoftDevQ1.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Congratulations! You have selected the correct answer.");
+                    quizTotal = quizTotal + 1;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Incorrect answer! The correct answer would be C (Firmware).");
+                    quizTotal = quizTotal + 0;
+                }
+                //Displays the correct answer and enables the next button
+                ansCLblDigSkillsSoftDevQ1.setText("This is the correct answer.");
+                nextQBtnDigSkillsSoftDevQ1.setEnabled(true);
+
+                //Disables the radio buttons and the confirm button
+                ansARadioBtnDigSkillsSoftDevQ1.setEnabled(false);
+                ansBRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
+                ansCRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
+                ansDRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
+                confirmAnBtnsDigSkillsSoftDevQ1.setEnabled(false);
+            }
+        });
+        nextQBtnDigSkillsSoftDevQ1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DigSkillsSoftDevQuiz.removeAll();
+                DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion2);
+                DigSkillsSoftDevQuiz.repaint();
+                DigSkillsSoftDevQuiz.revalidate();
+                nextQBtnDigSkillsSoftDevQ2.setEnabled(false);
+            }
+        });
+
+        //Digital Skills Software Dev question 2
+        confirmAnsBtnDigSkillsSoftDevQ2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Checks the selected radio button and tells the user if their answer is correct or incorrect
+                if (ansBRadioBtnDigSkillsSoftDevQ2.isSelected()){
+                    JOptionPane.showMessageDialog(null, "Congratulations! You have selected the correct answer.");
+                    quizTotal = quizTotal + 1;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Incorrect answer! The correct answer would be B (Development).");
+                    quizTotal = quizTotal + 0;
+                }
+                //Displays the correct answer and enables the next button
+                ansBLblDigSkillsSoftDevQ2.setText("This is the correct answer.");
+                nextQBtnDigSkillsSoftDevQ2.setEnabled(true);
+
+                //Disables the radio buttons and the confirm button
+                ansARadioBtnDigSkillsSoftDevQ1.setEnabled(false);
+                ansBRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
+                ansCRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
+                ansDRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
+                confirmAnBtnsDigSkillsSoftDevQ1.setEnabled(false);
+                }
+
         });
     }
 }
