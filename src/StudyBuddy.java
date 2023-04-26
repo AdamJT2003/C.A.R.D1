@@ -175,7 +175,7 @@ public class StudyBuddy {
     private JButton DigSkillCybSecRetry;
     private JButton DigSkilSoftDev;
     private JRadioButton ansARadioBtnDigSkillsSoftDevQ1;
-    private JButton confirmAnBtnsDigSkillsSoftDevQ1;
+    private JButton confirmAnsBtnsDigSkillsSoftDevQ1;
     private JButton nextQBtnDigSkillsSoftDevQ1;
     private JPanel DigSkillsSoftDevQuestion2;
     private JPanel DigSkillsSoftDevQuestion3;
@@ -185,7 +185,7 @@ public class StudyBuddy {
     private JRadioButton ansBRadioBtnDigSkillsSoftDevQ1;
     private JRadioButton ansCRadioBtnDigSkillsSoftDevQ1;
     private JRadioButton ansDRadioBtnDigSkillsSoftDevQ1;
-    private JRadioButton ansARadioBtnDigSkilsSoftDevQ2;
+    private JRadioButton ansARadioBtnDigSkillsSoftDevQ2;
     private JRadioButton ansBRadioBtnDigSkillsSoftDevQ2;
     private JRadioButton ansCRadioBtnDigSkillsSoftDevQ2;
     private JRadioButton ansDRadioBtnDigSkillsSoftDevQ2;
@@ -199,10 +199,10 @@ public class StudyBuddy {
     private JRadioButton ansBRadioBtnDigSkillsSoftDevQ4;
     private JRadioButton ansCRadioBtnDigSkillsSoftDevQ4;
     private JRadioButton ansDRadioBtnDigSkillsSoftDevQ4;
-    private JButton confirmAnsDigSkillsSoftDevQ4;
+    private JButton confirmAnsBtnDigSkillsSoftDevQ4;
     private JButton nextQBtnDigSkillsSoftDevQ4;
     private JRadioButton ansDRadioBtnDigSkillsSoftDevQ5;
-    private JRadioButton andCRadioBtnDigSkillsSoftDevQ5;
+    private JRadioButton ansCRadioBtnDigSkillsSoftDevQ5;
     private JRadioButton ansBRadioBtnDigSkillsSoftDevQ5;
     private JRadioButton ansARadioBtnDigSkillsSoftDevQ5;
     private JButton confirmAnsBtnDigSkillsSoftDevQ5;
@@ -218,10 +218,17 @@ public class StudyBuddy {
     private JLabel ansCLblDigSkillsSoftDevQ1;
     private JLabel ansDLblDigSkillsSoftDevQ1;
     private JButton nextQBtnDigSkillsSoftDevQ2;
-    private JLabel ansALblDigSkillsSoftDevQ2;
+    private JTextPane correctAnsDigSkillsSoftDevQ3TxtPane;
+    private JTextPane correctAnsDigSkillsSoftDevQ2TxtPane;
+    private JTextPane correctAnsDigSkillsSoftDevQ1TxtPane;
+    private JButton nextQBtnDigSkillsSoftDevQ5;
+    private JTextPane correctAnsDigSkillsSoftDevQ4TxtPane;
+    private JTextPane correctAnsDigSkillsSoftDevQ5TxtPane;
+    private JTextPane correctAnsDigSkillsSoftDevQ6TxtPane;
     private JLabel ansBLblDigSkillsSoftDevQ2;
-    private JLabel ansCLblDigSkillsSoftDevQ2;
-    private JLabel ansDLblDigSkillsSoftDevQ2;
+    private JLabel ansALblDigSkillsSoftDevQ3;
+    private JLabel ansBLblDigSkillsSoftDevQ3;
+    private JLabel ansCLblDigSkillsSoftDevQ3;
     private JButton confirmPasswordBtn;
     public String surname;
     public String forename;
@@ -2013,10 +2020,13 @@ public class StudyBuddy {
 
                 //Disables nextQBtnDigSkillsSoftDevQ1
                 nextQBtnDigSkillsSoftDevQ1.setEnabled(false);
+
             }
         });
+
         //Digital Skills Software Dev Question 1
-        confirmAnBtnsDigSkillsSoftDevQ1.addActionListener(new ActionListener() {
+        //Digital Skills Software Dev Question 1 Confirm Button
+        confirmAnsBtnsDigSkillsSoftDevQ1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Checks the selected radio button and tells the user if their answer is correct or incorrect
@@ -2028,7 +2038,6 @@ public class StudyBuddy {
                     quizTotal = quizTotal + 0;
                 }
                 //Displays the correct answer and enables the next button
-                ansCLblDigSkillsSoftDevQ1.setText("This is the correct answer.");
                 nextQBtnDigSkillsSoftDevQ1.setEnabled(true);
 
                 //Disables the radio buttons and the confirm button
@@ -2036,9 +2045,12 @@ public class StudyBuddy {
                 ansBRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
                 ansCRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
-                confirmAnBtnsDigSkillsSoftDevQ1.setEnabled(false);
+                confirmAnsBtnsDigSkillsSoftDevQ1.setEnabled(false);
+                correctAnsDigSkillsSoftDevQ1TxtPane.setText("The correct answer is: C");
             }
         });
+
+        //Digital Skills Software Dev Question 1 next button
         nextQBtnDigSkillsSoftDevQ1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2050,7 +2062,8 @@ public class StudyBuddy {
             }
         });
 
-        //Digital Skills Software Dev question 2
+        //Digital Skills Software Dev Question 2
+        //Digital Skills Software Dev Question 2 confirm button
         confirmAnsBtnDigSkillsSoftDevQ2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2059,22 +2072,137 @@ public class StudyBuddy {
                     JOptionPane.showMessageDialog(null, "Congratulations! You have selected the correct answer.");
                     quizTotal = quizTotal + 1;
                 } else {
-                    JOptionPane.showMessageDialog(null, "Incorrect answer! The correct answer would be B (Development).");
+                    JOptionPane.showMessageDialog(null, "Incorrect answer! The correct answer would be B.");
                     quizTotal = quizTotal + 0;
                 }
                 //Displays the correct answer and enables the next button
-                ansBLblDigSkillsSoftDevQ2.setText("This is the correct answer.");
                 nextQBtnDigSkillsSoftDevQ2.setEnabled(true);
 
                 //Disables the radio buttons and the confirm button
-                ansARadioBtnDigSkillsSoftDevQ1.setEnabled(false);
-                ansBRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
-                ansCRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
-                ansDRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
-                confirmAnBtnsDigSkillsSoftDevQ1.setEnabled(false);
+                ansARadioBtnDigSkillsSoftDevQ2.setEnabled(false);
+                ansBRadioBtnDigSkillsSoftDevQ2.setEnabled(false);
+                ansCRadioBtnDigSkillsSoftDevQ2.setEnabled(false);
+                ansDRadioBtnDigSkillsSoftDevQ2.setEnabled(false);
+                confirmAnsBtnDigSkillsSoftDevQ2.setEnabled(false);
+                correctAnsDigSkillsSoftDevQ2TxtPane.setText("The correct answer is: B");
                 }
 
         });
+
+        //Digital Skills Software Dev Question 2 next button
+        nextQBtnDigSkillsSoftDevQ2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DigSkillsSoftDevQuiz.removeAll();
+                DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion3);
+                DigSkillsSoftDevQuiz.repaint();
+                DigSkillsSoftDevQuiz.revalidate();
+                nextQBtnDigSkillsSoftDevQ3.setEnabled(false);
+            }
+        });
+
+        //Digital Skills Software Dev Question 3
+        //Digital Skills Software Dev Question 3 confirm button
+        confirmAnsBtnDigSkillsSoftDevQ3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Checks the selected radio button and tells the user if their answer is correct or incorrect
+                if (ansARadioBtnDigSkillsSoftDevQ3.isSelected() || ansBRadioBtnDigSkillsSoftDevQ3.isSelected() || ansCRadioBtnDigSkillsSoftDevQ3.isSelected()){
+                    JOptionPane.showMessageDialog(null, "Congratulations! You have selected the correct answer.");
+                    quizTotal = quizTotal + 1;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Incorrect answer! The correct answer would be A, B, C.");
+                    quizTotal = quizTotal + 0;
+                }
+                //Displays the correct answer and enables the next button
+                nextQBtnDigSkillsSoftDevQ3.setEnabled(true);
+
+                //Disables the radio buttons and the confirm button
+                ansARadioBtnDigSkillsSoftDevQ3.setEnabled(false);
+                ansBRadioBtnDigSkillsSoftDevQ3.setEnabled(false);
+                ansCRadioBtnDigSkillsSoftDevQ3.setEnabled(false);
+                ansDRadioBtnDigSkillsSoftDevQ3.setEnabled(false);
+                confirmAnsBtnDigSkillsSoftDevQ3.setEnabled(false);
+                correctAnsDigSkillsSoftDevQ3TxtPane.setText("The correct answers are: A, B, C");
+            }
+        });
+        //Digital Skills Software Dev Question 3 next button
+        nextQBtnDigSkillsSoftDevQ3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DigSkillsSoftDevQuiz.removeAll();
+                DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion4);
+                DigSkillsSoftDevQuiz.repaint();
+                DigSkillsSoftDevQuiz.revalidate();
+                nextQBtnDigSkillsSoftDevQ4.setEnabled(false);
+            }
+        });
+
+        //Digital Skills Software Dev Question 4
+        //Digital Skills Software Dev Question 4 confirm button
+        confirmAnsBtnDigSkillsSoftDevQ4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                //Checks the selected radio button and tells the user if their answer is correct or incorrect
+                if (ansBRadioBtnDigSkillsSoftDevQ4.isSelected() || ansCRadioBtnDigSkillsSoftDevQ4.isSelected()){
+                    JOptionPane.showMessageDialog(null, "Congratulations! You have selected the correct answer.");
+                    quizTotal = quizTotal + 1;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Incorrect answer! The correct answer would be B, C.");
+                    quizTotal = quizTotal + 0;
+                }
+                //Displays the correct answer and enables the next button
+                nextQBtnDigSkillsSoftDevQ4.setEnabled(true);
+
+                //Disables the radio buttons and the confirm button
+                ansARadioBtnDigSkillsSoftDevQ4.setEnabled(false);
+                ansBRadioBtnDigSkillsSoftDevQ4.setEnabled(false);
+                ansCRadioBtnDigSkillsSoftDevQ4.setEnabled(false);
+                ansDRadioBtnDigSkillsSoftDevQ4.setEnabled(false);
+                confirmAnsBtnDigSkillsSoftDevQ4.setEnabled(false);
+                correctAnsDigSkillsSoftDevQ4TxtPane.setText("The correct answers are: B, C");
+            }
+        });
+
+        //Digital Skills Software Dev Question 4 next button
+        nextQBtnDigSkillsSoftDevQ4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DigSkillsSoftDevQuiz.removeAll();
+                DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion5);
+                DigSkillsSoftDevQuiz.repaint();
+                DigSkillsSoftDevQuiz.revalidate();
+                nextQBtnDigSkillsSoftDevQ5.setEnabled(false);
+            }
+        });
+
+        //Digital Skills Software Dev Question 5
+        //Digital Skills Software Dev Question 5 confirm button
+        confirmAnsBtnDigSkillsSoftDevQ5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Checks the selected radio button and tells the user if their answer is correct or incorrect
+                if (ansCRadioBtnDigSkillsSoftDevQ5.isSelected()){
+                    JOptionPane.showMessageDialog(null, "Congratulations! You have selected the correct answer.");
+                    quizTotal = quizTotal + 1;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Incorrect answer! The correct answer would be C.");
+                    quizTotal = quizTotal + 0;
+                }
+                //Displays the correct answer and enables the next button
+                nextQBtnDigSkillsSoftDevQ5.setEnabled(true);
+
+                //Disables the radio buttons and the confirm button
+                ansARadioBtnDigSkillsSoftDevQ5.setEnabled(false);
+                ansBRadioBtnDigSkillsSoftDevQ5.setEnabled(false);
+                ansCRadioBtnDigSkillsSoftDevQ5.setEnabled(false);
+                ansDRadioBtnDigSkillsSoftDevQ5.setEnabled(false);
+                confirmAnsBtnDigSkillsSoftDevQ5.setEnabled(false);
+                correctAnsDigSkillsSoftDevQ5TxtPane.setText("The correct answer is: C");
+            }
+        });
+
     }
 }
 
