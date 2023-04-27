@@ -931,23 +931,6 @@ public class StudyBuddy {
                  */
 
 
-                if (DigSkillsCyberGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                }
-                /*Checks to see if the Digital Skills: Cyber Security grade = "Fail. (Attempt 1)"
-                 Subtracts 2 to total if Digital Skills: Cyber Security grade = "Fail. (Attempt 1)"
-                 */
-                else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                }
-                /*Checks to see if the Digital Skills: Cyber Security grade = "Fail. (Attempt 2)"
-                 Subtracts 1 to total if Digital Skills: Cyber Security grade = "Fail. (Attempt 2)"
-                 */
-                else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                }
-                NextBtnCyber.setEnabled(false);
-
             }
         });
 
