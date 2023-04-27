@@ -2077,8 +2077,8 @@
               <card name="Card7"/>
             </constraints>
             <properties>
-              <alignmentX value="1.0"/>
-              <alignmentY value="1.0"/>
+              <alignmentX value="0.5"/>
+              <alignmentY value="0.5"/>
               <background color="-9399905"/>
               <focusable value="true"/>
               <preferredSize width="450" height="350"/>

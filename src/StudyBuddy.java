@@ -2291,7 +2291,7 @@ public class StudyBuddy {
             public void actionPerformed(ActionEvent e) {
                 //Moves onto the DigSkillsSoftDevQuizScore jPanel
                 DigSkillsSoftDevQuiz.removeAll();
-                DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuizScore);
+                DigSkillsSoftDevQuiz.add(QuizResults);
                 DigSkillsSoftDevQuiz.repaint();
                 DigSkillsSoftDevQuiz.revalidate();
 
