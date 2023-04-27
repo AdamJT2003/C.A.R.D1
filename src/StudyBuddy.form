@@ -3048,7 +3048,7 @@
                 <properties>
                   <background color="-9399905"/>
                   <preferredSize width="430" height="20"/>
-                  <text value="Software"/>
+                  <text value="Abstraction"/>
                 </properties>
               </component>
               <component id="a66ac" class="javax.swing.JLabel">
@@ -3069,7 +3069,7 @@
                 <properties>
                   <background color="-9399905"/>
                   <preferredSize width="430" height="20"/>
-                  <text value="Malware"/>
+                  <text value="Encapsulation"/>
                 </properties>
               </component>
               <component id="189df" class="javax.swing.JRadioButton" binding="ansCRadioBtnDigSkillsSoftDevQ6">
@@ -3080,7 +3080,7 @@
                 <properties>
                   <background color="-9399905"/>
                   <preferredSize width="430" height="20"/>
-                  <text value="Firmware"/>
+                  <text value="Inheritance"/>
                 </properties>
               </component>
               <component id="2df0b" class="javax.swing.JRadioButton" binding="ansDRadioBtnDigSkillsSoftDevQ6">
@@ -3091,7 +3091,7 @@
                 <properties>
                   <background color="-9399905"/>
                   <preferredSize width="430" height="20"/>
-                  <text value="Adware"/>
+                  <text value="All the above"/>
                 </properties>
               </component>
               <component id="3b298" class="javax.swing.JLabel">
@@ -3136,8 +3136,8 @@
                   <editable value="false"/>
                   <font name="Courier New" style="1"/>
                   <foreground color="-16777216"/>
-                  <preferredSize width="440" height="35"/>
-                  <text value="Question 1: &#10;BIOS is a type of ______ware?"/>
+                  <preferredSize width="440" height="45"/>
+                  <text value="Question 6:  &#10;Choose which of the following is a principle of object-oriented programming?"/>
                 </properties>
               </component>
               <component id="c0aec" class="javax.swing.JTextPane" binding="correctAnsDigSkillsSoftDevQ6TxtPane">
@@ -3297,6 +3297,65 @@
           </grid>
         </children>
       </grid>
+      <grid id="2b31e" binding="QuizResults" layout-manager="GridBagLayout">
+        <constraints>
+          <card name="Card22"/>
+        </constraints>
+        <properties>
+          <background color="-9399905"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="f7537" class="javax.swing.JTextPane">
+            <constraints>
+              <grid row="0" column="5" row-span="2" col-span="9" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-9277497"/>
+              <editable value="false"/>
+              <font size="24" style="1"/>
+              <text value="Digital Skills: Software Development Quiz Score"/>
+            </properties>
+          </component>
+          <component id="e1a62" class="javax.swing.JButton" binding="exitBtnDigSkillsSoftDevQuizScore">
+            <constraints>
+              <grid row="3" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <preferredSize width="220" height="30"/>
+              <text value="Exit"/>
+            </properties>
+          </component>
+          <component id="b6211" class="javax.swing.JTextPane" binding="quizResultsTxtPane">
+            <constraints>
+              <grid row="2" column="9" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-9277497"/>
+              <editable value="false"/>
+              <preferredSize width="440" height="50"/>
+            </properties>
+          </component>
+          <component id="adeba" class="javax.swing.JButton" binding="returnToQuizSelectorBtnDigSkillsSoftDevQuizScore">
+            <constraints>
+              <grid row="3" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <label value="Return To Quiz Selector"/>
+              <preferredSize width="220" height="30"/>
+              <text value="Return To Quiz Selector"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
     </children>
   </grid>
   <buttonGroups>
@@ -3311,6 +3370,18 @@
       <member id="fce59"/>
       <member id="a0b19"/>
       <member id="3f4f"/>
+    </group>
+    <group name="DigSkilsSoftDevQ6RadioBtns">
+      <member id="f9d36"/>
+      <member id="bda9f"/>
+      <member id="189df"/>
+      <member id="2df0b"/>
+    </group>
+    <group name="DigSkillsSoftDevQ5RadioBtns">
+      <member id="fd6a8"/>
+      <member id="2adf4"/>
+      <member id="3a1e6"/>
+      <member id="f69b8"/>
     </group>
   </buttonGroups>
 </form>

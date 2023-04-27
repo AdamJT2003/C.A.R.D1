@@ -225,6 +225,11 @@ public class StudyBuddy {
     private JTextPane correctAnsDigSkillsSoftDevQ4TxtPane;
     private JTextPane correctAnsDigSkillsSoftDevQ5TxtPane;
     private JTextPane correctAnsDigSkillsSoftDevQ6TxtPane;
+    private JPanel DigSkillsSoftDevQuizScore;
+    private JButton returnToQuizSelectorBtnDigSkillsSoftDevQuizScore;
+    private JButton exitBtnDigSkillsSoftDevQuizScore;
+    private JTextPane quizResultsTxtPane;
+    private JPanel QuizResults;
     private JLabel ansBLblDigSkillsSoftDevQ2;
     private JLabel ansALblDigSkillsSoftDevQ3;
     private JLabel ansBLblDigSkillsSoftDevQ3;
@@ -2029,7 +2034,7 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
                 confirmAnsBtnsDigSkillsSoftDevQ1.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ1TxtPane.setText("The correct answer is: C");
+                correctAnsDigSkillsSoftDevQ1TxtPane.setText("The correct answer is: C.");
             }
         });
 
@@ -2037,10 +2042,13 @@ public class StudyBuddy {
         nextQBtnDigSkillsSoftDevQ1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Moves onto the DigSkillsSoftDevQuestion2
                 DigSkillsSoftDevQuiz.removeAll();
                 DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion2);
                 DigSkillsSoftDevQuiz.repaint();
                 DigSkillsSoftDevQuiz.revalidate();
+
+                //Disables nextQBtnDigSKillsSoftDevQ2
                 nextQBtnDigSkillsSoftDevQ2.setEnabled(false);
             }
         });
@@ -2067,7 +2075,7 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ2.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ2.setEnabled(false);
                 confirmAnsBtnDigSkillsSoftDevQ2.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ2TxtPane.setText("The correct answer is: B");
+                correctAnsDigSkillsSoftDevQ2TxtPane.setText("The correct answer is: B.");
                 }
 
         });
@@ -2076,10 +2084,13 @@ public class StudyBuddy {
         nextQBtnDigSkillsSoftDevQ2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Moves onto the DigSkillsSoftDevQuestion3 jPanel
                 DigSkillsSoftDevQuiz.removeAll();
                 DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion3);
                 DigSkillsSoftDevQuiz.repaint();
                 DigSkillsSoftDevQuiz.revalidate();
+
+                //Disables nextQBtnDigSKillsSoftDevQ3
                 nextQBtnDigSkillsSoftDevQ3.setEnabled(false);
             }
         });
@@ -2090,7 +2101,7 @@ public class StudyBuddy {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Checks the selected radio button and tells the user if their answer is correct or incorrect
-                if (ansARadioBtnDigSkillsSoftDevQ3.isSelected() || ansBRadioBtnDigSkillsSoftDevQ3.isSelected() || ansCRadioBtnDigSkillsSoftDevQ3.isSelected()){
+                if (ansARadioBtnDigSkillsSoftDevQ3.isSelected() && ansBRadioBtnDigSkillsSoftDevQ3.isSelected() && ansCRadioBtnDigSkillsSoftDevQ3.isSelected()){
                     JOptionPane.showMessageDialog(null, "Congratulations! You have selected the correct answer.");
                     quizTotal = quizTotal + 1;
                 } else {
@@ -2106,17 +2117,20 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ3.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ3.setEnabled(false);
                 confirmAnsBtnDigSkillsSoftDevQ3.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ3TxtPane.setText("The correct answers are: A, B, C");
+                correctAnsDigSkillsSoftDevQ3TxtPane.setText("The correct answers are: A, B, C.");
             }
         });
         //Digital Skills Software Dev Question 3 next button
         nextQBtnDigSkillsSoftDevQ3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Moves onto the DigSkillsSoftDevQuestion4 jPanel
                 DigSkillsSoftDevQuiz.removeAll();
                 DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion4);
                 DigSkillsSoftDevQuiz.repaint();
                 DigSkillsSoftDevQuiz.revalidate();
+
+                //Disables nextQBtnDigSKillsSoftDevQ4
                 nextQBtnDigSkillsSoftDevQ4.setEnabled(false);
             }
         });
@@ -2128,7 +2142,7 @@ public class StudyBuddy {
             public void actionPerformed(ActionEvent e) {
 
                 //Checks the selected radio button and tells the user if their answer is correct or incorrect
-                if (ansBRadioBtnDigSkillsSoftDevQ4.isSelected() || ansCRadioBtnDigSkillsSoftDevQ4.isSelected()){
+                if (ansBRadioBtnDigSkillsSoftDevQ4.isSelected() && ansCRadioBtnDigSkillsSoftDevQ4.isSelected()){
                     JOptionPane.showMessageDialog(null, "Congratulations! You have selected the correct answer.");
                     quizTotal = quizTotal + 1;
                 } else {
@@ -2144,7 +2158,7 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ4.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ4.setEnabled(false);
                 confirmAnsBtnDigSkillsSoftDevQ4.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ4TxtPane.setText("The correct answers are: B, C");
+                correctAnsDigSkillsSoftDevQ4TxtPane.setText("The correct answers are: B, C.");
             }
         });
 
@@ -2152,10 +2166,12 @@ public class StudyBuddy {
         nextQBtnDigSkillsSoftDevQ4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Moves onto the DigSkillsSoftDevQuestion5 jPanel
                 DigSkillsSoftDevQuiz.removeAll();
                 DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion5);
                 DigSkillsSoftDevQuiz.repaint();
                 DigSkillsSoftDevQuiz.revalidate();
+                //Disables nextQBtnDigSKillsSoftDevQ5
                 nextQBtnDigSkillsSoftDevQ5.setEnabled(false);
             }
         });
@@ -2182,10 +2198,86 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ5.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ5.setEnabled(false);
                 confirmAnsBtnDigSkillsSoftDevQ5.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ5TxtPane.setText("The correct answer is: C");
+                correctAnsDigSkillsSoftDevQ5TxtPane.setText("The correct answer is: C.");
             }
         });
 
+        //Digital Skills Software Dev Question 5 next button
+        nextQBtnDigSkillsSoftDevQ5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Moves onto the DigSkillsSoftDevQuestion6 jPanel
+                DigSkillsSoftDevQuiz.removeAll();
+                DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuestion6);
+                DigSkillsSoftDevQuiz.repaint();
+                DigSkillsSoftDevQuiz.revalidate();
+
+                //Disables nextQBtnDigSKillsSoftDevQ6
+                nextQBtnDigSkillsSoftDevQ6.setEnabled(false);
+            }
+        });
+        //Digital Skills Software Dev Question 6
+        //Digital Skills Software Dev Question 6 confirm button
+        confirmAnsBtnDigSkillsSoftDevQ6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Checks the selected radio button and tells the user if their answer is correct or incorrect
+                if (ansDRadioBtnDigSkillsSoftDevQ6.isSelected()){
+                    JOptionPane.showMessageDialog(null, "Congratulations! You have selected the correct answer.");
+                    quizTotal = quizTotal + 1;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Incorrect answer! The correct answer would be D.");
+                    quizTotal = quizTotal + 0;
+                }
+                //Displays the correct answer and enables the next button
+                nextQBtnDigSkillsSoftDevQ6.setEnabled(true);
+
+                //Disables the radio buttons and the confirm button
+                ansARadioBtnDigSkillsSoftDevQ6.setEnabled(false);
+                ansBRadioBtnDigSkillsSoftDevQ6.setEnabled(false);
+                ansCRadioBtnDigSkillsSoftDevQ6.setEnabled(false);
+                ansDRadioBtnDigSkillsSoftDevQ6.setEnabled(false);
+                confirmAnsBtnDigSkillsSoftDevQ6.setEnabled(false);
+                correctAnsDigSkillsSoftDevQ5TxtPane.setText("The correct answer is: D.");
+
+            }
+        });
+
+        //Digital Skills Software Dev Question 6 next button
+        nextQBtnDigSkillsSoftDevQ6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Moves onto the DigSkillsSoftDevQuizScore jPanel
+                DigSkillsSoftDevQuiz.removeAll();
+                DigSkillsSoftDevQuiz.add(DigSkillsSoftDevQuizScore);
+                DigSkillsSoftDevQuiz.repaint();
+                DigSkillsSoftDevQuiz.revalidate();
+
+                double scorePercentage;
+                scorePercentage = (quizTotal * 100) / 6;
+                int quizPercentage = (int) scorePercentage;
+
+                //Working out if they have passed the quiz and displaying their total
+                if (quizPercentage >= 50){
+                    quizResultsTxtPane.setText("Congratulations you have passed.\n Your score was " + quizTotal + ".\n Your percentage was " + quizPercentage + "%.");
+                }else {
+                    quizResultsTxtPane.setText("You have failed this quiz.\n Your score was" + quizTotal + ".\n Your percentage was " + quizPercentage + "%.");
+                }
+            }
+        });
+
+        //Digital Skills Software Dev Quiz Score
+        //Digital Skills Software Dev Quiz Score return to quiz selector button
+        returnToQuizSelectorBtnDigSkillsSoftDevQuizScore.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Moves onto the Quiz jPanel
+                Background.removeAll();
+                Background.add(quizSelection);
+                Background.repaint();
+                Background.revalidate();
+            }
+        });
     }
 }
 
