@@ -160,9 +160,8 @@ public class StudyBuddy {
     private JPanel DigSkillsSoftDevQuizWelcome;
     private JButton DigSkillsSoftDevQuizStartBtn;
     private JButton DigSkillsSoftDevQuizBackBtn;
-    private JPanel DigSkillsCyberSecQuizStart;
+    private JPanel DigSkillsCyberSecQuizWelcome;
     private JButton DigSkillsCyberSecQuizBackBtn;
-    private JButton DigSkillsCyberSecQuizStartBtn;
     private JButton IotRetryBtn;
     private JButton DigSkillDataSciRetry;
     private JButton DigSkillComSciRetry;
@@ -212,15 +211,15 @@ public class StudyBuddy {
     private JLabel ansCLblDigSkillsSoftDevQ1;
     private JLabel ansDLblDigSkillsSoftDevQ1;
     private JButton nextQBtnDigSkillsSoftDevQ2;
-    private JTextPane correctAnsDigSkillsSoftDevQ3TxtPane;
-    private JTextPane correctAnsDigSkillsSoftDevQ2TxtPane;
-    private JTextPane correctAnsDigSkillsSoftDevQ1TxtPane;
+    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ3;
+    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ2;
+    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ1;
     private JButton nextQBtnDigSkillsSoftDevQ5;
-    private JTextPane correctAnsDigSkillsSoftDevQ4TxtPane;
-    private JTextPane correctAnsDigSkillsSoftDevQ5TxtPane;
-    private JTextPane correctAnsDigSkillsSoftDevQ6TxtPane;
+    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ4;
+    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ5;
+    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ6;
     private JPanel DigSkillsSoftDevQuizScore;
-    private JButton returnToQuizSelectorBtnDigSkillsSoftDevQuizScore;
+    private JButton returnToQuizSelectorBtn;
     private JButton exitBtnDigSkillsSoftDevQuizScore;
     private JTextPane quizResultsTxtPane;
     private JPanel QuizResults;
@@ -248,7 +247,7 @@ public class StudyBuddy {
     private JRadioButton ansBRadioBtnDigSkillsCyberSecQ3;
     private JRadioButton ansARadioBtnDigSkillsCyberSecQ3;
     private JButton confirmAnsBtnDigSkillsCyberSecQ3;
-    private JPanel DigSkillsCyberSecQ4;
+    private JPanel DigSkillsCyberSecQuestion4;
     private JButton nextQBtnDigSkillsCyberSecQ4;
     private JButton confirmAnsBtnDigSkillsCyberSecQ4;
     private JTextPane correctAnsTxtPaneDigSkillsCyberSecQ4;
@@ -256,7 +255,7 @@ public class StudyBuddy {
     private JRadioButton ansCRadioBtnDigSkillsCyberSecQ4;
     private JRadioButton ansBRadioBtnDigSkillsCyberSecQ4;
     private JRadioButton ansARadioBtnDigSkillsCyberSecQ4;
-    private JPanel DigSkillsCyberSecQ5;
+    private JPanel DigSkillsCyberSecQuestion5;
     private JRadioButton ansARadioBtnDigSkillsCyberSecQ5;
     private JRadioButton ansBRadioBtnDigSkillsCyberSecQ5;
     private JRadioButton ansCRadioBtnDigSkillsCyberSecQ5;
@@ -264,7 +263,7 @@ public class StudyBuddy {
     private JTextPane correctAnsTxtPaneDigSkillsCyberSecQ5;
     private JButton confirmAnsBtnDigSkillsCyberSecQ5;
     private JButton nextQBtnDigSkillsCyberSecQ5;
-    private JPanel DigSkillsCyberSecQ6;
+    private JPanel DigSkillsCyberSecQuestion6;
     private JButton nextQBtnDigSkillsCyberSecQ6;
     private JButton confirmAnsBtnDigSkillsCyberSecQ6;
     private JTextPane correctAnsTxtPaneDigSkillsCyberSecQ6;
@@ -272,6 +271,163 @@ public class StudyBuddy {
     private JRadioButton ansCRadioBtnDigSkillsCyberSecQ6;
     private JRadioButton ansBRadioBtnDigSkillsCyberSecQ6;
     private JRadioButton ansARadioBtnDigSkillsCyberSecQ6;
+    private JPanel DigSkillsCompSciQuiz;
+    private JPanel DigSkillsCompSciQuizWelcome;
+    private JButton DigSkillsCompSciQuizBackBtn;
+    private JButton DigSkillsCompSciQuizStartBtn;
+    private JButton DigSkillsCyberSecQuizStartBtn;
+    private JPanel DigSkillsCompSciQuestion1;
+    private JRadioButton ansARadioBtnDigSkillsCompSciQ1;
+    private JRadioButton ansBRadioBtnDigSkillsCompSciQ1;
+    private JRadioButton ansCRadioBtnDigSkillsCompSciQ1;
+    private JRadioButton ansDRadioBtnDigSkillsCompSciQ1;
+    private JButton confirmAnsBtnDigSkillsCompSciQ1;
+    private JButton nextQBtnDigSkillsCompSciQ1;
+    private JTextPane correctAnsTxtPaneDigSkillsCompSciQ1;
+    private JPanel DigSkillsCompSciQuestion2;
+    private JRadioButton ansARadioBtnDigSkillsCompSciQ2;
+    private JRadioButton ansBRadioBtnDigSkillsCompSciQ2;
+    private JRadioButton ansCRadioBtnDigSkillsCompSciQ2;
+    private JRadioButton ansDRadioBtnDigSkillsCompSciQ2;
+    private JButton confirmAnsBtnDigSkillsCompSciQ2;
+    private JTextPane correctAnsTxtPaneDigSkillsCompSciQ2;
+    private JButton nextQBtnDigSkillsCompSciQ2;
+    private JPanel DigSkillsCompSciQuestion3;
+    private JButton confirmAnsBtnDigSkillsCompSciQ3;
+    private JButton nextQBtnDigSkillsCompSciQ3;
+    private JTextPane correctAnsTxtPaneDigSkillsCompSciQ3;
+    private JRadioButton ansDRadioBtnDigSkillsCompSciQ3;
+    private JRadioButton ansCRadioBtnDigSkillsCompSciQ3;
+    private JRadioButton ansBRadioBtnDigSkillsCompSciQ3;
+    private JRadioButton ansARadioBtnDigSkillsCompSciQ3;
+    private JButton nextQBtnDigSkillsCompSciQ4;
+    private JButton confirmAnsBtnDigSkillsCompSciQ4;
+    private JTextPane correctAnsTxtPaneDigSkillsCompSciQ4;
+    private JRadioButton ansDRadioBtnDigSkillsCompSciQ4;
+    private JRadioButton ansCRadioBtnDigSkillsCompSciQ4;
+    private JRadioButton ansBRadioBtnDigSkillsCompSciQ4;
+    private JRadioButton ansARadioBtnDigSkillsCompSciQ4;
+    private JPanel DigSkillsCompSciQuestion4;
+    private JPanel DigSkillsCompSciQuestion5;
+    private JButton nextQBtnDigSkillsCompSciQ5;
+    private JButton confirmAnsBtnDigSkillsCompSciQ5;
+    private JTextPane correctAnsTxtPaneDigSkillsCompSciQ5;
+    private JRadioButton ansARadioBtnDigSkillsCompSciQ5;
+    private JRadioButton ansBRadioBtnDigSkillsCompSciQ5;
+    private JRadioButton ansCRadioBtnDigSkillsCompSciQ5;
+    private JRadioButton ansDRadioBtnDigSkillsCompSciQ5;
+    private JPanel DigSkillsCompSciQuestion6;
+    private JButton nextQBtnDigSkillsCompSciQ6;
+    private JButton confirmAnsBtnDigSkillsCompSciQ6;
+    private JTextPane correctAnsTxtPaneDigSkillsCompSciQ6;
+    private JRadioButton ansARadioBtnDigSkillsCompSciQ6;
+    private JRadioButton ansBRadioBtnDigSkillsCompSciQ6;
+    private JRadioButton ansCRadioBtnDigSkillsCompSciQ6;
+    private JRadioButton ansDRadioBtnDigSkillsCompSciQ6;
+    private JPanel DigSkillsDataSciQuiz;
+    private JPanel DigSkillsDataSciQuizWelcome;
+    private JButton DigSkillsDataSciQuizStartBtn;
+    private JButton DigSkillsDataSciQuizBackBtn;
+    private JPanel DigSkillsDataSciQuestion1;
+    private JPanel DigSkillsDataSciQuestion2;
+    private JPanel DigSkillsDataSciQuestion3;
+    private JPanel DigSkillsDataSciQuestion4;
+    private JPanel DigSkillsDataSciQuestion5;
+    private JPanel DigSkillsDataSciQuestion6;
+    private JButton confirmAnsBtnDigSkillsDataSciQ1;
+    private JRadioButton ansARadioBtnDigSkillsDataSciQ1;
+    private JRadioButton ansBRadioBtnDigSkillsDataSciQ1;
+    private JRadioButton ansCRadioBtnDigSkillsDataSciQ1;
+    private JRadioButton ansDRadioBtnDigSkillsDataSciQ1;
+    private JTextPane correctAnsTxtPaneDigSkillsDataSciQ1;
+    private JButton nextQBtnDigSkillsDataSciQ1;
+    private JButton nextQBtnDigSkillsDataSciQ2;
+    private JButton confirmAnsBtnDigSkillsDataSciQ2;
+    private JRadioButton ansDRadioBtnDigSkillsDataSciQ2;
+    private JRadioButton ansCRadioBtnDigSkillsDataSciQ2;
+    private JRadioButton ansBRadioBtnDigSkillsDataSciQ2;
+    private JRadioButton ansARadioBtnDigSkillsDataSciQ2;
+    private JTextPane correctAnsTxtPaneDigSkillsDataSciQ2;
+    private JTextPane correctAnsTxtPaneDigSkillsDataSciQ3;
+    private JButton confirmAnsBtnDigSkillsDataSciQ3;
+    private JButton nextQBtnDigSkillsDataSciQ3;
+    private JRadioButton ansDRadioBtnDigSkillsDataSciQ3;
+    private JRadioButton ansCRadioBtnDigSkillsDataSciQ3;
+    private JRadioButton ansBRadioBtnDigSkillsDataSciQ3;
+    private JRadioButton ansARadioBtnDigSkillsDataSciQ3;
+    private JButton nextQBtnDigSkillsDataSciQ4;
+    private JButton confirmAnsBtnDigSkillsDataSciQ4;
+    private JTextPane correctAnsTxtPaneDigSkillsDataSciQ4;
+    private JRadioButton ansDRadioBtnDigSkillsDataSciQ4;
+    private JRadioButton ansBRadioBtnDigSkillsDataSciQ4;
+    private JRadioButton ansCRadioBtnDigSkillsDataSciQ4;
+    private JRadioButton ansARadioBtnDigSkillsDataSciQ4;
+    private JButton nextQBtnDigSkillsDataSciQ5;
+    private JButton confirmAnsBtnDigSkillsDataSciQ5;
+    private JTextPane correctAnsTxtPaneDigSkillsDataSciQ5;
+    private JRadioButton ansDRadioBtnDigSkillsDataSciQ5;
+    private JRadioButton ansCRadioBtnDigSkillsDataSciQ5;
+    private JRadioButton ansBRadioBtnDigSkillsDataSciQ5;
+    private JRadioButton ansARadioBtnDigSkillsDataSciQ5;
+    private JButton nextQBtnDigSkillsDataSciQ6;
+    private JButton confirmAnsBtnDigSkillsDataSciQ6;
+    private JTextPane correctAnsTxtPaneDigSkillsDataSciQ6;
+    private JRadioButton ansDRadioBtnDigSkillsDataSciQ6;
+    private JRadioButton ansCRadioBtnDigSkillsDataSciQ6;
+    private JRadioButton ansBRadioBtnDigSkillsDataSciQ6;
+    private JRadioButton ansARadioBtnDigSkillsDataSciQ6;
+    private JPanel IoTQuiz;
+    private JPanel IoTWelcome;
+    private JButton IoTQuizBackBtn;
+    private JButton IoTQuizStartBtn;
+    private JPanel IoTQuestion1;
+    private JPanel IoTQuestion2;
+    private JPanel IoTQuestion3;
+    private JPanel IoTQuestion4;
+    private JPanel IoTQuestion5;
+    private JPanel IoTQuestion6;
+    private JTextPane correctAnsTxtPaneIoTQ1;
+    private JButton nextQBtnIoTQ1;
+    private JRadioButton ansDRadioBtnIoTQ1;
+    private JRadioButton ansCRadioBtnIoTQ1;
+    private JRadioButton ansBRadioBtnIoTQ1;
+    private JRadioButton ansARadioBtnIoTQ1;
+    private JButton confirmAnsBtnIoTQ1;
+    private JButton nextQBtnIoTQ2;
+    private JTextPane correctAnsTxtPaneIoTQ2;
+    private JRadioButton ansDRadioBtnIoTQ2;
+    private JRadioButton ansCRadioBtnIoTQ2;
+    private JRadioButton ansBRadioBtnIoTQ2;
+    private JRadioButton ansARadioBtnIoTQ2;
+    private JButton confirmAnsBtnIoTQ2;
+    private JButton confirmAnsBtnIoTQ3;
+    private JButton nextQBtnIoTQ3;
+    private JTextPane correctAnsTxtPaneIoTQ3;
+    private JRadioButton ansDRadioBtnIoTQ3;
+    private JRadioButton ansARadioBtnIoTQ3;
+    private JRadioButton ansBRadioBtnIoTQ3;
+    private JRadioButton ansCRadioBtnIoTQ3;
+    private JRadioButton ansARadioBtnIoTQ4;
+    private JRadioButton ansBRadioBtnIoTQ4;
+    private JRadioButton ansCRadioBtnIoTQ4;
+    private JRadioButton ansDRadioBtnIoTQ4;
+    private JButton nextQBtnIoTQ4;
+    private JButton confirmAnsBtnIoTQ4;
+    private JTextPane correctAnsTxtPaneIoTQ4;
+    private JTextPane correctAnsTxtPaneIoTQ5;
+    private JButton confirmAnsBtnIoTQ5;
+    private JButton nextQBtnIoTQ5;
+    private JRadioButton ansCRadioBtnIoTQ5;
+    private JRadioButton ansDRadioBtnIoTQ5;
+    private JRadioButton ansBRadioBtnIoTQ5;
+    private JRadioButton ansARadioBtnIoTQ5;
+    private JRadioButton ansARadioBtnIoTQ6;
+    private JRadioButton ansBRadioBtnIoTQ6;
+    private JRadioButton ansCRadioBtnIoTQ6;
+    private JRadioButton ansDRadioBtnIoTQ6;
+    private JButton nextQBtnIoTQ6;
+    private JButton confirmAnsBtnIoTQ6;
+    private JTextPane correctAnsTxtPaneIoTQ6;
     private JLabel ansBLblDigSkillsSoftDevQ2;
     private JLabel ansALblDigSkillsSoftDevQ3;
     private JLabel ansBLblDigSkillsSoftDevQ3;
@@ -2076,7 +2232,7 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ1.setEnabled(false);
                 confirmAnsBtnsDigSkillsSoftDevQ1.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ1TxtPane.setText("The correct answer is: C.");
+                correctAnsTxtPaneDigSkillsSoftDevQ1.setText("The correct answer is: C.");
             }
         });
 
@@ -2117,7 +2273,7 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ2.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ2.setEnabled(false);
                 confirmAnsBtnDigSkillsSoftDevQ2.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ2TxtPane.setText("The correct answer is: B.");
+                correctAnsTxtPaneDigSkillsSoftDevQ2.setText("The correct answer is: B.");
                 }
 
         });
@@ -2159,7 +2315,7 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ3.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ3.setEnabled(false);
                 confirmAnsBtnDigSkillsSoftDevQ3.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ3TxtPane.setText("The correct answers are: A, B, C.");
+                correctAnsTxtPaneDigSkillsSoftDevQ3.setText("The correct answers are: A, B, C.");
             }
         });
         //Digital Skills Software Dev Question 3 next button
@@ -2200,7 +2356,7 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ4.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ4.setEnabled(false);
                 confirmAnsBtnDigSkillsSoftDevQ4.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ4TxtPane.setText("The correct answers are: B, C.");
+                correctAnsTxtPaneDigSkillsSoftDevQ4.setText("The correct answers are: B, C.");
             }
         });
 
@@ -2240,7 +2396,7 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ5.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ5.setEnabled(false);
                 confirmAnsBtnDigSkillsSoftDevQ5.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ5TxtPane.setText("The correct answer is: C.");
+                correctAnsTxtPaneDigSkillsSoftDevQ5.setText("The correct answer is: C.");
             }
         });
 
@@ -2280,7 +2436,7 @@ public class StudyBuddy {
                 ansCRadioBtnDigSkillsSoftDevQ6.setEnabled(false);
                 ansDRadioBtnDigSkillsSoftDevQ6.setEnabled(false);
                 confirmAnsBtnDigSkillsSoftDevQ6.setEnabled(false);
-                correctAnsDigSkillsSoftDevQ5TxtPane.setText("The correct answer is: D.");
+                correctAnsTxtPaneDigSkillsSoftDevQ5.setText("The correct answer is: D.");
 
             }
         });
@@ -2290,10 +2446,10 @@ public class StudyBuddy {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Moves onto the DigSkillsSoftDevQuizScore jPanel
-                DigSkillsSoftDevQuiz.removeAll();
-                DigSkillsSoftDevQuiz.add(QuizResults);
-                DigSkillsSoftDevQuiz.repaint();
-                DigSkillsSoftDevQuiz.revalidate();
+                Background.removeAll();
+                Background.add(QuizResults);
+                Background.repaint();
+                Background.revalidate();
 
                 double scorePercentage;
                 scorePercentage = (quizTotal * 100) / 6;
@@ -2310,7 +2466,7 @@ public class StudyBuddy {
 
         //Digital Skills Software Dev Quiz Score
         //Digital Skills Software Dev Quiz Score return to quiz selector button
-        returnToQuizSelectorBtnDigSkillsSoftDevQuizScore.addActionListener(new ActionListener() {
+        returnToQuizSelectorBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Moves onto the Quiz jPanel
@@ -2322,39 +2478,3 @@ public class StudyBuddy {
         });
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
