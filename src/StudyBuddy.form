@@ -3321,8 +3321,8 @@
                   <editable value="false"/>
                   <font name="Courier New" style="1"/>
                   <foreground color="-16777216"/>
-                  <preferredSize width="440" height="35"/>
-                  <text value="Question 1: &#10;BIOS is a type of ______ware? (Choose one)"/>
+                  <preferredSize width="440" height="45"/>
+                  <text value="Question 1: &#10;Which of the following is not an example of a cyber attack?&#10;(Choose one)"/>
                 </properties>
               </component>
               <component id="e36a1" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsCyberSecQ1">
@@ -3333,7 +3333,7 @@
                 <properties>
                   <background color="-9399905"/>
                   <preferredSize width="220" height="20"/>
-                  <text value="Software"/>
+                  <text value="Malware"/>
                 </properties>
               </component>
               <component id="b9ddd" class="javax.swing.JRadioButton" binding="ansBRadioBtnDigSkillsCyberSecQ1">
@@ -3344,7 +3344,7 @@
                 <properties>
                   <background color="-9399905"/>
                   <preferredSize width="220" height="20"/>
-                  <text value="Malware"/>
+                  <text value="Phishing"/>
                 </properties>
               </component>
               <component id="705f5" class="javax.swing.JRadioButton" binding="ansCRadioBtnDigSkillsCyberSecQ1">
@@ -3355,7 +3355,7 @@
                 <properties>
                   <background color="-9399905"/>
                   <preferredSize width="220" height="20"/>
-                  <text value="Firmware"/>
+                  <text value="Data backup"/>
                 </properties>
               </component>
               <component id="59588" class="javax.swing.JRadioButton" binding="ansDRadioBtnDigSkillsCyberSecQ1">
@@ -3366,7 +3366,7 @@
                 <properties>
                   <background color="-9399905"/>
                   <preferredSize width="220" height="20"/>
-                  <text value="Adware"/>
+                  <text value="Denial of service"/>
                 </properties>
               </component>
               <component id="86c57" class="javax.swing.JTextPane" binding="correctAnsTxtPaneDigSkillsCyberSecQ1">
@@ -3484,8 +3484,8 @@
                   <editable value="false"/>
                   <font name="Courier New" style="1"/>
                   <foreground color="-16777216"/>
-                  <preferredSize width="440" height="35"/>
-                  <text value="Question 1: &#10;BIOS is a type of ______ware? (Choose one)"/>
+                  <preferredSize width="440" height="45"/>
+                  <text value="Question 2: &#10;Name of the process used to disguise a message or piece of data to make it appear as something else? (Choose one)"/>
                 </properties>
               </component>
               <component id="f503a" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsCyberSecQ2">
@@ -3582,8 +3582,8 @@
                   <editable value="false"/>
                   <font name="Courier New" style="1"/>
                   <foreground color="-16777216"/>
-                  <preferredSize width="440" height="35"/>
-                  <text value="Question 1: &#10;BIOS is a type of ______ware? (Choose one)"/>
+                  <preferredSize width="440" height="45"/>
+                  <text value="Question 3: &#10;Which of the following is NOT an example of a network security measure? (Choose one)"/>
                 </properties>
               </component>
               <component id="4d896" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsCyberSecQ3">
@@ -3746,8 +3746,8 @@
                   <editable value="false"/>
                   <font name="Courier New" style="1"/>
                   <foreground color="-16777216"/>
-                  <preferredSize width="440" height="35"/>
-                  <text value="Question 1: &#10;BIOS is a type of ______ware? (Choose one)"/>
+                  <preferredSize width="440" height="45"/>
+                  <text value="Question 4: &#10;The act of hiding media or other information within a file is called? (Choose one)"/>
                 </properties>
               </component>
               <component id="a5e39" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsCyberSecQ4">
@@ -3910,8 +3910,8 @@
                   <editable value="false"/>
                   <font name="Courier New" style="1"/>
                   <foreground color="-16777216"/>
-                  <preferredSize width="440" height="35"/>
-                  <text value="Question 1: &#10;BIOS is a type of ______ware? (Choose one)"/>
+                  <preferredSize width="440" height="45"/>
+                  <text value="Question 5: &#10;Which of the following is the LEAST secure out of these security measures? (Choose one)"/>
                 </properties>
               </component>
               <component id="92269" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsCyberSecQ5">
@@ -4075,7 +4075,7 @@
                   <font name="Courier New" style="1"/>
                   <foreground color="-16777216"/>
                   <preferredSize width="440" height="35"/>
-                  <text value="Question 1: &#10;BIOS is a type of ______ware? (Choose one)"/>
+                  <text value="Question 1: &#10; (Choose one)"/>
                 </properties>
               </component>
               <component id="8927a" class="javax.swing.JRadioButton" binding="ansARadioBtnDigSkillsCyberSecQ6">
@@ -4190,7 +4190,7 @@
                   <editable value="false"/>
                   <font size="24" style="1"/>
                   <preferredSize width="470" height="38"/>
-                  <text value="Digital Skills: Cyber Security Question 5"/>
+                  <text value="Digital Skills: Cyber Security Question 6"/>
                 </properties>
               </component>
               <component id="f996f" class="javax.swing.JButton" binding="confirmAnsBtnDigSkillsCyberSecQ6">
