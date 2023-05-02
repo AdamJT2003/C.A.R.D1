@@ -2051,14 +2051,34 @@
               <text value="Back"/>
             </properties>
           </component>
-          <component id="9bde3" class="javax.swing.JButton" binding="nextBtnQuizSelection">
+          <component id="9bde3" class="javax.swing.JButton" binding="startBtnQuizSelection">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <preferredSize width="220" height="30"/>
-              <text value="Next"/>
+              <text value="Start"/>
+            </properties>
+          </component>
+          <component id="52286" class="javax.swing.JButton" binding="profileBtnQuizSelec">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <preferredSize width="220" height="30"/>
+              <text value="Profile"/>
+            </properties>
+          </component>
+          <component id="32172" class="javax.swing.JButton" binding="resultsBtnQuizSelec">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <preferredSize width="220" height="30"/>
+              <text value="Results"/>
             </properties>
           </component>
         </children>
