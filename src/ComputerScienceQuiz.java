@@ -36,13 +36,13 @@ public class ComputerScienceQuiz {
         //If result = JOptionPane.OK_OPTION then it will check if the answer is correct or incorrect.
         if (result == JOptionPane.OK_OPTION) {
 
-            //If radios[3] is selected, it will prompt a correct answer message and add 1 to quizTotal.
+            //If radios[1] is selected, it will prompt a correct answer message and add 1 to quizTotal.
             if (radios[1].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 ComputerScienceQuizQ2();
             }
-            //If radios[0], radios[1] or radios[2] is selected it will prompt an incorrect message and move onto the next question.
+            //If radios[3], radios[1] or radios[2] is selected it will prompt an incorrect message and move onto the next question.
             else if (radios[3].isSelected() || radios[1].isSelected() || radios[2].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was b.");
                 ComputerScienceQuizQ2();
@@ -160,13 +160,13 @@ public class ComputerScienceQuiz {
         if (result == JOptionPane.OK_OPTION) {
 
             //If radios[3] is selected, it will prompt a correct message, add 1 to quizTotal and moves onto the next question.
-            if (radios[2].isSelected()) {
+            if (radios[3].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 ComputerScienceQuizQ5();
             }
             //If radios[0] OR radios[1] OR radios[1] OR radios[2] is selected, it will prompt an incorrect answer message and move onto next question.
-            else if (radios[3].isSelected() || radios[1].isSelected() || radios[2].isSelected()) {
+            else if (radios[0].isSelected() || radios[1].isSelected() || radios[2].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was c");
                 ComputerScienceQuizQ5();
             }
@@ -206,13 +206,13 @@ public class ComputerScienceQuiz {
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
 
-            //If radios[3] is selected, it will prompt a correct message, add 1 to quizTotal and moves onto the next question.
+            //If radios[0] is selected, it will prompt a correct message, add 1 to quizTotal and moves onto the next question.
             if (radios[0].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 ComputerScienceQuizQ6();
             }
-            //If  radios[0] OR radios[1] OR radios[2] is selected then it will prompt an incorrect message and move on to the next question.
+            //If  radios[3] OR radios[1] OR radios[2] is selected then it will prompt an incorrect message and move on to the next question.
             else if (radios[3].isSelected() || radios[1].isSelected() || radios[2].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was a");
                 ComputerScienceQuizQ6();
