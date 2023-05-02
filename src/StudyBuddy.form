@@ -61,7 +61,7 @@
           </component>
         </children>
       </grid>
-      <grid id="4e5a0" binding="LogInOrSignUp" layout-manager="GridBagLayout">
+      <grid id="4e5a0" binding="LoginOrSignUp" layout-manager="GridBagLayout">
         <constraints>
           <card name="Card15"/>
         </constraints>
@@ -340,7 +340,7 @@
           </component>
         </children>
       </grid>
-      <grid id="dbc0d" binding="LogIn" layout-manager="GridBagLayout">
+      <grid id="dbc0d" binding="Login" layout-manager="GridBagLayout">
         <constraints>
           <card name="Card17"/>
         </constraints>
@@ -732,7 +732,7 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="b23d6" class="javax.swing.JButton" binding="DigSkilSoftDev">
+          <component id="b23d6" class="javax.swing.JButton" binding="DigSkillsSoftDevRetryBtn">
             <constraints>
               <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -836,7 +836,7 @@
               <preferredSize width="220" height="30"/>
             </properties>
           </component>
-          <component id="695dd" class="javax.swing.JButton" binding="DigSkillCybSecRetry">
+          <component id="695dd" class="javax.swing.JButton" binding="DigSkillsCyberSecRetryBtn">
             <constraints>
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -937,7 +937,7 @@
               <text value="Please select your grade."/>
             </properties>
           </component>
-          <component id="6287a" class="javax.swing.JButton" binding="DigSkillComSciRetry">
+          <component id="6287a" class="javax.swing.JButton" binding="DigSkillsCompSciRetryBtn">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -1038,7 +1038,7 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="f1cb5" class="javax.swing.JButton" binding="DigSkillDataSciRetry">
+          <component id="f1cb5" class="javax.swing.JButton" binding="DigSkillsDataSciRetryBtn">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -2059,6 +2059,138 @@
             <properties>
               <preferredSize width="220" height="30"/>
               <text value="Next"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="bc91d" binding="LecturersView" layout-manager="GridBagLayout">
+        <constraints>
+          <card name="Card20"/>
+        </constraints>
+        <properties>
+          <background color="-9399905"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="9ec28" class="javax.swing.JTextArea" binding="userDataTxtAreaDataLecturers">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-9277497"/>
+              <editable value="false"/>
+            </properties>
+          </component>
+          <component id="677df" class="javax.swing.JTextPane">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-9277497"/>
+              <editable value="false"/>
+              <font size="24" style="1"/>
+              <text value="Lecturers View"/>
+            </properties>
+          </component>
+          <component id="2af75" class="javax.swing.JButton" binding="loadUserLecturers">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <label value="Load Profile"/>
+              <preferredSize width="220" height="30"/>
+              <text value="Load Profile"/>
+            </properties>
+          </component>
+          <component id="341c0" class="javax.swing.JComboBox" binding="studentRefComboBoxLecturers">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <model/>
+              <preferredSize width="220" height="30"/>
+            </properties>
+          </component>
+          <component id="40182" class="javax.swing.JTextArea" binding="onTargetTxtAreaLecturers">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-9277497"/>
+              <editable value="false"/>
+              <preferredSize width="110" height="30"/>
+            </properties>
+          </component>
+          <component id="b1f18" class="javax.swing.JTextArea" binding="passPercentageTxtAreaLecturers">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-9277497"/>
+              <editable value="false"/>
+              <preferredSize width="110" height="30"/>
+            </properties>
+          </component>
+          <component id="d7e0c" class="javax.swing.JTextArea" binding="nameTxtAreaLecturers">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-9277497"/>
+              <editable value="false"/>
+              <preferredSize width="110" height="30"/>
+            </properties>
+          </component>
+          <component id="486d0" class="javax.swing.JTextArea" binding="totalTxtAreaLecturers">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-9277497"/>
+              <editable value="false"/>
+              <preferredSize width="110" height="30"/>
+            </properties>
+          </component>
+          <component id="6487d" class="javax.swing.JButton" binding="signOutBtnLecturers">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <label value="Sign-out"/>
+              <preferredSize width="220" height="30"/>
+              <text value="Sign-out"/>
+            </properties>
+          </component>
+          <component id="aafc3" class="javax.swing.JButton" binding="backBtnLecturersView">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <label value="Back"/>
+              <preferredSize width="220" height="30"/>
+              <text value="Back"/>
             </properties>
           </component>
         </children>

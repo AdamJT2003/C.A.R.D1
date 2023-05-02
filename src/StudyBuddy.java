@@ -113,7 +113,7 @@ public class StudyBuddy {
     private JButton SoftDevRetryBtn;
     private JButton RetryCloudBtn;
     private JButton RetryCompScienceBtn;
-    private JPanel LogInOrSignUp;
+    private JPanel LoginOrSignUp;
     private JTextPane LogInTxtPane;
     private JButton signUpBtn;
     private JButton logInBtn;
@@ -126,7 +126,7 @@ public class StudyBuddy {
     private JButton signUpConfirmUsernameAndPassword;
     private JButton backBtnSignUp;
     private JButton nextBtnSignUp;
-    private JPanel LogIn;
+    private JPanel Login;
     private JTextField LogInStudentRefNumberTxtField;
     private JButton confirmBtnLogin;
     private JButton backBtnLogin;
@@ -160,10 +160,20 @@ public class StudyBuddy {
     private JButton DigSkillsSoftDevQuizStartBtn;
     private JButton DigSkillsSoftDevQuizBackBtn;
     private JButton IotRetryBtn;
-    private JButton DigSkillDataSciRetry;
-    private JButton DigSkillComSciRetry;
-    private JButton DigSkillCybSecRetry;
-    private JButton DigSkilSoftDev;
+    private JButton DigSkillsDataSciRetryBtn;
+    private JButton DigSkillsCompSciRetryBtn;
+    private JButton DigSkillsCyberSecRetryBtn;
+    private JButton DigSkillsSoftDevRetryBtn;
+    private JPanel LecturersView;
+    private JTextArea userDataTxtAreaDataLecturers;
+    private JButton loadUserLecturers;
+    private JComboBox studentRefComboBoxLecturers;
+    private JTextArea onTargetTxtAreaLecturers;
+    private JTextArea passPercentageTxtAreaLecturers;
+    private JTextArea nameTxtAreaLecturers;
+    private JTextArea totalTxtAreaLecturers;
+    private JButton signOutBtnLecturers;
+    private JButton backBtnLecturersView;
     private JRadioButton ansARadioBtnDigSkillsSoftDevQ1;
     private JButton confirmAnsBtnsDigSkillsSoftDevQ1;
     private JButton nextQBtnDigSkillsSoftDevQ1;
@@ -254,16 +264,16 @@ public class StudyBuddy {
 
     }
 
-    //Welcome Page
-    // action listener for continue button, takes user to LogInOrSignUp panel
+
     public StudyBuddy() {
-        //Takes the user onto the Age page when clicked
+        //Welcome page
+        //action listener for continue button, takes user to Login or sign-up panel
         continueBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // removes previous panel, adds LogInOrSignUp panel, repaints and revalidates panels
+                //removes previous panel, adds login or sign-up panel, repaints and revalidates panels
                 Background.removeAll();
-                Background.add(LogInOrSignUp);
+                Background.add(LoginOrSignUp);
                 Background.repaint();
                 Background.revalidate();
 
@@ -283,13 +293,12 @@ public class StudyBuddy {
             }
         });
 
-        //Login/ Sign-up page
-
-        //Back button on the login/sign-up page
+        //Login/Sign-up page
+        //Back button on the login/sign-up page, moves back to Welcome page when pressed
         BackBtnSignUpOrLogIn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // removes previous panel, adds Welcome panel, repaints and revalidates panels
+                //removes previous panel, adds Welcome panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(Welcome);
                 Background.repaint();
@@ -297,36 +306,40 @@ public class StudyBuddy {
             }
         });
 
-        //sign-up button on login/sign-up page
+        //sign-up button on login/sign-up page, moves onto sign up page when pressed
         signUpBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // removes previous panel, adds SignUp panel, repaints and revalidates panels
+                //removes previous panel, adds SignUp panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(SignUp);
                 Background.repaint();
                 Background.revalidate();
+
+                //Disables the nextBtnSignUp
                 nextBtnSignUp.setEnabled(false);
+
             }
         });
 
-        //login button on login/sign-up page
+        //login button on login/sign-up page, moves onto login page when pressed
         logInBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // removes previous panel, adds LogIn panel, repaints and revalidates panels
+                //removes previous panel, adds Login panel, repaints and revalidates panels
                 Background.removeAll();
-                Background.add(LogIn);
+                Background.add(Login);
                 Background.repaint();
                 Background.revalidate();
             }
         });
 
         //Sign up page
+        //Confirms the new username and password when pressed
         signUpConfirmUsernameAndPassword.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Initialises fileUsernames
+                //Creates File called fileUsernames which represents users.txt
                 File fileUsernames = new File("users.txt");
 
                 //Checks to see if the sign-up text fields are empty and throws a warning message
@@ -335,15 +348,23 @@ public class StudyBuddy {
 
 
                 }
+                //Creates a new File called filed which represents signUpStudentReferenceTxtField.getText().txt
+                File file = new File(signUpStudentReferenceTxtField.getText() + ".txt");
+                if (file.exists()) {
+                    JOptionPane.showMessageDialog(null, "Cannot create account as there is already an account with this student reference number or lecturers email.");
+                }
                 //If both text fields are filled in, this will write the student reference number and password to users.txt
                 else {
                     try {
+
+                        //Creates a new FileOutputStream called fOut which represents fileUsernames.
                         FileOutputStream fOut = new FileOutputStream(fileUsernames, true);
                         OutputStreamWriter osw = new OutputStreamWriter(fOut);
                         osw.write(signUpStudentReferenceTxtField.getText() + "," + signUpPasswordTxtField.getText());
                         osw.write("\n");
                         osw.flush();
                         osw.close();
+
                     }
                     //Throws an exception if users.txt cannot be found
                     catch (Exception e2) {
@@ -353,10 +374,10 @@ public class StudyBuddy {
                     //Enables nextBtnSignUp
                     nextBtnSignUp.setEnabled(true);
 
-                    //initalises writer
+                    //Initialises writer
                     Writer writer = null;
 
-                    //creates a new file using the student reference number when both the student refere
+                    //creates a new file using the student reference number when both the student reference number and password text fields are full
                     try {
                         writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(signUpStudentReferenceTxtField.getText() + ".txt"), "utf-8"));
                     } catch (IOException ex) {
@@ -364,160 +385,218 @@ public class StudyBuddy {
                     } finally {
                         try {
                             writer.close();
-                        } catch (Exception ex) {
+                        }
+                        //If it can't create a file, it will prompt an error message.
+                        catch (Exception ex) {
+                            JOptionPane.showMessageDialog(null, "Cannot create text file.");
                         }
                     }
 
+                    //Writes student reference numbers to a text file
                     File fileUserRefNo = new File("usersRefNo.txt");
-                    try {
-                        FileOutputStream fOut = new FileOutputStream(fileUserRefNo, true);
-                        OutputStreamWriter osw = new OutputStreamWriter(fOut);
-                        osw.write(signUpStudentReferenceTxtField.getText());
-                        osw.write(",");
-                        osw.flush();
-                        osw.close();
-                    } catch (Exception e2) {
+                    if (signUpStudentReferenceTxtField.getText().matches("\\d+")) {
+                        try {
+                            FileOutputStream fOut = new FileOutputStream(fileUserRefNo, true);
+                            OutputStreamWriter osw = new OutputStreamWriter(fOut);
+                            osw.write(signUpStudentReferenceTxtField.getText());
+                            osw.write(",");
+                            osw.flush();
+                            osw.close();
+
+                        } catch (Exception e2) {
+                        }
+                    } else {
+
                     }
 
                 }
             }
         });
 
+        //Goes back to LoginOrSignUp page when pressed
         backBtnSignUp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds Login or sign-up panel, repaints and revalidates panels
                 Background.removeAll();
-                Background.add(LogInOrSignUp);
+                Background.add(LoginOrSignUp);
                 Background.repaint();
                 Background.revalidate();
             }
         });
+
+        //Moves onto the Name page when pressed
         nextBtnSignUp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds Name panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(Name);
                 Background.repaint();
                 Background.revalidate();
             }
         });
+
+        //Moves back to the LoginOrSignUp page
         backBtnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds Login or sign-up panel, repaints and revalidates panels
                 Background.removeAll();
-                Background.add(LogInOrSignUp);
+                Background.add(LoginOrSignUp);
                 Background.repaint();
                 Background.revalidate();
             }
         });
+
+        //Login Page
+        //Confirms login when pressed
         confirmBtnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                if (e.getSource() == confirmBtnLogin) {
-                    String username = LogInStudentRefNumberTxtField.getText();
-                    String password = String.valueOf(passwordJPasswordField.getPassword());
-                    try {
-                        File file = new File("users.txt");
-                        Scanner scanner = new Scanner(file);
-                        while (scanner.hasNextLine()) {
-                            String line = scanner.nextLine();
-                            String[] parts = line.split(",");
-                            if (username.equals(parts[0]) && password.equals(parts[1])) {
-                                JOptionPane.showMessageDialog(null, "Login Successful");
-                                NextBtnLogin.setEnabled(true);
-
-                                try {
-                                    FileReader reader = new FileReader(LogInStudentRefNumberTxtField.getText() + ".txt");
-                                    BufferedReader br = new BufferedReader(reader);
-                                    String lineRead = br.readLine();
-                                    String[] partsRead = lineRead.split(", ");
+                //Initialises username as input from loginStudentRefNumberTxtField and password as input from passwordJPasswordField
+                String username = LogInStudentRefNumberTxtField.getText();
+                String password = String.valueOf(passwordJPasswordField.getPassword());
 
 
-                                    fullName = partsRead[0];
-                                    DigSkillsSoftwareDevTheory.setSelectedItem(partsRead[1]);
-                                    DigSkillsSoftwareDevPrac.setSelectedItem(partsRead[2]);
-                                    DigSkillsCyberGrade.setSelectedItem(partsRead[3]);
-                                    DigSkillsCompSciGrade.setSelectedItem(partsRead[4]);
-                                    DigSkillsDataGrade.setSelectedItem(partsRead[5]);
-                                    iotTheoryGrade.setSelectedItem(partsRead[6]);
-                                    iotPracticalGrade.setSelectedItem(partsRead[7]);
-                                    networkTheory.setSelectedItem(partsRead[8]);
-                                    networkPractical.setSelectedItem(partsRead[9]);
-                                    compSciGrade.setSelectedItem(partsRead[10]);
-                                    CloudCompTheoryGrade.setSelectedItem(partsRead[11]);
-                                    cloudCompPrac.setSelectedItem(partsRead[12]);
-                                    SoftDevTheoryGrade.setSelectedItem(partsRead[13]);
-                                    SoftDevPracticalGrade.setSelectedItem(partsRead[14]);
-                                    ProPractGrade.setSelectedItem(partsRead[15]);
-                                    total = Integer.parseInt(partsRead[16]);
-                                    index = Integer.parseInt(partsRead[17]);
-                                    percentagePass = Integer.parseInt(partsRead[18]);
+                try {
+                    //Creates a new File called file which represents users.txt
+                    File file = new File("users.txt");
+                    //Creates a new Scanner called scanner which represents file
+                    Scanner scanner = new Scanner(file);
+
+                    //A loop which reads the input from the scanner line by line until there is no lines left to read
+                    while (scanner.hasNextLine()) {
+                        //Initialises line as scanner.nextLine() and parts array as line.split whenever there is a comma with no space before or after.
+                        String line = scanner.nextLine();
+                        String[] parts = line.split(",");
+
+                        //If this username and password exist on the file then it will prompt a Login successful message
+                        if (username.equals(parts[0]) && password.equals(parts[1])) {
+
+                            JOptionPane.showMessageDialog(null, "Login Successful");
+
+                            //Enables next button
+                            NextBtnLogin.setEnabled(true);
+
+                            try {
+                                //Creates FileReader called reader which represents LogInStudentRefNumberTxtField input text field
+                                FileReader reader = new FileReader(LogInStudentRefNumberTxtField.getText() + ".txt");
+                                //Creates new BufferedReader called br which represents reader
+                                BufferedReader br = new BufferedReader(reader);
+
+                                //Initialises lineRead as br.readLine() and partsRead array as lineRead.split which would be split by ", "
+                                String lineRead = br.readLine();
+                                String[] partsRead = lineRead.split(", ");
 
 
-                                    br.close();
-                                    profileWelcomeTxtArea.setText("Welcome back " + fullName + "! You can check your grades and edit them if required. \nAfterwards you will be able to gain some practice through our revision quizzes. \nYour grades are shown below:");
+                                //Reads the data from the account's text file and sets it to the fullName, grades, total, onTarget and percentagePass variables.
+                                fullName = partsRead[0];
+                                DigSkillsSoftwareDevTheory.setSelectedItem(partsRead[1]);
+                                DigSkillsSoftwareDevPrac.setSelectedItem(partsRead[2]);
+                                DigSkillsCyberGrade.setSelectedItem(partsRead[3]);
+                                DigSkillsCompSciGrade.setSelectedItem(partsRead[4]);
+                                DigSkillsDataGrade.setSelectedItem(partsRead[5]);
+                                iotTheoryGrade.setSelectedItem(partsRead[6]);
+                                iotPracticalGrade.setSelectedItem(partsRead[7]);
+                                networkTheory.setSelectedItem(partsRead[8]);
+                                networkPractical.setSelectedItem(partsRead[9]);
+                                compSciGrade.setSelectedItem(partsRead[10]);
+                                CloudCompTheoryGrade.setSelectedItem(partsRead[11]);
+                                cloudCompPrac.setSelectedItem(partsRead[12]);
+                                SoftDevTheoryGrade.setSelectedItem(partsRead[13]);
+                                SoftDevPracticalGrade.setSelectedItem(partsRead[14]);
+                                ProPractGrade.setSelectedItem(partsRead[15]);
+                                total = Integer.parseInt(partsRead[16]);
+                                index = Integer.parseInt(partsRead[17]);
+                                percentagePass = Integer.parseInt(partsRead[18]);
 
 
-                                    profileSubjectsTxtArea.setText("\nDigital Skills: Software Development Theory");
-                                    profileSubjectsTxtArea.append("\nDigital Skills: Software Development Practical");
-                                    profileSubjectsTxtArea.append("\nDigital Skills: Cyber Security");
-                                    profileSubjectsTxtArea.append("\nDigital Skills: Computer Science");
-                                    profileSubjectsTxtArea.append("\nDigital Skills: Data Science");
-                                    profileSubjectsTxtArea.append("\nInternet of Things Theory");
-                                    profileSubjectsTxtArea.append("\nInternet of Things Practical");
-                                    profileSubjectsTxtArea.append("\nNetwork Infrastructure Theory");
-                                    profileSubjectsTxtArea.append("\nNetwork Infrastructure Practical");
-                                    profileSubjectsTxtArea.append("\nComputer Science");
-                                    profileSubjectsTxtArea.append("\nCloud Computing Theory");
-                                    profileSubjectsTxtArea.append("\nCloud Computing Practical");
-                                    profileSubjectsTxtArea.append("\nSoftware Development Theory");
-                                    profileSubjectsTxtArea.append("\nSoftware Development Practical");
-                                    profileSubjectsTxtArea.append("\nProfessional Practice");
+                                //closes FileReader br
+                                br.close();
+
+                                //Displays a welcome back message.
+
+                                profileWelcomeTxtArea.setText("Welcome back " + fullName + "! You can check your grades and edit them if required. \nAfterwards you will be able to gain some practice through our revision quizzes. \nYour grades are shown below:");
 
 
-                                    profileGradesTxtArea.setText("\n   -   " + DigSkillsSoftwareDevTheory.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + DigSkillsSoftwareDevPrac.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + DigSkillsCyberGrade.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + DigSkillsCompSciGrade.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + DigSkillsDataGrade.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + iotTheoryGrade.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + iotPracticalGrade.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + networkTheory.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + networkPractical.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + compSciGrade.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + CloudCompTheoryGrade.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + cloudCompPrac.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + SoftDevTheoryGrade.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + SoftDevPracticalGrade.getSelectedItem());
-                                    profileGradesTxtArea.append("\n   -   " + ProPractGrade.getSelectedItem());
+                                //Displays all the subjects on the profileSubjectsTxtArea
+                                profileSubjectsTxtArea.setText("\nDigital Skills: Software Development Theory");
+                                profileSubjectsTxtArea.append("\nDigital Skills: Software Development Practical");
+                                profileSubjectsTxtArea.append("\nDigital Skills: Cyber Security");
+                                profileSubjectsTxtArea.append("\nDigital Skills: Computer Science");
+                                profileSubjectsTxtArea.append("\nDigital Skills: Data Science");
+                                profileSubjectsTxtArea.append("\nInternet of Things Theory");
+                                profileSubjectsTxtArea.append("\nInternet of Things Practical");
+                                profileSubjectsTxtArea.append("\nNetwork Infrastructure Theory");
+                                profileSubjectsTxtArea.append("\nNetwork Infrastructure Practical");
+                                profileSubjectsTxtArea.append("\nComputer Science");
+                                profileSubjectsTxtArea.append("\nCloud Computing Theory");
+                                profileSubjectsTxtArea.append("\nCloud Computing Practical");
+                                profileSubjectsTxtArea.append("\nSoftware Development Theory");
+                                profileSubjectsTxtArea.append("\nSoftware Development Practical");
+                                profileSubjectsTxtArea.append("\nProfessional Practice");
 
 
-                                    profileNameTxtArea.setText("Name\n" + fullName);
-                                    profileTotalTxtArea.setText("Total\n" + total);
-                                    profileOnTargetTxtArea.setText("On Target\n" + onTarget[index]);
-                                    profilePassPercentageTxtArea.setText("Pass Percentage\n" + percentagePass + "%");
+                                //Displays the grades in the profileGradesTxtArea
+                                profileGradesTxtArea.setText("\n   -   " + DigSkillsSoftwareDevTheory.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + DigSkillsSoftwareDevPrac.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + DigSkillsCyberGrade.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + DigSkillsCompSciGrade.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + DigSkillsDataGrade.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + iotTheoryGrade.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + iotPracticalGrade.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + networkTheory.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + networkPractical.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + compSciGrade.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + CloudCompTheoryGrade.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + cloudCompPrac.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + SoftDevTheoryGrade.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + SoftDevPracticalGrade.getSelectedItem());
+                                profileGradesTxtArea.append("\n   -   " + ProPractGrade.getSelectedItem());
 
-                                } catch (Exception e2) {
-                                    System.out.println(e2);
+
+                                /*Displays fullName in the profileNameTxtArea, total in the profileTotalTxtArea,
+                                onTarget in the profileOnTargetTxtArea and percentagePass in the profilePassPercentageTxtArea.
+                                */
+                                profileNameTxtArea.setText("Name\n" + fullName);
+                                profileTotalTxtArea.setText("Total\n" + total);
+                                profileOnTargetTxtArea.setText("On Target\n" + onTarget[index]);
+                                profilePassPercentageTxtArea.setText("Pass Percentage\n" + percentagePass + "%");
 
 
-                                }
-                                return;
                             }
+                            //If there is an error reading from the file and setting the data to the fullName, grades, total, onTarget and percentagePass variables
+                            catch (Exception e2) {
+                                System.out.println(e2);
+
+
+                            }
+                            return;
                         }
-                        JOptionPane.showMessageDialog(null, "Invalid Username or Password");
-                    } catch (FileNotFoundException ex) {
-                        JOptionPane.showMessageDialog(null, "File not found.");
+                        //If the login is invalid then it disables the nextBtnLogin
+                        else {
+                            NextBtnLogin.setEnabled(false);
+                        }
                     }
+                    //If the login doesn't exist in the users.txt then the login is invalid and an invalid username or password message is prompted.
+                    JOptionPane.showMessageDialog(null, "Invalid Username or Password");
+                }
+                //If file isn't found then a File not found message will be prompted
+                catch (FileNotFoundException ex) {
+                    JOptionPane.showMessageDialog(null, "File not found.");
                 }
             }
 
 
         });
+
+        //Shows and hides the password when pressed
         showPasswordLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //If checkbox is ticked, it shows the password, if it is not ticked then it will hide the password.
                 if (showPasswordLogin.isSelected()) {
                     passwordJPasswordField.setEchoChar((char) 0);
                 } else {
@@ -525,25 +604,67 @@ public class StudyBuddy {
                 }
             }
         });
+        //Moves onto either lecturers view or profile panel when pressed
         NextBtnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Background.removeAll();
-                Background.add(Profile);
-                Background.repaint();
-                Background.revalidate();
+                //Checks to see if it is an integer, if it is then it will move onto the Profile page, if not then it will move onto Lecturers View page
+                if (LogInStudentRefNumberTxtField.getText().matches("\\d+")) {
+                    //removes previous panel, adds Profile panel, repaints and revalidates panels
+                    Background.removeAll();
+                    Background.add(Profile);
+                    Background.repaint();
+                    Background.revalidate();
+                } else {
+                    //removes previous panel, adds Lecturers view panel, repaints and revalidates panels
+                    Background.removeAll();
+                    Background.add(LecturersView);
+                    Background.repaint();
+                    Background.revalidate();
+
+                    //Reads data from a text file and adds the data to a JComboBox
+                    try {
+                        //Creates FileReader called reader which represents studentRefNo.txt
+                        FileReader reader = new FileReader("usersRefNo.txt");
+                        //Creates new BufferedReader called br which represents reader
+                        BufferedReader br = new BufferedReader(reader);
+
+                        //Initialises lineRead as br.readLine() and partsRead array as lineRead.split which would be split by ", "
+                        String lineRead = br.readLine();
+                        String[] partsRead = lineRead.split(",");
+
+                        //Adds a blank item to the JComboBox
+                        studentRefComboBoxLecturers.addItem(" ");
+                        //loops until every item from the text file has been added to the JComboBox and stops after the last item was added.
+                        for (int i = 0; i < partsRead.length; i++) {
+                            studentRefComboBoxLecturers.addItem(partsRead[i]);
+                        }
+
+                        //closes FileReader br
+                        br.close();
+                    }
+                    //If there is an error reading from the file and setting the data to the fullName, grades, total, onTarget and percentagePass variables
+                    catch (Exception e2) {
+                        System.out.println(e2);
+
+                    }
+                }
             }
         });
 
 
+        //Profile page
+        //Sets all the grade JComboBox to enabled, sets total to 0, disables all next buttons and enables all confirm buttons when pressed.
         profileEditBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds digital skills software development panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(DigitalSkillsSoftwareDev);
                 Background.repaint();
                 Background.revalidate();
 
+                //Resetting the total back to 0
                 total = 0;
 
                 //Resetting subject retry buttons
@@ -552,6 +673,11 @@ public class StudyBuddy {
                 RetryCloudBtn.setEnabled(false);
                 RetryCompScienceBtn.setEnabled(false);
                 SoftDevRetryBtn.setEnabled(false);
+                IotRetryBtn.setEnabled(false);
+                DigSkillsDataSciRetryBtn.setEnabled(false);
+                DigSkillsCompSciRetryBtn.setEnabled(false);
+                DigSkillsCyberSecRetryBtn.setEnabled(false);
+                DigSkillsSoftDevRetryBtn.setEnabled(false);
 
                 //Resetting subject confirm button
                 confirmBtnNetworkInfrastructure.setEnabled(true);
@@ -559,22 +685,44 @@ public class StudyBuddy {
                 confirmBtnSoftwareDevelopment.setEnabled(true);
                 confirmBtnProfessionalPractice.setEnabled(true);
                 confirmBtnComputerScience.setEnabled(true);
+                confirmBtnDigSkillsSoftware.setEnabled(true);
+                confirmBtnDSCS.setEnabled(true);
+                confirmBtnDigSkillsCompSci.setEnabled(true);
+                confirmBtnDataScience.setEnabled(true);
+                confirmBtnIoT.setEnabled(true);
 
                 //Setting the grades to editable
+                DigSkillsSoftwareDevTheory.setEnabled(true);
+                DigSkillsSoftwareDevPrac.setEnabled(true);
+                DigSkillsCyberGrade.setEnabled(true);
+                DigSkillsCompSciGrade.setEnabled(true);
+                DigSkillsDataGrade.setEnabled(true);
+                iotTheoryGrade.setEnabled(true);
+                iotPracticalGrade.setEnabled(true);
+                networkTheory.setEnabled(true);
+                networkPractical.setEnabled(true);
+                compSciGrade.setEnabled(true);
+                CloudCompTheoryGrade.setEnabled(true);
+                cloudCompPrac.setEnabled(true);
                 SoftDevTheoryGrade.setEnabled(true);
                 SoftDevPracticalGrade.setEnabled(true);
+                ProPractGrade.setEnabled(true);
+
 
             }
         });
+        //Moves back to Login page when pressed
         BackBtnProfile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds Login panel, repaints and revalidates panels
                 Background.removeAll();
-                Background.add(LogIn);
+                Background.add(Login);
                 Background.repaint();
                 Background.revalidate();
             }
         });
+        //Signs user out, resets all text areas, JComboBox grades and moves to the welcome button when pressed
         profileSignOut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -636,6 +784,7 @@ public class StudyBuddy {
                 SoftDevTheoryGrade.setEnabled(true);
                 SoftDevPracticalGrade.setEnabled(true);
 
+                //removes previous panel, adds welcome panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(Welcome);
                 Background.repaint();
@@ -643,9 +792,11 @@ public class StudyBuddy {
             }
         });
 
+        //Moves onto quiz selection panel when pressed
         profileQuizBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds quiz selection panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(quizSelection);
                 Background.repaint();
@@ -654,7 +805,7 @@ public class StudyBuddy {
         });
 
 
-        //Confirms and displays the users full name.
+        //Confirms and displays the users full name when pressed
         confirmBtnName.addActionListener(new ActionListener() {
             @Override
 
@@ -685,13 +836,14 @@ public class StudyBuddy {
                 SoftDevPracticalGrade.setSelectedItem("Select Grade.");
                 ProPractGrade.setSelectedItem("Select Grade.");
 
+                //If all selected items in the JComboBoxes for grades are "Select Grade." (default option), index, total and percentage pass is set to 0.
                 if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Select Grade." || DigSkillsSoftwareDevPrac.getSelectedItem() == "Select Grade." || DigSkillsCyberGrade.getSelectedItem() == "Select Grade." || DigSkillsCompSciGrade.getSelectedItem() == "Select Grade." || DigSkillsDataGrade.getSelectedItem() == "Select Grade." || iotTheoryGrade.getSelectedItem() == "Select Grade." || iotPracticalGrade.getSelectedItem() == "Select Grade." || networkTheory.getSelectedItem() == "Select Grade." || networkPractical.getSelectedItem() == "Select Grade." || compSciGrade.getSelectedItem() == "Select Grade." || CloudCompTheoryGrade.getSelectedItem() == "Select Grade." || cloudCompPrac.getSelectedItem() == "Select Grade." || SoftDevTheoryGrade.getSelectedItem() == "Select Grade." || SoftDevPracticalGrade.getSelectedItem() == "Select Grade." || ProPractGrade.getSelectedItem() == "Select Grade.") {
                     index = 0;
                     total = 0;
                     percentagePass = 0;
                 }
 
-
+                //creates a new File called fileNames which represents signUpStudentsReferenceTxtField.getText() text file and writes the users name, grades, total, whether they are on target and pass percentage to the file
                 File fileNames = new File(signUpStudentReferenceTxtField.getText() + ".txt");
                 try {
                     FileOutputStream fOut = new FileOutputStream(fileNames, true);
@@ -708,36 +860,37 @@ public class StudyBuddy {
         });
 
 
-        // action listener for back button, takes user back to Welcome panel
+        //takes user back to sign-up panel when pressed
         backBtnName.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds Sign-up panel, repaints and revalidates panels
                 Background.removeAll();
-                Background.add(LogIn);
+                Background.add(SignUp);
                 Background.repaint();
                 Background.revalidate();
             }
         });
 
 
-        // next button to digital skills soft dev panel
-        NextBtnName.addActionListener(new
+        // next button to move onto Login panel when pressed
+        NextBtnName.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds Login panel, repaints and revalidates panels
+                Background.removeAll();
+                Background.add(Login);
+                Background.repaint();
+                Background.revalidate();
+            }
+        });
 
-                                              ActionListener() {
-                                                  @Override
-                                                  public void actionPerformed(ActionEvent e) {
-                                                      Background.removeAll();
-                                                      Background.add(LogIn);
-                                                      Background.repaint();
-                                                      Background.revalidate();
-                                                  }
-                                              });
 
-
-        // back button to Name panel
+        // back button to move onto Profile panel when pressed
         backBtnDigSkillsSoftware.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds Profile panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(Profile);
                 Background.repaint();
@@ -747,83 +900,102 @@ public class StudyBuddy {
         });
 
 
-        //Confirms the users input, finds which number the input would equal and adds it to a total
+        //Confirms the users input, disables the confirm button and JComboBox for grades, enables the retry and next button, finds which number the input would equal and adds it to a total when pressed
         confirmBtnDigSkillsSoftware.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DigSkilSoftDev.setEnabled(true);
+                //Enables next and retry button
+                DigSkillsSoftDevRetryBtn.setEnabled(true);
                 NextBtnDigSkillsSoftware.setEnabled(true);
+
+                //Disables both the theory and practical grade JComboBox.
                 DigSkillsSoftwareDevTheory.setEnabled(false);
                 confirmBtnDigSkillsSoftware.setEnabled(false);
                 DigSkillsSoftwareDevPrac.setEnabled(false);
+
                 //Initialise DigSkillsSoftwareDevScore as an integer with value 0
                 int DigSkillsSoftwareDevScore = 0;
 
-                /*Checks to see if the Digital Skills: Software Development Theory grade = "Pass."
-                 Adds 3 to total if Digital Skills: Software Development Theory grade = "Pass."
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 3
+                should be added to the total
                  */
                 if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Pass.") {
                     DigSkillsSoftwareDevScore += 3;
-                }
-                /*Checks to see if the Digital Skills: Software Development Theory grade = "Fail. (Attempt 1)"
-                 Adds 2 to total if Digital Skills: Software Development Theory grade = "Fail. (Attempt 1)"
-                 */
-                else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 1)") {
+                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 1)") {
                     DigSkillsSoftwareDevScore += 2;
-                }
-                /*Checks to see if the Digital Skills: Software Development Theory grade = "Fail. (Attempt 2)"
-                 Adds 1 to total if Digital Skills: Software Development Theory grade = "Fail. (Attempt 2)"
-                 */
-                else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 2)") {
+                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 2)") {
                     DigSkillsSoftwareDevScore += 1;
-                }
-                /*Checks to see if the Digital Skills: Software Development Theory grade = "Fail. (Attempt 3)"
-                 Adds 0 to total if Digital Skills: Software Development Theory grade = "Fail. (Attempt 3)"
-                 */
-                else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 3)") {
+                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 3)") {
                     DigSkillsSoftwareDevScore += 0;
                 }
 
-                /*Checks to see if the Digital Skills: Software Development Practical grade = "Pass."
-                 Adds 3 to total if Digital Skills: Software Development Practical grade = "Pass."
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 3
+                should be added to the total
                  */
                 if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Pass.") {
                     DigSkillsSoftwareDevScore += 3;
-                }
-                /*Checks to see if the Digital Skills: Software Development Practical grade = "Fail. (Attempt 1)"
-                 Adds 2 to total if Digital Skills: Software Development Practical grade = "Fail. (Attempt 1)"
-                 */
-                else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 1)") {
+                } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 1)") {
                     DigSkillsSoftwareDevScore += 2;
-                }
-                /*Checks to see if the Digital Skills: Software Development Practical grade = "Fail. (Attempt 2)"
-                 Adds 1 to total if Digital Skills: Software Development Practical grade = "Fail. (Attempt 2)"
-                 */
-                else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 2)") {
+                } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 2)") {
                     DigSkillsSoftwareDevScore += 1;
-                }
-                /*Checks to see if the Digital Skills: Software Development Practical grade = "Fail. (Attempt 2)"
-                 Adds 0 to total if Digital Skills: Software Development Practical grade = "Fail. (Attempt 2)"
-                 */
-                else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 3)") {
+                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 3)") {
                     DigSkillsSoftwareDevScore += 0;
                 }
 
                 //Updates total and displays Digital Skills: Software Development total
                 total = total + DigSkillsSoftwareDevScore;
                 DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(DigSkillsSoftwareDevScore));
-                NextBtnDigSkillsSoftware.setEnabled(true);
-
-
             }
 
         });
 
+        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        DigSkillsSoftDevRetryBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
-        // next button to digital skills cyber
+                //Enables confirm button and the JComboBox for theory and practical grades
+                confirmBtnDigSkillsSoftware.setEnabled(true);
+                DigSkillsSoftwareDevTheory.setEnabled(true);
+                DigSkillsSoftwareDevPrac.setEnabled(true);
+
+                //Disables next button and retry button
+                NextBtnDigSkillsSoftware.setEnabled(false);
+                DigSkillsSoftDevRetryBtn.setEnabled(false);
+
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 3
+                should be subtracted to the total
+                 */
+                if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                }
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 3
+                should be subtracted to the total
+                 */
+                if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
+                }
+            }
+        });
+        // next button to move onto digital skills cyber security page when pressed
         NextBtnDigSkillsSoftware.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds digital skills cyber security panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(DigitalSkillsCyber);
                 Background.repaint();
@@ -833,56 +1005,43 @@ public class StudyBuddy {
         });
 
 
-        // back button to software dev
+        // back button to move backk to digital skills software dev page when pressed
         BackBtnCyber.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds digital skills software development panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(DigitalSkillsSoftwareDev);
                 Background.repaint();
                 Background.revalidate();
-
-                /*Checks to see if the Digital Skills: Software Development Theory grade = "Pass."
-                 Subtracts 3 to total if Digital Skills: Software Development Theory grade = "Pass."
-                 */
-
             }
         });
 
 
-        //Confirms the users input, finds which number the input would equal and adds it to a total
+        //Confirms the users input, finds which number the input would equal and adds it to a total when pressed
         confirmBtnDSCS.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
-                DigSkillCybSecRetry.setEnabled(true);
+                DigSkillsCyberSecRetryBtn.setEnabled(true);
                 DigSkillsCyberGrade.setEnabled(false);
                 NextBtnCyber.setEnabled(true);
                 confirmBtnDSCS.setEnabled(false);
 
                 int DigSkillsCyberSecure = 0;
 
-                /*Checks to see if the Digital Skills: Cyber Security grade = "Pass."
-                 Adds 3  to total if Digital Skills: Cyber Security grade = "Pass."
+               /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 3
+                should be added to the total
                  */
                 if (DigSkillsCyberGrade.getSelectedItem() == "Pass.") {
                     DigSkillsCyberSecure += 3;
                 }
-                /*Checks to see if the Digital Skills: Cyber Security grade = "Fail. (Attempt 1)"
-                 Adds 2  to total if Digital Skills: Cyber Security grade = "Fail. (Attempt 1)"
-                 */
                 else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 1)") {
                     DigSkillsCyberSecure += 2;
                 }
-                /*Checks to see if the Digital Skills: Cyber Security grade = "Fail. (Attempt 2)"
-                 Adds 1 to total if Digital Skills: Cyber Security grade = "Fail. (Attempt 2)"
-                 */
                 else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 2)") {
                     DigSkillsCyberSecure += 1;
                 }
-                /*Checks to see if the Digital Skills: Cyber Security grade = "Fail. (Attempt 3)"
-                 Adds 0  to total if Digital Skills: Cyber Security grade = "Fail. (Attempt 3)"
-                 */
                 else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 3)") {
                     DigSkillsCyberSecure += 0;
                 }
@@ -894,10 +1053,37 @@ public class StudyBuddy {
 
             }
         });
-        // next button to data sci
+
+        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        DigSkillsCyberSecRetryBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                confirmBtnDSCS.setEnabled(true);
+                NextBtnCyber.setEnabled(false);
+                DigSkillsCyberSecRetryBtn.setEnabled(false);
+                DigSkillsCyberGrade.setEnabled(true);
+
+
+                if (DigSkillsCyberGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    dscsLbl.setText(String.valueOf(0));
+                } else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    dscsLbl.setText(String.valueOf(0));
+                } else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    dscsLbl.setText(String.valueOf(0));
+
+
+                }
+            }
+        });
+        //next button to data science when pressed
         NextBtnCyber.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds digital skills computer science panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(DigitalSkillsComputerScience);
                 Background.repaint();
@@ -906,31 +1092,28 @@ public class StudyBuddy {
             }
         });
 
-
+        //Moves back to digital skills cyber security page when pressed
         backBtnDigSkillsCompSci.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds digital skills cyber security panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(DigitalSkillsCyber);
                 Background.repaint();
                 Background.revalidate();
 
-                /*Checks to see if the Digital Skills: Cyber Security grade = "Pass."
-                 Subtracts 3 to total if Digital Skills: Cyber Security grade = "Pass."
-                 */
-
 
             }
         });
 
-
+        //Confirms Digital skills computer science grade when pressed.
         confirmBtnDigSkillsCompSci.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 DigSkillsCompSciGrade.setEnabled(false);
                 confirmBtnDigSkillsCompSci.setEnabled(false);
-                DigSkillComSciRetry.setEnabled(true);
+                DigSkillsCompSciRetryBtn.setEnabled(true);
                 nextBtnDigSkillsCompSci.setEnabled(true);
 
                 int DigSkillsCompSci = 0;
@@ -967,6 +1150,32 @@ public class StudyBuddy {
                 nextBtnDigSkillsCompSci.setEnabled(true);
             }
         });
+        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        DigSkillsCompSciRetryBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                confirmBtnDigSkillsCompSci.setEnabled(true);
+                nextBtnDigSkillsCompSci.setEnabled(false);
+                DigSkillsCompSciRetryBtn.setEnabled(false);
+                DigSkillsCompSciGrade.setEnabled(true);
+
+
+                if (DigSkillsCompSciGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    DigSkillsCompSciLbl.setText(String.valueOf(0));
+                } else if (DigSkillsCompSciGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    DigSkillsCompSciLbl.setText(String.valueOf(0));
+                } else if (DigSkillsCompSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    DigSkillsCompSciLbl.setText(String.valueOf(0));
+
+                }
+            }
+        });
+
+        //Moves onto the digital skills data science page when pressed
         nextBtnDigSkillsCompSci.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -981,17 +1190,11 @@ public class StudyBuddy {
         BackBtnData.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds digital skills computer science panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(DigitalSkillsComputerScience);
                 Background.repaint();
                 Background.revalidate();
-
-
-                /*Checks to see if the Digital Skills: Cyber Security = "Pass"
-                 Subtracts 3  to total if Digital Skills: Cyber Security grade = "Pass."
-                 */
-
-
             }
         });
 
@@ -1003,7 +1206,7 @@ public class StudyBuddy {
 
                 NextBtnData.setEnabled(true);
                 confirmBtnDataScience.setEnabled(false);
-                DigSkillDataSciRetry.setEnabled(true);
+                DigSkillsDataSciRetryBtn.setEnabled(true);
 
 
                 int total2 = 0;
@@ -1018,6 +1221,32 @@ public class StudyBuddy {
                 DataLbl.setText(String.valueOf(total2));
                 total = total + total2;
                 NextBtnData.setEnabled(true);
+            }
+        });
+        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        DigSkillsDataSciRetryBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                DigSkillsDataGrade.setEnabled(true);
+
+                DigSkillsDataSciRetryBtn.setEnabled(false);
+
+                confirmBtnDataScience.setEnabled(true);
+                NextBtnData.setEnabled(false);
+
+                if (DigSkillsDataGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    DataLbl.setText(String.valueOf(0));
+                } else if (DigSkillsDataGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    DataLbl.setText(String.valueOf(0));
+                } else if (DigSkillsDataGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    DataLbl.setText(String.valueOf(0));
+
+
+                }
             }
         });
 
@@ -1037,6 +1266,7 @@ public class StudyBuddy {
         backButtonIoT.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds digital skills data science panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(DigSkillsDataScience);
                 Background.repaint();
@@ -1091,11 +1321,45 @@ public class StudyBuddy {
             }
         });
 
+        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        IotRetryBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                nextButtonIoT.setEnabled(false);
+                IotRetryBtn.setEnabled(false);
+                iotTheoryGrade.setEnabled(true);
+                iotPracticalGrade.setEnabled(true);
+                confirmBtnIoT.setEnabled(true);
+
+                if (iotTheoryGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    IotLbl.setText(String.valueOf(0));
+
+                }
+                if (iotPracticalGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    IotLbl.setText(String.valueOf(0));
+                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    IotLbl.setText(String.valueOf(0));
+                }
+            }
+        });
 
         // next btn to network infra
         nextButtonIoT.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds network infrastructure panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(NetworkInfrastructure);
                 Background.repaint();
@@ -1109,6 +1373,7 @@ public class StudyBuddy {
         networkBackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds IoT panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(IoT);
                 Background.repaint();
@@ -1118,6 +1383,7 @@ public class StudyBuddy {
             }
         });
 
+        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
         confirmBtnNetworkInfrastructure.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1161,10 +1427,48 @@ public class StudyBuddy {
 
             }
         });
+
+        networkRetryBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                confirmBtnNetworkInfrastructure.setEnabled(true);
+                networkTheory.setEnabled(true);
+                networkPractical.setEnabled(true);
+
+                networkRetryBtn.setEnabled(false);
+                networkNextButton.setEnabled(false);
+
+                if (networkTheory.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    NetworkLbl.setText(String.valueOf(0));
+                } else if (networkTheory.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    NetworkLbl.setText(String.valueOf(0));
+                } else if (networkTheory.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    NetworkLbl.setText(String.valueOf(0));
+
+                }
+                if (networkPractical.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    NetworkLbl.setText(String.valueOf(0));
+                } else if (networkPractical.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    NetworkLbl.setText(String.valueOf(0));
+                } else if (networkPractical.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    NetworkLbl.setText(String.valueOf(0));
+
+                }
+
+            }
+        });
+
         // next btn to comp sci
         networkNextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds computer science panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(ComputerScience);
                 Background.repaint();
@@ -1177,6 +1481,7 @@ public class StudyBuddy {
         compSciBackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds network infrastructure panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(NetworkInfrastructure);
                 Background.repaint();
@@ -1216,11 +1521,38 @@ public class StudyBuddy {
             }
         });
 
+        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        RetryCompScienceBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                confirmBtnComputerScience.setEnabled(true);
+                compSciGrade.setEnabled(true);
+
+                RetryCompScienceBtn.setEnabled(false);
+                compSciNextButton.setEnabled(false);
+
+                if (compSciGrade.getSelectedItem() == "Pass.") {
+                    total = total - 3;
+                    compSciLbl.setText(String.valueOf(0));
+                } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    total = total - 2;
+                    compSciLbl.setText(String.valueOf(0));
+                } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    total = total - 1;
+                    compSciLbl.setText(String.valueOf(0));
+
+                }
+
+
+            }
+        });
 
         // next btn to cloud comp
         compSciNextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds cloud computing panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(CloudComputing);
                 Background.repaint();
@@ -1233,6 +1565,7 @@ public class StudyBuddy {
         BackBtnCloud.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds computer science panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(ComputerScience);
                 Background.repaint();
@@ -1321,6 +1654,7 @@ public class StudyBuddy {
         NextBtnCloud.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds software development panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(SoftwareDevelopment);
                 Background.repaint();
@@ -1333,6 +1667,7 @@ public class StudyBuddy {
         BackBtnSoftDev.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds cloud computing panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(CloudComputing);
                 Background.repaint();
@@ -1433,6 +1768,7 @@ public class StudyBuddy {
         NextBtnSoftDev.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds professional practice panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(ProfessionalPractice);
                 Background.repaint();
@@ -1445,6 +1781,7 @@ public class StudyBuddy {
         BackBtnProfPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds software development panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(SoftwareDevelopment);
                 Background.repaint();
@@ -1474,6 +1811,7 @@ public class StudyBuddy {
                 ProfPracticeLbl.setText(String.valueOf(Total3));
                 NextBtnProfPractice.setEnabled(true);
                 RetrybtnProfPrac.setEnabled(true);
+                ProPractGrade.setEnabled(true);
 
 
                 confirmBtnProfessionalPractice.setEnabled(false);
@@ -1504,6 +1842,7 @@ public class StudyBuddy {
         NextBtnProfPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds Summary panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(Summary);
                 Background.repaint();
@@ -1570,6 +1909,7 @@ public class StudyBuddy {
         backBtnSummary.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds professional practice panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(ProfessionalPractice);
                 Background.repaint();
@@ -1583,6 +1923,7 @@ public class StudyBuddy {
         nextBtnSummary.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds results panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(Results);
                 Background.repaint();
@@ -1616,6 +1957,7 @@ public class StudyBuddy {
         backBtnResults.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds summary panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(Summary);
                 Background.repaint();
@@ -1640,6 +1982,7 @@ public class StudyBuddy {
         editGradesBtnResults.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds digital skills software development panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(DigitalSkillsSoftwareDev);
                 Background.repaint();
@@ -1653,6 +1996,11 @@ public class StudyBuddy {
                 RetryCloudBtn.setEnabled(false);
                 RetryCompScienceBtn.setEnabled(false);
                 SoftDevRetryBtn.setEnabled(false);
+                IotRetryBtn.setEnabled(false);
+                DigSkillsDataSciRetryBtn.setEnabled(false);
+                DigSkillsCompSciRetryBtn.setEnabled(false);
+                DigSkillsCyberSecRetryBtn.setEnabled(false);
+                DigSkillsSoftDevRetryBtn.setEnabled(false);
 
                 //Resetting subject confirm button
                 confirmBtnNetworkInfrastructure.setEnabled(true);
@@ -1660,10 +2008,28 @@ public class StudyBuddy {
                 confirmBtnSoftwareDevelopment.setEnabled(true);
                 confirmBtnProfessionalPractice.setEnabled(true);
                 confirmBtnComputerScience.setEnabled(true);
+                confirmBtnDigSkillsSoftware.setEnabled(true);
+                confirmBtnDSCS.setEnabled(true);
+                confirmBtnDigSkillsCompSci.setEnabled(true);
+                confirmBtnDataScience.setEnabled(true);
+                confirmBtnIoT.setEnabled(true);
 
                 //Setting the grades to editable
+                DigSkillsSoftwareDevTheory.setEnabled(true);
+                DigSkillsSoftwareDevPrac.setEnabled(true);
+                DigSkillsCyberGrade.setEnabled(true);
+                DigSkillsCompSciGrade.setEnabled(true);
+                DigSkillsDataGrade.setEnabled(true);
+                iotTheoryGrade.setEnabled(true);
+                iotPracticalGrade.setEnabled(true);
+                networkTheory.setEnabled(true);
+                networkPractical.setEnabled(true);
+                compSciGrade.setEnabled(true);
+                CloudCompTheoryGrade.setEnabled(true);
+                cloudCompPrac.setEnabled(true);
                 SoftDevTheoryGrade.setEnabled(true);
                 SoftDevPracticalGrade.setEnabled(true);
+                ProPractGrade.setEnabled(true);
             }
         });
         signOutBtnResults.addActionListener(new ActionListener() {
@@ -1736,6 +2102,7 @@ public class StudyBuddy {
         quizBtnResults.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds quiz selection panel, repaints and revalidates panels
                 Background.removeAll();
                 Background.add(quizSelection);
                 Background.repaint();
@@ -1745,68 +2112,7 @@ public class StudyBuddy {
         });
 
 
-        RetryCompScienceBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-                confirmBtnComputerScience.setEnabled(true);
-                compSciGrade.setEnabled(true);
-
-                RetryCompScienceBtn.setEnabled(false);
-                compSciNextButton.setEnabled(false);
-
-                if (compSciGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    compSciLbl.setText(String.valueOf(0));
-                } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    compSciLbl.setText(String.valueOf(0));
-                } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    cloudCompLbl.setText(String.valueOf(0));
-
-                }
-
-
-            }
-        });
-
-
-        networkRetryBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                confirmBtnNetworkInfrastructure.setEnabled(true);
-                networkTheory.setEnabled(true);
-                networkPractical.setEnabled(true);
-
-                networkRetryBtn.setEnabled(false);
-                networkNextButton.setEnabled(false);
-
-                if (networkTheory.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    NetworkLbl.setText(String.valueOf(0));
-                } else if (networkTheory.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    NetworkLbl.setText(String.valueOf(0));
-                } else if (networkTheory.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    NetworkLbl.setText(String.valueOf(0));
-
-                }
-                if (networkPractical.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    NetworkLbl.setText(String.valueOf(0));
-                } else if (networkPractical.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    NetworkLbl.setText(String.valueOf(0));
-                } else if (networkPractical.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    NetworkLbl.setText(String.valueOf(0));
-
-                }
-
-            }
-        });
 
 
         nextBtnQuizSelection.addActionListener(new ActionListener() {
@@ -1816,154 +2122,186 @@ public class StudyBuddy {
                 if (quizSelector.getSelectedItem() == "Digital Skills: Software Development.") {
                     DigSkillsSoftDevQuiz prog = new DigSkillsSoftDevQuiz();
                     prog.DigSkillsSoftDevQuizQ1();
-                } else if (quizSelector.getSelectedItem() == "Digital Skills: Cyber Security.") {
+                }else if (quizSelector.getSelectedItem() == "Digital Skills: Cyber Security.") {
+                    DigSkillsCyberSecQuiz prog = new DigSkillsCyberSecQuiz();
+                    prog.DigSkillsCyberSecQuizQ1();
+                }else if (quizSelector.getSelectedItem() == "Digital Skills: Computer Science.") {
+                    DigSkillsCompSciQuiz prog = new DigSkillsCompSciQuiz();
+                    prog.DigSkillsCompSciQ1();
+                }else if (quizSelector.getSelectedItem() == "Digital Skills: Data Science.") {
+                    DigSkillsDataSciQuiz prog  = new DigSkillsDataSciQuiz();
+                    prog.DigSkillsDataSciQuizQ1();
+                }else if (quizSelector.getSelectedItem() == "Internet of Things.") {
+                    IoTQuiz prog = new IoTQuiz();
+                    prog.IoTQuizQ1();
+                }else if (quizSelector.getSelectedItem() == "Network Infrastructure.") {
+                    NetworkInfraQuiz prog  = new NetworkInfraQuiz();
+                    prog.NetworkInfraQ1();
+                }else if (quizSelector.getSelectedItem() == "Computer Science.") {
+                    ComputerScienceQuiz prog  = new ComputerScienceQuiz();
+                    prog.ComputerScienceQuizQ1();
+                }else if (quizSelector.getSelectedItem() == "Cloud Computing.") {
+                    CloudComputingQuiz prog = new CloudComputingQuiz();
+                    prog.CloudComputingQuizQ1();
+                }else if (quizSelector.getSelectedItem() == "Software Development.") {
+                    SoftwareDevelopmentQuiz prog = new SoftwareDevelopmentQuiz();
+                    prog.SoftDevQuizQ1();
+                }else if (quizSelector.getSelectedItem() == "Professional Practice.") {
+                    ProfessionalPracticeQuiz prog = new ProfessionalPracticeQuiz();
+                    prog.ProfessionalPracticeQuizQ1();
+                }else {
+                    JOptionPane.showMessageDialog(null, "There was no quiz selected!");
+                }
+
+
+            }
+
+        });
+
+
+        //Loads user profile and displays grades, full name, total, whether they are on target and their percentage pass when pressed
+        loadUserLecturers.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                try {
+                    //Creates FileReader called reader which represents LogInStudentRefNumberTxtField input text field
+                    FileReader reader = new FileReader(studentRefComboBoxLecturers.getSelectedItem() + ".txt");
+                    //Creates new BufferedReader called br which represents reader
+                    BufferedReader br = new BufferedReader(reader);
+
+                    //Initialises lineRead as br.readLine() and partsRead array as lineRead.split which would be split by ", "
+                    String lineRead = br.readLine();
+                    String[] partsRead = lineRead.split(", ");
+
+
+                    //Reads the data from the account's text file and sets it to the fullName, grades, total, onTarget and percentagePass variables.
+
+
+                    br.close();
+                    int index = Integer.parseInt(partsRead[17]);
+
+                    //Displays all the subjects on the profileSubjectsTxtArea
+                    userDataTxtAreaDataLecturers.setText(partsRead[0] + "file.\n" +
+                            "\nDigital Skills: Software Development Theory\t-   " + partsRead[1] +
+                            "\nDigital Skills: Software Development Practical\t-   " + partsRead[2] +
+                            "\nDigital Skills: Cyber Security\t\t-   " + partsRead[3] +
+                            "\nDigital Skills: Computer Science\t-   " + partsRead[4] +
+                            "\nDigital Skills: Data Science\t\t-   " + partsRead[5] +
+                            "\nInternet of Things Theory\t\t-   " + partsRead[6] +
+                            "\nInternet of Things Practical\t\t-   " + partsRead[7] +
+                            "\nNetwork Infrastructure Theory\t\t-   " + partsRead[8] +
+                            "\nNetwork Infrastructure Practical\t\t-   " + partsRead[9] +
+                            "\nComputer Science\t\t-   " + partsRead[10] +
+                            "\nCloud Computing Theory\t\t-   " + partsRead[11] +
+                            "\nCloud Computing Practical\t\t-   " + partsRead[12] +
+                            "\nSoftware Development Theory\t\t-   " + partsRead[13] +
+                            "\nSoftware Development Practical\t\t-   " + partsRead[14] +
+                            "\nProfessional Practice\t\t-   " + partsRead[15]);
+
+                    nameTxtAreaLecturers.setText("Name\n" + partsRead[0]);
+                    totalTxtAreaLecturers.setText("total\n" + partsRead[16]);
+                    onTargetTxtAreaLecturers.setText("On Target\n" + onTarget[index]);
+                    passPercentageTxtAreaLecturers.append("Pass Percentage\n" + partsRead[18]);
+
+
+
+
+
+
+                }
+                //If there is an error reading from the file and setting the data to the fullName, grades, total, onTarget and percentagePass variables
+                catch (Exception e2) {
+                    System.out.println(e2);
+
 
                 }
 
             }
-        });
 
-        IotRetryBtn.addActionListener(new ActionListener() {
+
+        });
+        //Moves back to the Login page when pressed
+        backBtnLecturersView.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                nextButtonIoT.setEnabled(false);
-                IotRetryBtn.setEnabled(false);
-                iotTheoryGrade.setEnabled(true);
-                iotPracticalGrade.setEnabled(true);
-                confirmBtnIoT.setEnabled(true);
-
-                if (iotTheoryGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    IotLbl.setText(String.valueOf(0));
-                } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    IotLbl.setText(String.valueOf(0));
-                } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    IotLbl.setText(String.valueOf(0));
-
-                }
-                if (iotPracticalGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    IotLbl.setText(String.valueOf(0));
-                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    IotLbl.setText(String.valueOf(0));
-                } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    IotLbl.setText(String.valueOf(0));
-                }
+                //removes previous panel, adds Login panel, repaints and revalidates panels
+                Background.removeAll();
+                Background.add(Login);
+                Background.repaint();
+                Background.revalidate();
             }
         });
-
-
-        DigSkillDataSciRetry.addActionListener(new ActionListener() {
+        //Resets variables, JComboBox and textFields and moves back to welcome page when pressed.
+        signOutBtnLecturers.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds welcome panel, repaints and revalidates panels
+                Background.removeAll();
+                Background.add(Welcome);
+                Background.repaint();
+                Background.revalidate();
 
-                DigSkillsDataGrade.setEnabled(true);
+                signUpStudentReferenceTxtField.setText("");
+                LogInStudentRefNumberTxtField.setText("");
+                signUpPasswordTxtField.setText("");
+                passwordJPasswordField.setText("");
+                forenameTxtField.setText("");
+                surnameTxtField.setText("");
+                fullNameLbl.setText("");
+                profileWelcomeTxtArea.setText("");
+                profileSubjectsTxtArea.setText("");
+                profileGradesTxtArea.setText("");
+                profileNameTxtArea.setText("");
+                profileTotalTxtArea.setText("");
+                profileOnTargetTxtArea.setText("");
+                profilePassPercentageTxtArea.setText("");
+                ResultsTxtAreaInfo.setText("");
+                ResultsTxtAreaName.setText("");
+                ResultsTxtAreaTotal.setText("");
+                ResultsTxtAreaOnTarget.setText("");
+                ResultsTxtAreaPassPercentage.setText("");
+                SummaryTxtAreaSubjects.setText("");
+                SummaryTxtAreaGrades.setText("");
 
-                DigSkillDataSciRetry.setEnabled(false);
+                //Setting grades to default.
+                DigSkillsSoftwareDevTheory.setSelectedItem("Select Grade.");
+                DigSkillsSoftwareDevPrac.setSelectedItem("Select Grade.");
+                DigSkillsCyberGrade.setSelectedItem("Select Grade.");
+                DigSkillsCompSciGrade.setSelectedItem("Select Grade.");
+                DigSkillsDataGrade.setSelectedItem("Select Grade.");
+                iotTheoryGrade.setSelectedItem("Select Grade.");
+                iotPracticalGrade.setSelectedItem("Select Grade.");
+                networkTheory.setSelectedItem("Select Grade.");
+                networkPractical.setSelectedItem("Select Grade.");
+                compSciGrade.setSelectedItem("Select Grade.");
+                CloudCompTheoryGrade.setSelectedItem("Select Grade.");
+                cloudCompPrac.setSelectedItem("Select Grade.");
+                SoftDevTheoryGrade.setSelectedItem("Select Grade.");
+                SoftDevPracticalGrade.setSelectedItem("Select Grade.");
+                ProPractGrade.setSelectedItem("Select Grade.");
 
-                confirmBtnDataScience.setEnabled(true);
-                NextBtnData.setEnabled(false);
+                //Resetting subject retry buttons
+                networkRetryBtn.setEnabled(false);
+                RetrybtnProfPrac.setEnabled(false);
+                RetryCloudBtn.setEnabled(false);
+                RetryCompScienceBtn.setEnabled(false);
+                SoftDevRetryBtn.setEnabled(false);
 
-                if (DigSkillsDataGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    DataLbl.setText(String.valueOf(0));
-                } else if (DigSkillsDataGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    DataLbl.setText(String.valueOf(0));
-                } else if (DigSkillsDataGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    DataLbl.setText(String.valueOf(0));
+                //Resetting subject confirm button
+                confirmBtnNetworkInfrastructure.setEnabled(true);
+                confirmBtnCloudComputing.setEnabled(true);
+                confirmBtnSoftwareDevelopment.setEnabled(true);
+                confirmBtnProfessionalPractice.setEnabled(true);
+                confirmBtnComputerScience.setEnabled(true);
 
-
-                }
-            }
-        });
-        DigSkillComSciRetry.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                confirmBtnDigSkillsCompSci.setEnabled(true);
-                nextBtnDigSkillsCompSci.setEnabled(false);
-                DigSkillComSciRetry.setEnabled(false);
-                DigSkillsCompSciGrade.setEnabled(true);
-
-
-                if (DigSkillsCompSciGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    DigSkillsCompSciLbl.setText(String.valueOf(0));
-                } else if (DigSkillsCompSciGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    DigSkillsCompSciLbl.setText(String.valueOf(0));
-                } else if (DigSkillsCompSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    DigSkillsCompSciLbl.setText(String.valueOf(0));
-
-                }
-            }
-        });
-        DigSkillCybSecRetry.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                confirmBtnDSCS.setEnabled(true);
-                NextBtnCyber.setEnabled(false);
-                DigSkillCybSecRetry.setEnabled(false);
-                DigSkillsCyberGrade.setEnabled(true);
-
-
-                if (DigSkillsCyberGrade.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    dscsLbl.setText(String.valueOf(0));
-                } else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    dscsLbl.setText(String.valueOf(0));
-                } else if (DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    dscsLbl.setText(String.valueOf(0));
-
-
-                }
-            }
-        });
-
-        DigSkilSoftDev.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                confirmBtnDigSkillsSoftware.setEnabled(true);
-                NextBtnDigSkillsSoftware.setEnabled(false);
-                DigSkilSoftDev.setEnabled(false);
-                DigSkillsSoftwareDevTheory.setEnabled(true);
-                DigSkillsSoftwareDevPrac.setEnabled(true);
-
-
-                if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
-                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
-                } else if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
-
-
-                }
-                if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Pass.") {
-                    total = total - 3;
-                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
-                } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 1)") {
-                    total = total - 2;
-                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
-                } else if (DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 2)") {
-                    total = total - 1;
-                    DigSkillsSoftwareDevScoreLbl.setText(String.valueOf(0));
-                }
+                //Setting the grades to editable
+                SoftDevTheoryGrade.setEnabled(true);
+                SoftDevPracticalGrade.setEnabled(true);
             }
         });
     }
+
+
 }
+
