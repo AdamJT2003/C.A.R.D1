@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class CloudComputingQuiz {
-    //
+
 
     public int quizTotal;
     public static void main(String[] args) {
