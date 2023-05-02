@@ -6,7 +6,7 @@ public class IoTQuiz {
         public static void main(String[] args) {
             //initialises prog
             IoTQuiz prog = new IoTQuiz();
-            //calls DigSkillsSoftDevQ1 method
+            //calls IoTQuizQ1 method
             prog.IoTQuizQ1();
         }
 
@@ -121,7 +121,7 @@ public class IoTQuiz {
             }
 
             //Initialises result as JOptionPane.showConfirmDialog
-            int result = JOptionPane.showConfirmDialog(null, radios, "Question 3 - Name of the umbrella term used to describe the network of physical objects that are embedded with sensors, software and other technologies for the purpose of connecting and exchanging data with other device and systems over the internet? (Choose one)", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(null, radios, "Question 3 - What is the umbrella term for the network of physical objects embedded with sensors, software and other technologies that connect and exchange data with other devices and systems over the internet? (Choose one)", JOptionPane.OK_CANCEL_OPTION);
 
             //If result is = JOptionPane.OK_OPTION then it will check the answer selected
             if (result == JOptionPane.OK_OPTION) {

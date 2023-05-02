@@ -10,7 +10,7 @@ public class DigSkillsSoftDevQuiz {
         //calls DigSkillsSoftDevQ1 method
         prog.DigSkillsSoftDevQuizQ1();
     }
-
+//
     public void DigSkillsSoftDevQuizQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
         String[] options = {"a) Software",
