@@ -147,7 +147,7 @@ public class SoftwareDevelopmentQuiz {
 
     public void SoftDevQuizQ4() {
         //Initialise options array
-        String[] options = {"a) Null                                                                                                                                                                                         ",
+        String[] options = {"a) Null                                                                                                                                                                                        ",
                 "b) Float",
                 "c) Object",
                 "d) Complex"};
