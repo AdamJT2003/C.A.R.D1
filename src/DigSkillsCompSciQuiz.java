@@ -1,11 +1,11 @@
 import javax.swing.*;
 
-public class DigSkillsCompSci {
+public class DigSkillsCompSciQuiz {
     public int quizTotal;
 
     public static void main(String[] args) {
         //initialises prog
-        DigSkillsCompSci prog = new DigSkillsCompSci();
+        DigSkillsCompSciQuiz prog = new DigSkillsCompSciQuiz();
         //calls DigSkillsSoftDevQ1 method
         prog.DigSkillsCompSciQ1();
     }
