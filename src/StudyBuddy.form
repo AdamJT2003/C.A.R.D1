@@ -71,7 +71,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="c5fa3" class="javax.swing.JTextPane" binding="LogInTxtPane">
+          <component id="c5fa3" class="javax.swing.JTextPane" binding="LoginTxtPane">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
@@ -85,7 +85,7 @@
               <text value="Hello, before you continue, you must either log in to your account or create a new account. "/>
             </properties>
           </component>
-          <component id="8d68f" class="javax.swing.JTextPane" binding="LogInOrSignUpTxtPane">
+          <component id="8d68f" class="javax.swing.JTextPane" binding="LoginOrSignUpTxtPane">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
@@ -143,7 +143,7 @@
         <children>
           <component id="28b9b" class="javax.swing.JTextPane">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="0" column="0" row-span="1" col-span="7" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
               <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
@@ -155,30 +155,39 @@
               <text value="Sign-up"/>
             </properties>
           </component>
-          <component id="54e0b" class="javax.swing.JButton" binding="signUpConfirmUsernameAndPassword">
+          <component id="4483d" class="javax.swing.JCheckBox" binding="agreeTermsAndConditionsCheckBox">
             <constraints>
-              <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
-              <text value="Confirm"/>
+              <background color="-9399905"/>
+              <minimumSize width="110" height="21"/>
+              <preferredSize width="440" height="30"/>
+              <text value="I have read and agreed to the Terms and Conditions."/>
             </properties>
           </component>
-          <component id="fa833" class="javax.swing.JTextField" binding="signUpStudentReferenceTxtField">
+          <component id="f8d28" class="javax.swing.JButton" binding="backBtnSignUp">
             <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
+              <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
-              <preferredSize width="220" height="30"/>
-              <text value=""/>
+              <text value="Back"/>
+            </properties>
+          </component>
+          <component id="ccfde" class="javax.swing.JButton" binding="nextBtnSignUp">
+            <constraints>
+              <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Next"/>
             </properties>
           </component>
           <component id="ade0c" class="javax.swing.JLabel">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -186,9 +195,19 @@
               <text value="Please create a password."/>
             </properties>
           </component>
-          <component id="c355d" class="javax.swing.JTextField" binding="signUpPasswordTxtField">
+          <component id="a0227" class="javax.swing.JLabel" binding="usernameLbl">
             <constraints>
-              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <preferredSize width="220" height="30"/>
+              <text value="Enter your student reference number"/>
+            </properties>
+          </component>
+          <component id="fa833" class="javax.swing.JTextField" binding="signUpStudentReferenceTxtField">
+            <constraints>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -198,32 +217,36 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="ccfde" class="javax.swing.JButton" binding="nextBtnSignUp">
+          <component id="c355d" class="javax.swing.JTextField" binding="signUpPasswordTxtField">
             <constraints>
-              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
-            </constraints>
-            <properties>
-              <text value="Next"/>
-            </properties>
-          </component>
-          <component id="f8d28" class="javax.swing.JButton" binding="backBtnSignUp">
-            <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
-            </constraints>
-            <properties>
-              <text value="Back"/>
-            </properties>
-          </component>
-          <component id="a0227" class="javax.swing.JLabel" binding="usernameLbl">
-            <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <preferredSize width="220" height="30"/>
-              <text value="Enter your student reference number"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="54e0b" class="javax.swing.JButton" binding="signUpConfirmUsernameAndPassword">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Confirm"/>
+            </properties>
+          </component>
+          <component id="87d01" class="javax.swing.JButton" binding="viewTermsAndConditionsBtn">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-9399905"/>
+              <preferredSize width="440" height="30"/>
+              <text value="View Terms &#10;and Conditions"/>
             </properties>
           </component>
         </children>
@@ -373,7 +396,7 @@
               <text value="Login"/>
             </properties>
           </component>
-          <component id="5443b" class="javax.swing.JTextField" binding="LogInStudentRefNumberTxtField">
+          <component id="5443b" class="javax.swing.JTextField" binding="LoginStudentRefNumberTxtField">
             <constraints>
               <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>

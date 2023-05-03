@@ -114,11 +114,11 @@ public class StudyBuddy {
     private JButton RetryCloudBtn;
     private JButton RetryCompScienceBtn;
     private JPanel LoginOrSignUp;
-    private JTextPane LogInTxtPane;
+    private JTextPane LoginTxtPane;
     private JButton signUpBtn;
     private JButton logInBtn;
     private JButton BackBtnSignUpOrLogIn;
-    private JTextPane LogInOrSignUpTxtPane;
+    private JTextPane LoginOrSignUpTxtPane;
     private JPanel SignUp;
     private JTextField signUpStudentReferenceTxtField;
     private JLabel usernameLbl;
@@ -127,7 +127,7 @@ public class StudyBuddy {
     private JButton backBtnSignUp;
     private JButton nextBtnSignUp;
     private JPanel Login;
-    private JTextField LogInStudentRefNumberTxtField;
+    private JTextField LoginStudentRefNumberTxtField;
     private JButton confirmBtnLogin;
     private JButton backBtnLogin;
     private JButton NextBtnLogin;
@@ -176,6 +176,8 @@ public class StudyBuddy {
     private JButton backBtnLecturersView;
     private JButton profileBtnQuizSelec;
     private JButton resultsBtnQuizSelec;
+    private JButton viewTermsAndConditionsBtn;
+    private JCheckBox agreeTermsAndConditionsCheckBox;
     private JRadioButton ansARadioBtnDigSkillsSoftDevQ1;
     private JButton confirmAnsBtnsDigSkillsSoftDevQ1;
     private JButton nextQBtnDigSkillsSoftDevQ1;
@@ -341,77 +343,102 @@ public class StudyBuddy {
         signUpConfirmUsernameAndPassword.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Creates File called fileUsernames which represents users.txt
-                File fileUsernames = new File("users.txt");
 
                 //Checks to see if the sign-up text fields are empty and throws a warning message
                 if (signUpStudentReferenceTxtField.getText().isEmpty() || signUpPasswordTxtField.getText().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Please enter a username and password.");
+                }else {
+                    /*Checks to see if the user agrees to the terms and conditions, if yes then the user can move on, if no then it will prompt a must
+                    agree to terms and conditions to continue message.
+                    */
+                    if (agreeTermsAndConditionsCheckBox.isSelected()) {
+                        //Creates File called fileUsernames which represents users.txt
+                        File fileUsernames = new File("users.txt");
 
 
-                }
-                //Creates a new File called filed which represents signUpStudentReferenceTxtField.getText().txt
-                File file = new File(signUpStudentReferenceTxtField.getText() + ".txt");
-                if (file.exists()) {
-                    JOptionPane.showMessageDialog(null, "Cannot create account as there is already an account with this student reference number or lecturers email.");
-                }
-                //If both text fields are filled in, this will write the student reference number and password to users.txt
-                else {
-                    try {
-
-                        //Creates a new FileOutputStream called fOut which represents fileUsernames.
-                        FileOutputStream fOut = new FileOutputStream(fileUsernames, true);
-                        OutputStreamWriter osw = new OutputStreamWriter(fOut);
-                        osw.write(signUpStudentReferenceTxtField.getText() + "," + signUpPasswordTxtField.getText());
-                        osw.write("\n");
-                        osw.flush();
-                        osw.close();
-
-                    }
-                    //Throws an exception if users.txt cannot be found
-                    catch (Exception e2) {
-
-                    }
-
-                    //Enables nextBtnSignUp
-                    nextBtnSignUp.setEnabled(true);
-
-                    //Initialises writer
-                    Writer writer = null;
-
-                    //creates a new file using the student reference number when both the student reference number and password text fields are full
-                    try {
-                        writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(signUpStudentReferenceTxtField.getText() + ".txt"), "utf-8"));
-                    } catch (IOException ex) {
-
-                    } finally {
-                        try {
-                            writer.close();
+                        //Creates a new File called filed which represents signUpStudentReferenceTxtField.getText().txt
+                        File file = new File(signUpStudentReferenceTxtField.getText() + ".txt");
+                        if (file.exists()) {
+                            JOptionPane.showMessageDialog(null, "Cannot create account as there is already an account with this student reference number or lecturers email.");
                         }
-                        //If it can't create a file, it will prompt an error message.
-                        catch (Exception ex) {
-                            JOptionPane.showMessageDialog(null, "Cannot create text file.");
-                        }
-                    }
+                        //If both text fields are filled in, this will write the student reference number and password to users.txt
+                        else {
+                            try {
 
-                    //Writes student reference numbers to a text file
-                    File fileUserRefNo = new File("usersRefNo.txt");
-                    if (signUpStudentReferenceTxtField.getText().matches("\\d+")) {
-                        try {
-                            FileOutputStream fOut = new FileOutputStream(fileUserRefNo, true);
-                            OutputStreamWriter osw = new OutputStreamWriter(fOut);
-                            osw.write(signUpStudentReferenceTxtField.getText());
-                            osw.write(",");
-                            osw.flush();
-                            osw.close();
+                                //Creates a new FileOutputStream called fOut which represents fileUsernames.
+                                FileOutputStream fOut = new FileOutputStream(fileUsernames, true);
+                                OutputStreamWriter osw = new OutputStreamWriter(fOut);
+                                osw.write(signUpStudentReferenceTxtField.getText() + "," + signUpPasswordTxtField.getText());
+                                osw.write("\n");
+                                osw.flush();
+                                osw.close();
 
-                        } catch (Exception e2) {
+                            }
+                            //Throws an exception if users.txt cannot be found
+                            catch (Exception e2) {
+
+                            }
+
+                            //Enables nextBtnSignUp
+                            nextBtnSignUp.setEnabled(true);
+
+                            //Initialises writer
+                            Writer writer = null;
+
+                            //creates a new file using the student reference number when both the student reference number and password text fields are full
+                            try {
+                                writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(signUpStudentReferenceTxtField.getText() + ".txt"), "utf-8"));
+                            } catch (IOException ex) {
+
+                            } finally {
+                                try {
+                                    writer.close();
+                                }
+                                //If it can't create a file, it will prompt an error message.
+                                catch (Exception ex) {
+                                    JOptionPane.showMessageDialog(null, "Cannot create text file.");
+                                }
+                            }
+
+                            //Writes student reference numbers to a text file
+                            File fileUserRefNo = new File("usersRefNo.txt");
+                            if (signUpStudentReferenceTxtField.getText().matches("\\d+")) {
+                                try {
+                                    FileOutputStream fOut = new FileOutputStream(fileUserRefNo, true);
+                                    OutputStreamWriter osw = new OutputStreamWriter(fOut);
+                                    osw.write(signUpStudentReferenceTxtField.getText());
+                                    osw.write(",");
+                                    osw.flush();
+                                    osw.close();
+
+                                } catch (Exception e2) {
+                                }
+                            } else {
+
+                            }
+
                         }
                     } else {
-
+                        JOptionPane.showMessageDialog(null, "You must agree to the Terms and Conditions to continue.");
                     }
-
                 }
+            }
+        });
+
+        //View terms and conditions button on sign up page, opens a JOptionPane to show the terms and conditions
+        viewTermsAndConditionsBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Terms and Conditions\n\n" +
+                                                                          "1. Users must create an account to use the app.\n" +
+                                                                          "2. The app will save user's inputted grades to a file which was \n    " +
+                                                                          "created at sign-up and is named after the username (student reference number) \n    " +
+                                                                          "so that the file can be identified.\n" +
+                                                                          "3. Users must not share their account details with anyone else.\n" +
+                                                                          "4. Users must not use the app for any illegal or unauthorized purpose.\n" +
+                                                                          "5. The app is provided “as is” and without warranty of any kind, either express or implied.\n" +
+                                                                          "6. The app may be updated from time to time and may contain bugs or errors.\n" +
+                                                                          "7. The app may be terminated at any time without notice.");
             }
         });
 
@@ -458,7 +485,7 @@ public class StudyBuddy {
             public void actionPerformed(ActionEvent e) {
 
                 //Initialises username as input from loginStudentRefNumberTxtField and password as input from passwordJPasswordField
-                String username = LogInStudentRefNumberTxtField.getText();
+                String username = LoginStudentRefNumberTxtField.getText();
                 String password = String.valueOf(passwordJPasswordField.getPassword());
 
 
@@ -483,8 +510,8 @@ public class StudyBuddy {
                             NextBtnLogin.setEnabled(true);
 
                             try {
-                                //Creates FileReader called reader which represents LogInStudentRefNumberTxtField input text field
-                                FileReader reader = new FileReader(LogInStudentRefNumberTxtField.getText() + ".txt");
+                                //Creates FileReader called reader which represents LoginStudentRefNumberTxtField input text field
+                                FileReader reader = new FileReader(LoginStudentRefNumberTxtField.getText() + ".txt");
                                 //Creates new BufferedReader called br which represents reader
                                 BufferedReader br = new BufferedReader(reader);
 
@@ -611,7 +638,7 @@ public class StudyBuddy {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Checks to see if it is an integer, if it is then it will move onto the Profile page, if not then it will move onto Lecturers View page
-                if (LogInStudentRefNumberTxtField.getText().matches("\\d+")) {
+                if (LoginStudentRefNumberTxtField.getText().matches("\\d+")) {
                     //removes previous panel, adds Profile panel, repaints and revalidates panels
                     Background.removeAll();
                     Background.add(Profile);
@@ -730,7 +757,7 @@ public class StudyBuddy {
             public void actionPerformed(ActionEvent e) {
                 //Clearing all text areas after sign out.
                 signUpStudentReferenceTxtField.setText("");
-                LogInStudentRefNumberTxtField.setText("");
+                LoginStudentRefNumberTxtField.setText("");
                 signUpPasswordTxtField.setText("");
                 passwordJPasswordField.setText("");
                 forenameTxtField.setText("");
@@ -807,6 +834,7 @@ public class StudyBuddy {
         });
 
 
+        //Name page
         //Confirms and displays the users full name when pressed
         confirmBtnName.addActionListener(new ActionListener() {
             @Override
@@ -845,13 +873,22 @@ public class StudyBuddy {
                     percentagePass = 0;
                 }
 
-                //creates a new File called fileNames which represents signUpStudentsReferenceTxtField.getText() text file and writes the users name, grades, total, whether they are on target and pass percentage to the file
+                /*Creates a new File called fileNames which represents signUpStudentsReferenceTxtField.getText() text file
+                and writes the users name, grades, total, whether they are on target and pass percentage to the file
+                */
                 File fileNames = new File(signUpStudentReferenceTxtField.getText() + ".txt");
+
                 try {
+                    //Creates a new FileOutputStream called fOut which represents fileNames and is set to append true
                     FileOutputStream fOut = new FileOutputStream(fileNames, true);
+                    //Creates a new OutputStreamWriter called osw which represents fOut
                     OutputStreamWriter osw = new OutputStreamWriter(fOut);
+
+                    //Writes the users full name, selected grades, total, whether they are on target or not and there percentage pass
                     osw.write(fullName + ", " + DigSkillsSoftwareDevTheory.getSelectedItem() + ", " + DigSkillsSoftwareDevPrac.getSelectedItem() + ", " + DigSkillsCyberGrade.getSelectedItem() + ", " + DigSkillsCompSciGrade.getSelectedItem() + ", " + DigSkillsDataGrade.getSelectedItem() + ", " + iotTheoryGrade.getSelectedItem() + ", " + iotPracticalGrade.getSelectedItem() + ", " + networkTheory.getSelectedItem() + ", " + networkPractical.getSelectedItem() + ", " + compSciGrade.getSelectedItem() + ", " + CloudCompTheoryGrade.getSelectedItem() + ", " + cloudCompPrac.getSelectedItem() + ", " + SoftDevTheoryGrade.getSelectedItem() + ", " + SoftDevPracticalGrade.getSelectedItem() + ", " + ProPractGrade.getSelectedItem() + ", " + total + ", " + index + ", " + percentagePass + ", ");
+                    //Sends the data from the buffer to the file
                     osw.flush();
+                    //Closes the output stream called osw
                     osw.close();
                 } catch (Exception e2) {
 
@@ -886,7 +923,7 @@ public class StudyBuddy {
             }
         });
 
-
+        //Digital Skills: Software Development page
         //Back button to move back to Profile panel when pressed
         backBtnDigSkillsSoftware.addActionListener(new ActionListener() {
             @Override
@@ -899,7 +936,6 @@ public class StudyBuddy {
 
             }
         });
-
 
         //Confirms digital skills software dev grade when pressed
         confirmBtnDigSkillsSoftware.addActionListener(new ActionListener() {
@@ -1006,6 +1042,7 @@ public class StudyBuddy {
         });
 
 
+        //Digital Skills: Cyber security page
         //Back button to move back to digital skills software dev page when pressed
         BackBtnCyber.addActionListener(new ActionListener() {
             @Override
@@ -1100,6 +1137,7 @@ public class StudyBuddy {
             }
         });
 
+        //Digital Skills: Computer Science page
         //Back button to move back to digital skills cyber security page when pressed
         backBtnDigSkillsCompSci.addActionListener(new ActionListener() {
             @Override
@@ -1191,6 +1229,7 @@ public class StudyBuddy {
             }
         });
 
+        //Digital Skills: Data Science
         //Back button to move back to digital skills computer science
         BackBtnData.addActionListener(new ActionListener() {
             @Override
@@ -1277,7 +1316,7 @@ public class StudyBuddy {
             }
         });
 
-
+        //IoT page
         //Back button to move back digital skills data science when pressed
         backButtonIoT.addActionListener(new ActionListener() {
             @Override
@@ -1287,7 +1326,6 @@ public class StudyBuddy {
                 Background.add(DigSkillsDataScience);
                 Background.repaint();
                 Background.revalidate();
-
             }
         });
 
@@ -1396,6 +1434,7 @@ public class StudyBuddy {
             }
         });
 
+        //Network Infrastructure page
         //Back button to move back to IoT page when pressed
         networkBackButton.addActionListener(new ActionListener() {
             @Override
@@ -1518,7 +1557,7 @@ public class StudyBuddy {
             }
         });
 
-
+        //Computer Science page
         //Back button to move back to network infrastructure page when pressed
         compSciBackButton.addActionListener(new ActionListener() {
             @Override
@@ -1611,7 +1650,7 @@ public class StudyBuddy {
             }
         });
 
-
+        //Cloud Computing page
         //Back button to move back to computer science page when pressed
         BackBtnCloud.addActionListener(new ActionListener() {
             @Override
@@ -1725,7 +1764,7 @@ public class StudyBuddy {
             }
         });
 
-
+        //Software Development page
         //Back button to move back to cloud computing when pressed
         BackBtnSoftDev.addActionListener(new ActionListener() {
             @Override
@@ -1847,6 +1886,7 @@ public class StudyBuddy {
             }
         });
 
+        //Professional Practice page
         //Back button to move back to software development page when pressed
         BackBtnProfPractice.addActionListener(new ActionListener() {
             @Override
@@ -1923,6 +1963,7 @@ public class StudyBuddy {
 
             }
         });
+
         //Next button to move onto Summary page when pressed
         NextBtnProfPractice.addActionListener(new ActionListener() {
             @Override
@@ -1992,6 +2033,7 @@ public class StudyBuddy {
             }
         });
 
+        //Summary page
         //Back button to move back to professional practice page when pressed
         backBtnSummary.addActionListener(new ActionListener() {
             @Override
@@ -2024,17 +2066,29 @@ public class StudyBuddy {
                     index = 2;
                 } else if (total >= 32) {
                     index = 1;
+                } else {
+                    index = 0;
                 }
 
 
+                //Displays information about how the results are calculated.
                 ResultsTxtAreaInfo.setText("The total is calculated by adding on a set value dependant on the grade and \nattempt, to be on target, you must have a total of 33 or higher and must have \ngreater than a fail attempt 3.");
+
+                //Displays fullName
                 ResultsTxtAreaName.setText("Name\n" + fullName);
+
+                //Displays total
                 ResultsTxtAreaTotal.setText("Total\n" + total);
+
+                //Uses index to decide which item in the onTarget array will be selected to display whether they are on target or not.
                 ResultsTxtAreaOnTarget.setText("On Target\n" + onTarget[index]);
+
+                //Displays the percentage pass.
                 ResultsTxtAreaPassPercentage.setText("Pass Percentage\n" + percentagePass + "%");
             }
         });
 
+        //Results page
         //Back button to move back to the summary page when pressed
         backBtnResults.addActionListener(new ActionListener() {
             @Override
@@ -2047,20 +2101,32 @@ public class StudyBuddy {
             }
         });
 
+        //Saves the results to a file when pressed
         saveBtnResults.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                File studenRefNo = new File(LogInStudentRefNumberTxtField.getText() + ".txt");
+                /*Initialises File called studentRefNo which represents the users inputted LoginStudentRefNumberTxtField
+                text file
+                */
+                File studenRefNo = new File(LoginStudentRefNumberTxtField.getText() + ".txt");
+
+                /*Writes the users name, grades and results into their inputted student reference number text field,
+                replacing previous data
+                */
                 try {
                     FileOutputStream fOut = new FileOutputStream(studenRefNo, false);
                     OutputStreamWriter osw = new OutputStreamWriter(fOut);
                     osw.write(fullName + ", " + DigSkillsSoftwareDevTheory.getSelectedItem() + ", " + DigSkillsSoftwareDevPrac.getSelectedItem() + ", " + DigSkillsCyberGrade.getSelectedItem() + ", " + DigSkillsCompSciGrade.getSelectedItem() + ", " + DigSkillsDataGrade.getSelectedItem() + ", " + iotTheoryGrade.getSelectedItem() + ", " + iotPracticalGrade.getSelectedItem() + ", " + networkTheory.getSelectedItem() + ", " + networkPractical.getSelectedItem() + ", " + compSciGrade.getSelectedItem() + ", " + CloudCompTheoryGrade.getSelectedItem() + ", " + cloudCompPrac.getSelectedItem() + ", " + SoftDevTheoryGrade.getSelectedItem() + ", " + SoftDevPracticalGrade.getSelectedItem() + ", " + ProPractGrade.getSelectedItem() + ", " + total + ", " + index + ", " + percentagePass + ", ");
                     osw.flush();
                     osw.close();
-                } catch (Exception e2) {
+                }
+                //Catches any exceptions, for example, it would catch if there was no file to save the data to.
+                catch (Exception e2) {
                 }
             }
         });
+
+        //Edit grades button, moves back to digital skills software development when pressed
         editGradesBtnResults.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2070,6 +2136,7 @@ public class StudyBuddy {
                 Background.repaint();
                 Background.revalidate();
 
+                //Resets the total back to 0
                 total = 0;
 
                 //Resetting subject retry buttons
@@ -2114,12 +2181,14 @@ public class StudyBuddy {
                 ProPractGrade.setEnabled(true);
             }
         });
+
+        //Sign out button on results page, signs the user out and moves back to the welcome page when pressed
         signOutBtnResults.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Clearing all text areas after sign out.
                 signUpStudentReferenceTxtField.setText("");
-                LogInStudentRefNumberTxtField.setText("");
+                LoginStudentRefNumberTxtField.setText("");
                 signUpPasswordTxtField.setText("");
                 passwordJPasswordField.setText("");
                 forenameTxtField.setText("");
@@ -2181,6 +2250,8 @@ public class StudyBuddy {
                 Background.revalidate();
             }
         });
+
+        //Quiz button on results page, moves onto quiz selection page when pressed.
         quizBtnResults.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2193,42 +2264,74 @@ public class StudyBuddy {
             }
         });
 
-        //Start button to begin the selected quiz when pressed.
+        //Quiz Selection page quiz
+        //Start button on quiz selection page, starts the selected quiz when pressed.
         startBtnQuizSelection.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Getting the user's input from the quizSelector jComboBox to work out which quiz the user wants to attempt
                 if (quizSelector.getSelectedItem() == "Digital Skills: Software Development.") {
+                    //Creates a new instance of the DigSkillsSoftDevQuiz class and assigns it to the variable prog
                     DigSkillsSoftDevQuiz prog = new DigSkillsSoftDevQuiz();
+
+                    //Calls the method called DigSkillsSoftDevQuizQ1 within the DigSkillsSoftDevQuiz class
                     prog.DigSkillsSoftDevQuizQ1();
                 } else if (quizSelector.getSelectedItem() == "Digital Skills: Cyber Security.") {
+                    //Creates a new instance of the DigSkillsCyberSecQuiz class and assigns it to the variable prog
                     DigSkillsCyberSecQuiz prog = new DigSkillsCyberSecQuiz();
+
+                    //Calls the method called DigSkillsCyberSecQuizQ1 within the DigSkillsSoftDevQuiz class
                     prog.DigSkillsCyberSecQuizQ1();
                 } else if (quizSelector.getSelectedItem() == "Digital Skills: Computer Science.") {
+                    //Creates a new instance of the DigSkillsCompSciQuiz class and assigns it to the variable prog
                     DigSkillsCompSciQuiz prog = new DigSkillsCompSciQuiz();
+
+                    //Calls the method called DigSkillsCompSciQ1 within the DigSkillsSoftDevQuiz class
                     prog.DigSkillsCompSciQ1();
                 } else if (quizSelector.getSelectedItem() == "Digital Skills: Data Science.") {
+                    //Creates a new instance of the DigSkillsDataSciQuiz class and assigns it to the variable prog
                     DigSkillsDataSciQuiz prog = new DigSkillsDataSciQuiz();
+
+                    //Calls the method called DigSkillsDataSciQuizQ1 within the DigSkillsSoftDevQuiz class
                     prog.DigSkillsDataSciQuizQ1();
                 } else if (quizSelector.getSelectedItem() == "Internet of Things.") {
+                    //Creates a new instance of the IoTQuiz class and assigns it to the variable prog
                     IoTQuiz prog = new IoTQuiz();
+
+                    //Calls the method called IoTQuizQ1 within the DigSkillsSoftDevQuiz class
                     prog.IoTQuizQ1();
                 } else if (quizSelector.getSelectedItem() == "Network Infrastructure.") {
+                    //Creates a new instance of the NetworkInfraQuiz class and assigns it to the variable prog
                     NetworkInfraQuiz prog = new NetworkInfraQuiz();
+
+                    //Calls the method called NetworkInfraQ1 within the DigSkillsSoftDevQuiz class
                     prog.NetworkInfraQ1();
                 } else if (quizSelector.getSelectedItem() == "Computer Science.") {
+                    //Creates a new instance of the ComputerScienceQuiz class and assigns it to the variable prog
                     ComputerScienceQuiz prog = new ComputerScienceQuiz();
+
+                    //Calls the method called ComputerScienceQuizQ1 within the DigSkillsSoftDevQuiz class
                     prog.ComputerScienceQuizQ1();
                 } else if (quizSelector.getSelectedItem() == "Cloud Computing.") {
+                    //Creates a new instance of the CloudComputingQuiz class and assigns it to the variable prog
                     CloudComputingQuiz prog = new CloudComputingQuiz();
+
+                    //Calls the method called CloudComputingQuizQ1 within the DigSkillsSoftDevQuiz class
                     prog.CloudComputingQuizQ1();
                 } else if (quizSelector.getSelectedItem() == "Software Development.") {
+                    //Creates a new instance of the SoftwareDevelopmentQuiz class and assigns it to the variable prog
                     SoftwareDevelopmentQuiz prog = new SoftwareDevelopmentQuiz();
+
+                    //Calls the method called SoftDevQuizQ1 within the DigSkillsSoftDevQuiz class
                     prog.SoftDevQuizQ1();
                 } else if (quizSelector.getSelectedItem() == "Professional Practice.") {
+                    //Creates a new instance of the ProfessionalPracticeQuiz class and assigns it to the variable prog
                     ProfessionalPracticeQuiz prog = new ProfessionalPracticeQuiz();
+
+                    //Calls the method called ProfessionalPracticeQuizQ1 within the DigSkillsSoftDevQuiz class
                     prog.ProfessionalPracticeQuizQ1();
                 } else {
+                    //Prompts a "There was no quiz selected!" message
                     JOptionPane.showMessageDialog(null, "There was no quiz selected!");
                 }
 
@@ -2237,14 +2340,39 @@ public class StudyBuddy {
 
         });
 
+        //Profile button on quiz selection page, moves back to the profile page when pressed
+        profileBtnQuizSelec.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds profile panel, repaints and revalidates panels
+                Background.removeAll();
+                Background.add(Profile);
+                Background.repaint();
+                Background.revalidate();
+            }
+        });
 
-        //Loads user profile and displays grades, full name, total, whether they are on target and their percentage pass when pressed
+        //Results button on quiz selection page, moves back to the results page when pressed
+        resultsBtnQuizSelec.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //removes previous panel, adds results panel, repaints and revalidates panels
+                Background.removeAll();
+                Background.add(Results);
+                Background.repaint();
+                Background.revalidate();
+            }
+        });
+
+        //Lecturers view page
+        /*Loads user profile and displays the selected students profile when pressed
+        */
         loadUserLecturers.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 try {
-                    //Creates FileReader called reader which represents LogInStudentRefNumberTxtField input text field
+                    //Creates FileReader called reader which represents LoginStudentRefNumberTxtField input text field
                     FileReader reader = new FileReader(studentRefComboBoxLecturers.getSelectedItem() + ".txt");
                     //Creates new BufferedReader called br which represents reader
                     BufferedReader br = new BufferedReader(reader);
@@ -2254,9 +2382,7 @@ public class StudyBuddy {
                     String[] partsRead = lineRead.split(", ");
 
 
-                    //Reads the data from the account's text file and sets it to the fullName, grades, total, onTarget and percentagePass variables.
-
-
+                    //Closes the FileReader called br
                     br.close();
                     int index = Integer.parseInt(partsRead[17]);
 
@@ -2278,6 +2404,7 @@ public class StudyBuddy {
                             "\nSoftware Development Practical\t\t-   " + partsRead[14] +
                             "\nProfessional Practice\t\t-   " + partsRead[15]);
 
+                    //Displays the selected users full name, total, if they are on target or not and their percentage pass.
                     nameTxtAreaLecturers.setText("Name\n" + partsRead[0]);
                     totalTxtAreaLecturers.setText("total\n" + partsRead[16]);
                     onTargetTxtAreaLecturers.setText("On Target\n" + onTarget[index]);
@@ -2285,18 +2412,17 @@ public class StudyBuddy {
 
 
                 }
-                //If there is an error reading from the file and setting the data to the fullName, grades, total, onTarget and percentagePass variables
+                //If there is an error reading from the file and displaying the data, it will print a message about an exception
                 catch (Exception e2) {
                     System.out.println(e2);
-
-
                 }
 
             }
 
 
         });
-        //Back button to move back to the Login page when pressed
+
+        //Back button on lecturers view page to move back to the Login page when pressed
         backBtnLecturersView.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2307,7 +2433,8 @@ public class StudyBuddy {
                 Background.revalidate();
             }
         });
-        //Resets variables, JComboBox and textFields and moves back to welcome page when pressed.
+
+        //Sign-out button on lecturers view page, signs the user out when pressed
         signOutBtnLecturers.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2317,8 +2444,9 @@ public class StudyBuddy {
                 Background.repaint();
                 Background.revalidate();
 
+                //Resets all the text fields to default (empties them)
                 signUpStudentReferenceTxtField.setText("");
-                LogInStudentRefNumberTxtField.setText("");
+                LoginStudentRefNumberTxtField.setText("");
                 signUpPasswordTxtField.setText("");
                 passwordJPasswordField.setText("");
                 forenameTxtField.setText("");
@@ -2375,6 +2503,9 @@ public class StudyBuddy {
                 SoftDevPracticalGrade.setEnabled(true);
             }
         });
+
+
+
     }
 
 
