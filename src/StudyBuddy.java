@@ -862,7 +862,7 @@ public class StudyBuddy {
         });
 
 
-        //takes user back to sign-up panel when pressed
+        //Back button to move back to sign-up panel when pressed
         backBtnName.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -874,8 +874,7 @@ public class StudyBuddy {
             }
         });
 
-
-        // next button to move onto Login panel when pressed
+        //Next button to move onto Login panel when pressed
         NextBtnName.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -888,7 +887,7 @@ public class StudyBuddy {
         });
 
 
-        // back button to move onto Profile panel when pressed
+        //Back button to move back to Profile panel when pressed
         backBtnDigSkillsSoftware.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -993,7 +992,7 @@ public class StudyBuddy {
                 }
             }
         });
-        // next button to move onto digital skills cyber security page when pressed
+        //Next button to move onto digital skills cyber security page when pressed
         NextBtnDigSkillsSoftware.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1007,7 +1006,7 @@ public class StudyBuddy {
         });
 
 
-        // back button to move back to digital skills software dev page when pressed
+        //Back button to move back to digital skills software dev page when pressed
         BackBtnCyber.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1052,9 +1051,6 @@ public class StudyBuddy {
                 //Updates total and displays Digital Skills: Cyber-security total
                 total = total + DigSkillsCyberSecureTotal;
                 dscsLbl.setText(String.valueOf(DigSkillsCyberSecureTotal));
-
-                //Enables next button
-                NextBtnCyber.setEnabled(true);
 
             }
         });
@@ -1151,7 +1147,6 @@ public class StudyBuddy {
                 //Updates total and displays Digital Skills: Computing Science total
                 total = total + DigSkillsCompSciTotal;
                 DigSkillsCompSciLbl.setText(String.valueOf(DigSkillsCompSciTotal));
-                nextBtnDigSkillsCompSci.setEnabled(true);
             }
         });
         //Resets digital skills computer science grade when pressed
@@ -1237,10 +1232,9 @@ public class StudyBuddy {
                 //Updates total and displays Digital Skills: Data Science total
                 DataLbl.setText(String.valueOf(total2));
                 total = total + total2;
-                NextBtnData.setEnabled(true);
             }
         });
-        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        //Resets digital skills data science grade when pressed
         DigSkillsDataSciRetryBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1284,7 +1278,7 @@ public class StudyBuddy {
         });
 
 
-        // back btn to data sci
+        //Back button to move back digital skills data science when pressed
         backButtonIoT.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1298,61 +1292,70 @@ public class StudyBuddy {
         });
 
 
+        //Confirms IoT grades when pressed.
         confirmBtnIoT.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
+                //Enables retry and next button
                 IotRetryBtn.setEnabled(true);
                 nextButtonIoT.setEnabled(true);
 
-
+                //Disables confirm button and JComboBox for theory and practical grades.
                 confirmBtnIoT.setEnabled(false);
                 iotPracticalGrade.setEnabled(false);
                 iotTheoryGrade.setEnabled(false);
+
+                //Initialises Total3 as 0
                 int Total3 = 0;
 
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
                 if (iotTheoryGrade.getSelectedItem() == "Pass.") {
                     Total3 += 3;
-
                 } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 1)") {
                     Total3 += 2;
-
                 } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 2)") {
                     Total3 += 1;
-
                 } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 3)") {
                     Total3 += 0;
-
                 }
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
                 if (iotPracticalGrade.getSelectedItem() == "Pass.") {
                     Total3 += 3;
-
                 } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 1)") {
                     Total3 += 2;
-
                 } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 2)") {
                     Total3 += 1;
-
                 } else if (iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 3)") {
                     Total3 += 0;
-
                 }
+
+                //Updates the total and displays the IoT total
                 total = total + Total3;
                 IotLbl.setText(String.valueOf(Total3));
-                nextButtonIoT.setEnabled(true);
             }
         });
 
-        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        //Resets IoT grades when pressed
         IotRetryBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Disables the next and retry button
                 nextButtonIoT.setEnabled(false);
                 IotRetryBtn.setEnabled(false);
+
+                //Enables the confirm button and the JComboBox for theory and practical grades
                 iotTheoryGrade.setEnabled(true);
                 iotPracticalGrade.setEnabled(true);
                 confirmBtnIoT.setEnabled(true);
 
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
                 if (iotTheoryGrade.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     IotLbl.setText(String.valueOf(0));
@@ -1362,8 +1365,10 @@ public class StudyBuddy {
                 } else if (iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 2)") {
                     total = total - 1;
                     IotLbl.setText(String.valueOf(0));
-
                 }
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
                 if (iotPracticalGrade.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     IotLbl.setText(String.valueOf(0));
@@ -1405,32 +1410,37 @@ public class StudyBuddy {
             }
         });
 
-        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        //Confirms Network Infrastructure grades when pressed.
         confirmBtnNetworkInfrastructure.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //Disables the confirm button and the JComboBox for theory and practical grades
                 networkTheory.setEnabled(false);
                 networkPractical.setEnabled(false);
-
-                networkNextButton.setEnabled(true);
                 confirmBtnNetworkInfrastructure.setEnabled(false);
+
+                //Enables next and retry button
+                networkNextButton.setEnabled(true);
                 networkRetryBtn.setEnabled(true);
+
+                //Initialises Total3 as 0
                 int Total3 = 0;
 
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
                 if (networkTheory.getSelectedItem() == "Pass.") {
                     Total3 += 3;
-
                 } else if (networkTheory.getSelectedItem() == "Fail. (Attempt 1)") {
                     Total3 += 2;
-
                 } else if (networkTheory.getSelectedItem() == "Fail. (Attempt 2)") {
                     Total3 += 1;
-
                 } else if (networkTheory.getSelectedItem() == "Fail. (Attempt 3)") {
                     Total3 += 0;
-
                 }
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
                 if (networkPractical.getSelectedItem() == "Pass.") {
                     Total3 += 3;
 
@@ -1444,22 +1454,29 @@ public class StudyBuddy {
                     Total3 += 0;
 
                 }
+                //Updates the total and displays the Network Infrastructure total.
                 total = total + Total3;
                 NetworkLbl.setText(String.valueOf(Total3));
 
             }
         });
 
+        //Resets the network infrastructure grades when pressed
         networkRetryBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Enables confirm button and JComboBox for theory and practical grades
                 confirmBtnNetworkInfrastructure.setEnabled(true);
                 networkTheory.setEnabled(true);
                 networkPractical.setEnabled(true);
 
+                //Disables next and retry button
                 networkRetryBtn.setEnabled(false);
                 networkNextButton.setEnabled(false);
 
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be subtracted from the total
+                 */
                 if (networkTheory.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     NetworkLbl.setText(String.valueOf(0));
@@ -1471,6 +1488,9 @@ public class StudyBuddy {
                     NetworkLbl.setText(String.valueOf(0));
 
                 }
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be subtracted from the total
+                 */
                 if (networkPractical.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     NetworkLbl.setText(String.valueOf(0));
@@ -1499,7 +1519,7 @@ public class StudyBuddy {
         });
 
 
-        // back btn to network infra
+        //Back button to move back to network infrastructure page when pressed
         compSciBackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1513,47 +1533,56 @@ public class StudyBuddy {
             }
         });
 
+        //Confirms computer science grade when pressed.
         confirmBtnComputerScience.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //Disables the confirm button and JComboBox for grades
                 compSciGrade.setEnabled(false);
                 confirmBtnComputerScience.setEnabled(false);
+
+                //Enables retry and next button
                 RetryCompScienceBtn.setEnabled(true);
+                compSciNextButton.setEnabled(true);
 
-
+                //Initialises Total3 as 0
                 int Total3 = 0;
 
 
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
                 if (compSciGrade.getSelectedItem() == "Pass.") {
                     Total3 += 3;
-
                 } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 1)") {
                     Total3 += 2;
-
                 } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 2)") {
                     Total3 += 1;
-
                 } else if (compSciGrade.getSelectedItem() == "Fail. (Attempt 3)") {
                     Total3 += 0;
                 }
+
+                //Updates the total and displays the Computer Science total
                 total = total + Total3;
                 compSciLbl.setText(String.valueOf(Total3));
-                compSciNextButton.setEnabled(true);
             }
         });
 
-        //Resets the score back to before the confirm button was pressed, enables the confirm button and the JComboBox and disables the retry button when pressed
+        //Resets the computer science grades when pressed
         RetryCompScienceBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //Enables confirm button and JComboBox for grades
                 confirmBtnComputerScience.setEnabled(true);
                 compSciGrade.setEnabled(true);
 
+                //Disables retry and next button
                 RetryCompScienceBtn.setEnabled(false);
                 compSciNextButton.setEnabled(false);
 
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be subtracted from the total
+                 */
                 if (compSciGrade.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     compSciLbl.setText(String.valueOf(0));
@@ -1583,7 +1612,7 @@ public class StudyBuddy {
         });
 
 
-        // back btn to comp sci
+        //Back button to move back to computer science page when pressed
         BackBtnCloud.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1595,59 +1624,69 @@ public class StudyBuddy {
             }
         });
 
+        //Confirms cloud computing grades when pressed.
         confirmBtnCloudComputing.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //Disables confirm button and JComboBox for theory and practical grades
                 CloudCompTheoryGrade.setEnabled(false);
                 cloudCompPrac.setEnabled(false);
-
-                NextBtnCloud.setEnabled(true);
                 confirmBtnCloudComputing.setEnabled(false);
+
+                //Enables next and retry button
+                NextBtnCloud.setEnabled(true);
                 RetryCloudBtn.setEnabled(true);
 
-
+                //Initialises Total3 as 0
                 int Total3 = 0;
+
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
                 if (CloudCompTheoryGrade.getSelectedItem() == "Pass.") {
                     Total3 += 3;
-
                 } else if (CloudCompTheoryGrade.getSelectedItem() == "Fail. (Attempt 1)") {
                     Total3 += 2;
-
                 } else if (CloudCompTheoryGrade.getSelectedItem() == "Fail. (Attempt 2)") {
                     Total3 += 1;
-
                 } else if (CloudCompTheoryGrade.getSelectedItem() == "Fail. (Attempt 3)") {
                     Total3 += 0;
                 }
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
                 if (cloudCompPrac.getSelectedItem() == "Pass.") {
                     Total3 += 3;
-
                 } else if (cloudCompPrac.getSelectedItem() == "Fail. (Attempt 1)") {
                     Total3 += 2;
-
                 } else if (cloudCompPrac.getSelectedItem() == "Fail. (Attempt 2)") {
                     Total3 += 1;
-
                 } else if (cloudCompPrac.getSelectedItem() == "Fail. (Attempt 3)") {
                     Total3 += 0;
                 }
+
+                //Updates the total and displays cloud computing total
                 total = total + Total3;
                 cloudCompLbl.setText(String.valueOf(Total3));
 
             }
         });
+        //Resets the cloud computing grades when pressed
         RetryCloudBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //Enables confirm button and JComboBox for theory and practical grades
                 CloudCompTheoryGrade.setEnabled(true);
                 cloudCompPrac.setEnabled(true);
                 confirmBtnCloudComputing.setEnabled(true);
 
+                //Disables next and retry button
                 RetryCloudBtn.setEnabled(false);
                 NextBtnCloud.setEnabled(false);
 
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be subtracted from the total
+                 */
                 if (CloudCompTheoryGrade.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     cloudCompLbl.setText(String.valueOf(0));
@@ -1657,8 +1696,10 @@ public class StudyBuddy {
                 } else if (CloudCompTheoryGrade.getSelectedItem() == "Fail. (Attempt 2)") {
                     total = total - 1;
                     cloudCompLbl.setText(String.valueOf(0));
-
                 }
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be subtracted from the total
+                 */
                 if (cloudCompPrac.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     cloudCompLbl.setText(String.valueOf(0));
@@ -1685,7 +1726,7 @@ public class StudyBuddy {
         });
 
 
-        // back btn to cloud comp
+        //Back button to move back to cloud computing when pressed
         BackBtnSoftDev.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1698,69 +1739,75 @@ public class StudyBuddy {
             }
         });
 
+        //Confirms software development grades when pressed.
         confirmBtnSoftwareDevelopment.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //Disables confirm button and JComboBox for theory and practical grades
                 SoftDevTheoryGrade.setEnabled(false);
                 SoftDevPracticalGrade.setEnabled(false);
+                confirmBtnSoftwareDevelopment.setEnabled(false);
 
-
-                int Total3 = 0;
-
-                if (SoftDevTheoryGrade.getSelectedItem() == "Pass.") {
-                    Total3 += 3;
-
-                } else if (SoftDevTheoryGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    Total3 += 2;
-
-                } else if (SoftDevTheoryGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    Total3 += 1;
-
-                } else if (SoftDevTheoryGrade.getSelectedItem() == "Fail. (Attempt 3)") {
-                    Total3 += 0;
-
-                }
-                if (SoftDevPracticalGrade.getSelectedItem() == "Pass.") {
-                    Total3 += 3;
-
-                } else if (SoftDevPracticalGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    Total3 += 2;
-
-                } else if (SoftDevPracticalGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    Total3 += 1;
-
-                } else if (SoftDevPracticalGrade.getSelectedItem() == "Fail. (Attempt 3)") {
-                    Total3 += 0;
-
-                }
-                total = total + Total3;
-                softDevLbl.setText(String.valueOf(Total3));
+                //Enables retry and next button
+                SoftDevRetryBtn.setEnabled(true);
                 NextBtnSoftDev.setEnabled(true);
 
-                confirmBtnSoftwareDevelopment.setEnabled(false);
-                SoftDevRetryBtn.setEnabled(true);
-                SoftDevTheoryGrade.setEnabled(false);
-                SoftDevPracticalGrade.setEnabled(false);
+                //Initiales Total3 as 0
+                int Total3 = 0;
+
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
+                if (SoftDevTheoryGrade.getSelectedItem() == "Pass.") {
+                    Total3 += 3;
+                } else if (SoftDevTheoryGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    Total3 += 2;
+                } else if (SoftDevTheoryGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    Total3 += 1;
+                } else if (SoftDevTheoryGrade.getSelectedItem() == "Fail. (Attempt 3)") {
+                    Total3 += 0;
+                }
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
+                if (SoftDevPracticalGrade.getSelectedItem() == "Pass.") {
+                    Total3 += 3;
+                } else if (SoftDevPracticalGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    Total3 += 2;
+                } else if (SoftDevPracticalGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    Total3 += 1;
+                } else if (SoftDevPracticalGrade.getSelectedItem() == "Fail. (Attempt 3)") {
+                    Total3 += 0;
+                }
+
+                //Updates total and displays software development total
+                total = total + Total3;
+                softDevLbl.setText(String.valueOf(Total3));
+
 
 
             }
         });
 
+        //Resets software development grade when pressed
         SoftDevRetryBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //Enable confirm button and JComboBox for theory and practical grades
                 SoftDevTheoryGrade.setEnabled(true);
                 SoftDevPracticalGrade.setEnabled(true);
                 confirmBtnSoftwareDevelopment.setEnabled(true);
+
+                //Disables retry and next button
                 SoftDevRetryBtn.setEnabled(false);
                 NextBtnSoftDev.setEnabled(false);
 
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be subtracted from the total
+                 */
                 if (SoftDevPracticalGrade.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     softDevLbl.setText(String.valueOf(0));
-
                 } else if (SoftDevPracticalGrade.getSelectedItem() == "Fail. (Attempt 1)") {
                     total = total - 2;
                     softDevLbl.setText(String.valueOf(0));
@@ -1768,6 +1815,9 @@ public class StudyBuddy {
                     total = total - 1;
                     softDevLbl.setText(String.valueOf(0));
                 }
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be subtracted from the total
+                 */
                 if (SoftDevTheoryGrade.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     softDevLbl.setText(String.valueOf(0));
@@ -1781,8 +1831,6 @@ public class StudyBuddy {
                     total = total - 0;
                     softDevLbl.setText(String.valueOf(0));
                 }
-                SoftDevTheoryGrade.setEnabled(true);
-                SoftDevPracticalGrade.setEnabled(true);
 
             }
         });
@@ -1799,7 +1847,7 @@ public class StudyBuddy {
             }
         });
 
-        // back btn to software dev
+        //Back button to move back to software development page when pressed
         BackBtnProfPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1811,41 +1859,56 @@ public class StudyBuddy {
 
             }
         });
+
+        //Confirms professional practice grade when pressed.
         confirmBtnProfessionalPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int Total3 = 0;
-
-                if (ProPractGrade.getSelectedItem() == "Pass.") {
-                    Total3 += 3;
-
-                } else if (ProPractGrade.getSelectedItem() == "Fail. (Attempt 1)") {
-                    Total3 += 2;
-
-                } else if (ProPractGrade.getSelectedItem() == "Fail. (Attempt 2)") {
-                    Total3 += 1;
-
-                } else if (ProPractGrade.getSelectedItem() == "Fail. (Attempt 3)") {
-                    Total3 += 0;
-
-                }
-                total = total + Total3;
-                ProfPracticeLbl.setText(String.valueOf(Total3));
+                //Enables next and retry button
                 NextBtnProfPractice.setEnabled(true);
                 RetrybtnProfPrac.setEnabled(true);
-                ProPractGrade.setEnabled(true);
 
-
+                //Disables confirm button and JComboBox for grades
+                ProPractGrade.setEnabled(false);
                 confirmBtnProfessionalPractice.setEnabled(false);
+
+                //Initialises Total3 as 0
+                int Total3 = 0;
+
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be added to the total
+                 */
+                if (ProPractGrade.getSelectedItem() == "Pass.") {
+                    Total3 += 3;
+                } else if (ProPractGrade.getSelectedItem() == "Fail. (Attempt 1)") {
+                    Total3 += 2;
+                } else if (ProPractGrade.getSelectedItem() == "Fail. (Attempt 2)") {
+                    Total3 += 1;
+                } else if (ProPractGrade.getSelectedItem() == "Fail. (Attempt 3)") {
+                    Total3 += 0;
+                }
+
+                //Updates total and displays professional practice total
+                total = total + Total3;
+                ProfPracticeLbl.setText(String.valueOf(Total3));
+
             }
         });
+        //Resets professional practice grade when pressed
         RetrybtnProfPrac.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Enable confirm button and JComboBox for grades
                 confirmBtnProfessionalPractice.setEnabled(true);
+                ProPractGrade.setEnabled(true);
+
+                //Disables next and retry button
                 NextBtnProfPractice.setEnabled(false);
                 RetrybtnProfPrac.setEnabled(false);
 
+                /*Checks to see if grade is either a "Pass.", "Fail. (Attempt 1)", "Fail. (Attempt 2)" or "Fail. (Attempt 3)" to determine if 1,2 or 3
+                should be subtracted from the total
+                 */
                 if (ProPractGrade.getSelectedItem() == "Pass.") {
                     total = total - 3;
                     ProfPracticeLbl.setText(String.valueOf(0));
@@ -1858,7 +1921,7 @@ public class StudyBuddy {
                 }
 
 
-            }//
+            }
         });
         //Next button to move onto Summary page when pressed
         NextBtnProfPractice.addActionListener(new ActionListener() {
@@ -1871,6 +1934,7 @@ public class StudyBuddy {
                 Background.revalidate();
 
 
+                //Initialise subject inputs which = the selected item for the grade JComboBox
                 String digSkillsSoftwareDevTheoryInput = (String) DigSkillsSoftwareDevTheory.getSelectedItem();
                 String digSkillsSoftwareDevPracInput = (String) DigSkillsSoftwareDevPrac.getSelectedItem();
                 String digSkillsCyberInput = (String) DigSkillsCyberGrade.getSelectedItem();
@@ -1887,9 +1951,8 @@ public class StudyBuddy {
                 String softwareDevPracInput = (String) SoftDevPracticalGrade.getSelectedItem();
                 String professionalPracticeInput = (String) ProPractGrade.getSelectedItem();
 
+                //Displays name and subjects on SummaryTxtAreaSubjects
                 SummaryTxtAreaSubjects.setText(fullName + "\n" + "Your grades are:\n");
-
-
                 SummaryTxtAreaSubjects.append("\nDigital Skills: Software Development Theory");
                 SummaryTxtAreaSubjects.append("\nDigital Skills: Software Development Practical");
                 SummaryTxtAreaSubjects.append("\nDigital Skills: Cyber Security");
@@ -1906,6 +1969,7 @@ public class StudyBuddy {
                 SummaryTxtAreaSubjects.append("\nSoftware Development Practical");
                 SummaryTxtAreaSubjects.append("\nProfessional Practice");
 
+                //Displays grades on SummaryTxtAreaGrades
                 SummaryTxtAreaGrades.setText("\n\n");
                 SummaryTxtAreaGrades.append("\n   -   " + digSkillsSoftwareDevTheoryInput);
                 SummaryTxtAreaGrades.append("\n   -   " + digSkillsSoftwareDevPracInput);
@@ -1923,11 +1987,12 @@ public class StudyBuddy {
                 SummaryTxtAreaGrades.append("\n   -   " + softwareDevPracInput);
                 SummaryTxtAreaGrades.append("\n   -   " + professionalPracticeInput);
 
+                //Displays information on how the grading works in the SummaryTxtAreaInfo
                 SummaryTxtAreaInfo.setText("We have assigned each grade with a value to help calculate if you are on track to \npass. After selecting and confirming a grade, we add the number assigned to that \ngrade to the total and if this total is above our threshold of 33 then you are on track to \npass, if below our threshold of 33 then you may still be able to pass, however you are \ncurrently on course for a pass.");
             }
         });
 
-
+        //Back button to move back to professional practice page when pressed
         backBtnSummary.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1936,8 +2001,6 @@ public class StudyBuddy {
                 Background.add(ProfessionalPractice);
                 Background.repaint();
                 Background.revalidate();
-
-
             }
         });
 
@@ -1951,21 +2014,18 @@ public class StudyBuddy {
                 Background.repaint();
                 Background.revalidate();
 
-
+                //Calculates the pass percentage, rounds it and converts it to an int
                 passPercentage = (total * 100) / 45;
                 roundOffPassPercentage = Math.round(passPercentage * 100.0) / 100.0;
                 percentagePass = (int) roundOffPassPercentage;
 
+                //If every grade JComboBox is a fail then index = 2, if not and total is greater than 22 then index = 1
                 if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Fail. (Attempt 3)" || DigSkillsSoftwareDevPrac.getSelectedItem() == "Fail. (Attempt 3)" || DigSkillsCyberGrade.getSelectedItem() == "Fail. (Attempt 3)" || DigSkillsCompSciGrade.getSelectedItem() == "Fail. (Attempt 3)" || DigSkillsDataGrade.getSelectedItem() == "Fail. (Attempt 3)" || iotPracticalGrade.getSelectedItem() == "Fail. (Attempt 3)" || iotTheoryGrade.getSelectedItem() == "Fail. (Attempt 3)" || networkTheory.getSelectedItem() == "Fail. (Attempt 3)" || networkPractical.getSelectedItem() == "Fail. (Attempt 3)" || compSciGrade.getSelectedItem() == "Fail. (Attempt 3)" || CloudCompTheoryGrade.getSelectedItem() == "Fail. (Attempt 3)" || SoftDevPracticalGrade.getSelectedItem() == "Fail. (Attempt 3)" || SoftDevTheoryGrade.getSelectedItem() == "Fail. (Attempt 3)" || ProPractGrade.getSelectedItem() == "Fail. (Attempt 3)" || total < 31) {
                     index = 2;
                 } else if (total >= 32) {
                     index = 1;
                 }
 
-
-                double passPercentage = (total * 100) / 45;
-                double roundOffPassPercentage = Math.round(passPercentage * 100.0) / 100.0;
-                int percentagePass = (int) roundOffPassPercentage;
 
                 ResultsTxtAreaInfo.setText("The total is calculated by adding on a set value dependant on the grade and \nattempt, to be on target, you must have a total of 33 or higher and must have \ngreater than a fail attempt 3.");
                 ResultsTxtAreaName.setText("Name\n" + fullName);
@@ -1975,7 +2035,7 @@ public class StudyBuddy {
             }
         });
 
-
+        //Back button to move back to the summary page when pressed
         backBtnResults.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2236,7 +2296,7 @@ public class StudyBuddy {
 
 
         });
-        //Moves back to the Login page when pressed
+        //Back button to move back to the Login page when pressed
         backBtnLecturersView.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
