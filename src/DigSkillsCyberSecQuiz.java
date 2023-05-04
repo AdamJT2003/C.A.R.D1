@@ -76,7 +76,7 @@ public class DigSkillsCyberSecQuiz {
         /*Initialises results.
         Sets result as JOptionPane.showConfirmDialog.
          */
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 2 - Name of the process used to disguise a message or piece of data to make it appear as something else? ", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 2 - Name of the process used to disguise a message or piece of data to make it appear as something else? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
 
         //Checks the answer if result = JOptionPane.OK_OPTION
         if (result == JOptionPane.OK_OPTION) {
@@ -115,7 +115,7 @@ public class DigSkillsCyberSecQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 3 - Which of the following is NOT an example of a network security measure?", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 3 - Which of the following is NOT an example of a network security measure? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
@@ -249,7 +249,7 @@ public class DigSkillsCyberSecQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 6 -Choose which of the following is a principle of object-oriented programming?", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 6 -Choose which of the following is a principle of object-oriented programming? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {

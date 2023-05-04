@@ -167,15 +167,15 @@ public class SoftwareDevelopmentQuiz {
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
 
-            /*If radios[0] AND radios[1] is selected, and radios[2] AND radios[3] is not selected
+            /*If radios[0] AND radios[1] is selected
             it will prompt a correct message, add 1 to quizTotal and moves onto the next question.*/
-            if (radios[0].isSelected() && radios[1].isSelected() && !radios[2].isSelected() && !radios[3].isSelected()) {
+            if (radios[0].isSelected() && radios[1].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 SoftDevQuizQ5();
             }
-            //If radios[0] OR radios[2] OR radios[3] is selected, it will prompt an incorrect answer message and move onto next question.
-            else if (radios[0].isSelected() || radios[1].isSelected() || radios[2].isSelected() || radios[3].isSelected()) {
+            //If radios[2] OR radios[3] is selected, it will prompt an incorrect answer message and move onto next question.
+            else if (radios[2].isSelected() || radios[3].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was a and b.");
                 SoftDevQuizQ5();
             }

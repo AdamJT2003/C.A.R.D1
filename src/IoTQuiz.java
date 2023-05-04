@@ -30,7 +30,7 @@ public class IoTQuiz {
                 group.add(radios[i]);
             }
             //Initialising result as JOptionPane
-            int result = JOptionPane.showConfirmDialog(null, radios, "Question 1 - Which of the following is NOT a type of IoT device? ", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(null, radios, "Question 1 - Which of the following is NOT a type of IoT device? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
 
             //If result = JOptionPane.OK_OPTION then it will check if the answer is correct or incorrect.
             if (result == JOptionPane.OK_OPTION) {

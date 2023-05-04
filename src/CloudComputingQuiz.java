@@ -63,15 +63,11 @@ public class CloudComputingQuiz {
         //creating JRadioButton array called radios and setting it to the length of options.
         JRadioButton[] radios = new JRadioButton[options.length];
 
-        //Creates a button group called group.
-        ButtonGroup group = new ButtonGroup();
 
         //A loop to create a new radio button for each option
         for (int i = 0; i < options.length; i++) {
             radios[i] = new JRadioButton(options[i]);
 
-            //adds all radio buttons to the group so that only one can be selected at once.
-            group.add(radios[i]);
         }
         /*Initialises results.
         Sets result as JOptionPane.showConfirmDialog.
@@ -126,7 +122,7 @@ public class CloudComputingQuiz {
                 quizTotal++;
                 CloudComputingQuizQ4();
             }
-            //If radios[0] OR radios[2] OR radios[3] is selected, it will prompt an incorrect answer message and move onto next question.
+            //If  radios[2] OR radios[1] is selected, it will prompt an incorrect answer message and move onto next question.
             else if (radios[1].isSelected() || radios[2].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was a,d");
                 CloudComputingQuizQ4();
