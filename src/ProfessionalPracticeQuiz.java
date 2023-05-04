@@ -20,14 +20,12 @@ public class ProfessionalPracticeQuiz {
         //Initialises JRadioButton array called radios and set it the length of options
         JRadioButton[] radios = new JRadioButton[options.length];
 
-        //create button group so only one radio button can be selected at once
-        ButtonGroup group = new ButtonGroup();
+
 
         //A loop to create a new radio button for each option
         for (int i = 0; i < options.length; i++) {
             radios[i] = new JRadioButton(options[i]);
-            //Adding radio button to the group
-            group.add(radios[i]);
+
         }
         //Initialising result as JOptionPane
         int result = JOptionPane.showConfirmDialog(null, radios, "Question 1 - Which of the following are self-management meta skills? (Choose all that apply)  ", JOptionPane.OK_CANCEL_OPTION);
@@ -35,7 +33,7 @@ public class ProfessionalPracticeQuiz {
         //If result = JOptionPane.OK_OPTION then it will check if the answer is correct or incorrect.
         if (result == JOptionPane.OK_OPTION) {
 
-            //If radios[2] is selected, it will prompt a corrrect answer message and add 1 to quizTotal.
+            //If radios[0], AND radios [1] is selected, it will prompt a corrrect answer message and add 1 to quizTotal.
             if (radios[0].isSelected() && radios[1].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
@@ -63,15 +61,13 @@ public class ProfessionalPracticeQuiz {
         //creating JRadioButton array called radios and setting it to the length of options.
         JRadioButton[] radios = new JRadioButton[options.length];
 
-        //Creates a button group called group.
-        ButtonGroup group = new ButtonGroup();
+
 
         //A loop to create a new radio button for each option
         for (int i = 0; i < options.length; i++) {
             radios[i] = new JRadioButton(options[i]);
 
-            //adds all radio buttons to the group so that only one can be selected at once.
-            group.add(radios[i]);
+
         }
         /*Initialises results.
         Sets result as JOptionPane.showConfirmDialog.
@@ -114,7 +110,7 @@ public class ProfessionalPracticeQuiz {
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
-            /*If radios[0] AND radios[1] AND radios[2] is selected AND radios[3] is not selected, it will prompt a correct answer message,
+            /*If radios[1] AND radios[2] is selected AND radios[3] is not selected, it will prompt a correct answer message,
             add 1 to quizTotal and move onto the next question.
             */
             if (radios[1].isSelected() && radios[2].isSelected()) {
@@ -144,10 +140,17 @@ public class ProfessionalPracticeQuiz {
         //Initialises JRadioButton array radios as the length of options
         JRadioButton[] radios = new JRadioButton[options.length];
 
+        //Creates a button group called group.
+        ButtonGroup group = new ButtonGroup();
+
+
         //Loops to create a new radio button for every option
         for (int i = 0; i < options.length; i++) {
             radios[i] = new JRadioButton(options[i]);
+            //Adds all radio buttons to the group so that only one can be selected at once.
+            group.add(radios[i]);
         }
+
 
         //Initialises result as JOptionPane.showConfirmDialog
         int result = JOptionPane.showConfirmDialog(null, radios, "Question 4 - What would be the second to last stage in the waterfall software development model?", JOptionPane.OK_CANCEL_OPTION);

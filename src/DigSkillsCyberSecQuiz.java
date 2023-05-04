@@ -119,7 +119,7 @@ public class DigSkillsCyberSecQuiz {
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
-            /*If radios[0] AND radios[1] AND radios[2] is selected AND radios[3] is not selected, it will prompt a correct answer message,
+            /*If radios[1] is selected, it will prompt a correct answer message,
             add 1 to quizTotal and move onto the next question.
             */
             if (radios[1].isSelected()) {
@@ -160,7 +160,7 @@ public class DigSkillsCyberSecQuiz {
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
 
-            /*If radios[1] AND radios[2] are selected AND radios[0] AND radios[3] is not selected, it will prompt a correct answer message,
+            /*If radios[1] is selected, it will prompt a correct answer message,
             add 1 to quizTotal and move onto the next question.
             */
             if (radios[1].isSelected()) {
