@@ -19,7 +19,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="91e77" class="javax.swing.JButton" binding="continueBtn">
+          <component id="91e77" class="javax.swing.JButton" binding="continueBtnWelcome">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -120,7 +120,7 @@
               <text value="Back"/>
             </properties>
           </component>
-          <component id="1577b" class="javax.swing.JButton" binding="logInBtn">
+          <component id="1577b" class="javax.swing.JButton" binding="logInBtnLoginOrSignUp">
             <constraints>
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -130,7 +130,7 @@
               <text value="Log In"/>
             </properties>
           </component>
-          <component id="c81e6" class="javax.swing.JButton" binding="signUpBtn">
+          <component id="c81e6" class="javax.swing.JButton" binding="signUpBtnLoginOrSignUp">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -167,7 +167,7 @@
               <text value="Sign-up"/>
             </properties>
           </component>
-          <component id="4483d" class="javax.swing.JCheckBox" binding="agreeTermsAndConditionsCheckBox">
+          <component id="4483d" class="javax.swing.JCheckBox" binding="agreeTermsAndConditionsCheckBoxSignUp">
             <constraints>
               <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -250,7 +250,7 @@
               <text value="Confirm"/>
             </properties>
           </component>
-          <component id="87d01" class="javax.swing.JButton" binding="viewTermsAndConditionsBtn">
+          <component id="87d01" class="javax.swing.JButton" binding="viewTermsAndConditionsBtnSignUp">
             <constraints>
               <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -430,7 +430,7 @@
               <text value="Please enter your password."/>
             </properties>
           </component>
-          <component id="5684b" class="javax.swing.JPasswordField" binding="passwordJPasswordField">
+          <component id="5684b" class="javax.swing.JPasswordField" binding="passwordJPasswordFieldLogin">
             <constraints>
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>

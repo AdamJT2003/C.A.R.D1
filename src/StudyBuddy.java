@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class StudyBuddy {
     private JPanel Background;
     private JPanel Welcome;
-    private JButton continueBtn;
+    private JButton continueBtnWelcome;
     private JTextPane welcomeTxtPane;
     private JPanel Name;
     private JButton backBtnName;
@@ -115,8 +115,8 @@ public class StudyBuddy {
     private JButton RetryCompScienceBtn;
     private JPanel LoginOrSignUp;
     private JTextPane LoginTxtPane;
-    private JButton signUpBtn;
-    private JButton logInBtn;
+    private JButton signUpBtnLoginOrSignUp;
+    private JButton logInBtnLoginOrSignUp;
     private JButton BackBtnSignUpOrLogIn;
     private JTextPane LoginOrSignUpTxtPane;
     private JPanel SignUp;
@@ -131,7 +131,7 @@ public class StudyBuddy {
     private JButton confirmBtnLogin;
     private JButton backBtnLogin;
     private JButton NextBtnLogin;
-    private JPasswordField passwordJPasswordField;
+    private JPasswordField passwordJPasswordFieldLogin;
     private JCheckBox showPasswordLogin;
     private JPanel Profile;
     private JButton profileEditBtn;
@@ -170,8 +170,8 @@ public class StudyBuddy {
     private JButton backBtnLecturersView;
     private JButton profileBtnQuizSelec;
     private JButton resultsBtnQuizSelec;
-    private JButton viewTermsAndConditionsBtn;
-    private JCheckBox agreeTermsAndConditionsCheckBox;
+    private JButton viewTermsAndConditionsBtnSignUp;
+    private JCheckBox agreeTermsAndConditionsCheckBoxSignUp;
     private JButton exitBtnResults;
     private JButton exitBtnQuizSelec;
     private JButton exitBtnLecturers;
@@ -213,7 +213,7 @@ public class StudyBuddy {
     public StudyBuddy() {
         //Welcome page
         //action listener for continue button, takes user to Login or sign-up panel
-        continueBtn.addActionListener(new ActionListener() {
+        continueBtnWelcome.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //removes previous panel, adds login or sign-up panel, repaints and revalidates panels
@@ -261,7 +261,7 @@ public class StudyBuddy {
         });
 
         //sign-up button on login/sign-up page, moves onto sign up page when pressed
-        signUpBtn.addActionListener(new ActionListener() {
+        signUpBtnLoginOrSignUp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //removes previous panel, adds SignUp panel, repaints and revalidates panels
@@ -277,7 +277,7 @@ public class StudyBuddy {
         });
 
         //login button on login/sign-up page, moves onto login page when pressed
-        logInBtn.addActionListener(new ActionListener() {
+        logInBtnLoginOrSignUp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //removes previous panel, adds Login panel, repaints and revalidates panels
@@ -301,7 +301,7 @@ public class StudyBuddy {
                     /*Checks to see if the user agrees to the terms and conditions, if yes then the user can move on, if no then it will prompt a must
                     agree to terms and conditions to continue message.
                     */
-                    if (agreeTermsAndConditionsCheckBox.isSelected()) {
+                    if (agreeTermsAndConditionsCheckBoxSignUp.isSelected()) {
                         //Creates File called fileUsernames which represents users.txt
                         File fileUsernames = new File("users.txt");
 
@@ -376,7 +376,7 @@ public class StudyBuddy {
         });
 
         //View terms and conditions button on sign up page, opens a JOptionPane to show the terms and conditions
-        viewTermsAndConditionsBtn.addActionListener(new ActionListener() {
+        viewTermsAndConditionsBtnSignUp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null, "Terms and Conditions\n\n" +
@@ -434,9 +434,9 @@ public class StudyBuddy {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                //Initialises username as input from loginStudentRefNumberTxtField and password as input from passwordJPasswordField
+                //Initialises username as input from loginStudentRefNumberTxtField and password as input from passwordJPasswordFieldLogin
                 String username = LoginStudentRefNumberTxtField.getText();
-                String password = String.valueOf(passwordJPasswordField.getPassword());
+                String password = String.valueOf(passwordJPasswordFieldLogin.getPassword());
 
 
                 try {
@@ -584,9 +584,9 @@ public class StudyBuddy {
             public void actionPerformed(ActionEvent e) {
                 //If checkbox is ticked, it shows the password, if it is not ticked then it will hide the password.
                 if (showPasswordLogin.isSelected()) {
-                    passwordJPasswordField.setEchoChar((char) 0);
+                    passwordJPasswordFieldLogin.setEchoChar((char) 0);
                 } else {
-                    passwordJPasswordField.setEchoChar('*');
+                    passwordJPasswordFieldLogin.setEchoChar('*');
                 }
             }
         });
@@ -716,7 +716,7 @@ public class StudyBuddy {
                 signUpStudentReferenceTxtField.setText("");
                 LoginStudentRefNumberTxtField.setText("");
                 signUpPasswordTxtField.setText("");
-                passwordJPasswordField.setText("");
+                passwordJPasswordFieldLogin.setText("");
                 forenameTxtField.setText("");
                 surnameTxtField.setText("");
                 fullNameLbl.setText("");
@@ -2147,7 +2147,7 @@ public class StudyBuddy {
                 signUpStudentReferenceTxtField.setText("");
                 LoginStudentRefNumberTxtField.setText("");
                 signUpPasswordTxtField.setText("");
-                passwordJPasswordField.setText("");
+                passwordJPasswordFieldLogin.setText("");
                 forenameTxtField.setText("");
                 surnameTxtField.setText("");
                 fullNameLbl.setText("");
@@ -2423,7 +2423,7 @@ public class StudyBuddy {
                 signUpStudentReferenceTxtField.setText("");
                 LoginStudentRefNumberTxtField.setText("");
                 signUpPasswordTxtField.setText("");
-                passwordJPasswordField.setText("");
+                passwordJPasswordFieldLogin.setText("");
                 forenameTxtField.setText("");
                 surnameTxtField.setText("");
                 fullNameLbl.setText("");
