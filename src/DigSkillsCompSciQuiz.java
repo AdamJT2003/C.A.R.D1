@@ -200,7 +200,7 @@ public class DigSkillsCompSciQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 5 - IO devices are needed for computers to function. Which of these devices in an OUTPUT device? (Select all that apply) ", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 5 - IO devices are needed for computers to function. Which of these devices in an OUTPUT device? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {

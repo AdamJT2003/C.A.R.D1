@@ -36,7 +36,7 @@ public class NetworkInfraQuiz {
             //If result = JOptionPane.OK_OPTION then it will check if the answer is correct or incorrect.
             if (result == JOptionPane.OK_OPTION) {
 
-                //If radios[3] is selected, it will prompt a corrrect answer message and add 1 to quizTotal.
+                //If radios[3] is selected, it will prompt a correct answer message and add 1 to quizTotal.
                 if (radios[3].isSelected()) {
                     JOptionPane.showMessageDialog(null, "Correct answer");
                     quizTotal++;
