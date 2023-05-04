@@ -13,7 +13,7 @@ public class CloudComputingQuiz {
 
     public void CloudComputingQuizQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
-        String[] options = {"a) Software as a service",
+        String[] options = {"a) Software as a service                                                                                                                                                                                                                                                                     ",
                 "b) Infrastructure as a service",
                 "c) Payment as a service ",
                 "d) Hardware as a service"};
@@ -101,7 +101,7 @@ public class CloudComputingQuiz {
 
     public void CloudComputingQuizQ3() {
         //Initialises options array
-        String[] options = {"a) PaaS",
+        String[] options = {"a) PaaS                                                                                                                                                                                                                                                   ",
                 "b) IaaS",
                 "c) CaaS",
                 "d) SaaS"};
@@ -141,7 +141,7 @@ public class CloudComputingQuiz {
 
     public void CloudComputingQuizQ4() {
         //Initialises options array
-        String[] options = {"a) EC1",
+        String[] options = {"a) EC1                                                                                                                                                                                                                                                                                                                       ",
                 "b) EC10",
                 "c) EC2",
                 "d) Hybrid"};
@@ -154,7 +154,7 @@ public class CloudComputingQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 4 - The act of hiding media or other information within a file is called what? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 4 - Amazon provides a cloud service for their customers. One of the services they provide is an IaaS (Infrastructure as a service) what is the name of this? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
@@ -183,7 +183,7 @@ public class CloudComputingQuiz {
 
     public void CloudComputingQuizQ5() {
         //Initialises options array
-        String[] options = {"a) Cost",
+        String[] options = {"a) Cost                                                                                                                                                                                                                                                                              ",
                 "b) Security",
                 "c) Space",
                 "d) Platform"};
@@ -228,7 +228,7 @@ public class CloudComputingQuiz {
 
     public void CloudComputingQuizQ6() {
         //Initialises options array
-        String[] options = {"a) IaaS",
+        String[] options = {"a) IaaS                                                                                                                                                                                                                                           ",
                 "b) SaaS",
                 "c) XaaS",
                 "d) PaaS"};

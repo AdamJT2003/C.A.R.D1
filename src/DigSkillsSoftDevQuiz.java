@@ -13,7 +13,7 @@ public class DigSkillsSoftDevQuiz {
 
     public void DigSkillsSoftDevQuizQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
-        String[] options = {"a) Software",
+        String[] options = {"a) Software            ",
                 "b) Malware",
                 "c) Firmware",
                 "d) Adware"};
