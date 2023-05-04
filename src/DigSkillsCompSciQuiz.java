@@ -1,5 +1,5 @@
 import javax.swing.*;
-//
+///
 public class DigSkillsCompSciQuiz {
     public int quizTotal;
 
