@@ -13,7 +13,7 @@ public class ComputerScienceQuiz {
 
     public void ComputerScienceQuizQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
-        String[] options = {"a) Binary search",
+        String[] options = {"a) Binary search                                                                                                                                                           ",
                 "b) Bubble sort ",
                 "c) Linear search",
                 "d) Depth-first search"};
@@ -57,7 +57,7 @@ public class ComputerScienceQuiz {
 
     public void ComputerScienceQuizQ2() {
         //Options for the buttons
-        String[] options = {"a) 2                                                                                                                                                                                      ",
+        String[] options = {"a) 2                                                                                                                                                                                                                                             ",
                 "b) 2.5",
                 "c) 2.0",
                 "d) 3"};
@@ -102,7 +102,7 @@ public class ComputerScienceQuiz {
 
     public void ComputerScienceQuizQ3() {
         //Initialises options array
-        String[] options = {"a) XOR",
+        String[] options = {"a) XOR                                                                                                                                                           ",
                 "b) OR",
                 "c) AND",
                 "d) XAND"};
@@ -141,7 +141,7 @@ public class ComputerScienceQuiz {
 
     public void ComputerScienceQuizQ4() {
         //Initialises options array
-        String[] options = {"a) 0101 1010                                                                                                                                                                                    ",
+        String[] options = {"a) 0101 1010                                                                                                                                                                                                                                                                ",
                 "b) 1010 0101",
                 "c) 1111 1111",
                 "d) 1111 0000"};
@@ -182,7 +182,7 @@ public class ComputerScienceQuiz {
 
     public void ComputerScienceQuizQ5() {
         //Initialises options array
-        String[] options = {"a) 10000                                                                                                                                                                                     ",
+        String[] options = {"a) 10000                                                                                                                                                                                                                                                                                          ",
                 "b) 11000",
                 "c) 10100",
                 "d) 10010"};
@@ -227,7 +227,7 @@ public class ComputerScienceQuiz {
 
     public void ComputerScienceQuizQ6() {
         //Initialises options array
-        String[] options = {"a) Two                                                                                                                                                                                     ",
+        String[] options = {"a) Two                                                                                                                                                                                                                                                                                                          ",
                 "b) Three",
                 "c) Four",
                 "d) Seven"};

@@ -12,7 +12,7 @@ public class DigSkillsCompSciQuiz {
 
     public void DigSkillsCompSciQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
-        String[] options = {"a) C++",
+        String[] options = {"a) C++                                                                                                                                                                                                          ",
                 "b) Python",
                 "c) Assembly Language",
                 "d) Java"};
@@ -56,7 +56,7 @@ public class DigSkillsCompSciQuiz {
 
     public void DigSkillsCompSciQ2() {
         //Options for the buttons
-        String[] options = {"a) True                                                                                                                                                                                     ",
+        String[] options = {"a) True                                                                                                                                                                                                                                                                                                               ",
                 "b) False",
                 "c) None",
                 "d) Error"};
@@ -101,7 +101,7 @@ public class DigSkillsCompSciQuiz {
 
     public void DigSkillsCompSciQ3() {
         //Initialises options array
-        String[] options = {"a) While",
+        String[] options = {"a) While                                                                                                                                                                                                                                     ",
                 "b) Do while",
                 "c) For",
                 "d) If ."};
@@ -140,7 +140,7 @@ public class DigSkillsCompSciQuiz {
 
     public void DigSkillsCompSciQ4() {
         //Initialises options array
-        String[] options = {"a) > More than                                                                                                                                                                                    ",
+        String[] options = {"a) > More than                                                                                                                                                                                                                                                                                           ",
                 "b) < less than ",
                 "c) = equals",
                 "d) != equal to "};
@@ -181,7 +181,7 @@ public class DigSkillsCompSciQuiz {
 
     public void DigSkillsCompSciQ5() {
         //Initialises options array
-        String[] options = {"a) 3D printer                                                                                                                                                                                     ",
+        String[] options = {"a) 3D printer                                                                                                                                                                                                                                                                                                   ",
                 "b) Amplifier",
                 "c) Soundboard ",
                 "d) All of the above "};
@@ -226,7 +226,7 @@ public class DigSkillsCompSciQuiz {
 
     public void DigSkillsCompSciQ6() {
         //Initialises options array
-        String[] options = {"a) Graphics card                                                                                                                                                                                      ",
+        String[] options = {"a) Graphics card                                                                                                                                                                                                                                                                                                     ",
                 "b) Operating system  ",
                 "c) CPU   ",
                 "d) All the above "};

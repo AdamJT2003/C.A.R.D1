@@ -13,7 +13,7 @@ public class SoftwareDevelopmentQuiz {
 
     public void SoftDevQuizQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
-        String[] options = {"a) JDK                                                                                                                                                                                        ",
+        String[] options = {"a) JDK                                                                                                                                                                                                                                                                                                                                                                                                                                              ",
                 "b) JIT",
                 "c) JVM",
                 "d) JRE"};
@@ -57,7 +57,7 @@ public class SoftwareDevelopmentQuiz {
 
     public void SoftDevQuizQ2() {
         //Options for the buttons
-        String[] options = {"a) Package                                                                                                                                                                                          ",
+        String[] options = {"a) Package                                                                                                                                                                                                                                                                                                                                                                                                                                        ",
                 "b) Import",
                 "c) Export",
                 "d) Extend"};
@@ -102,7 +102,7 @@ public class SoftwareDevelopmentQuiz {
 
     public void SoftDevQuizQ3() {
         //Initialises options array
-        String[] options = {"a) write.Main                                                                                                                                                                                   ",
+        String[] options = {"a) write.Main                                                                                                                                                                                                                                                                                                                                                                                                                                       ",
                 "b) class.create(Main)",
                 "c) {class_name} == startup.main_void",
                 "d) psvm"};
@@ -147,7 +147,7 @@ public class SoftwareDevelopmentQuiz {
 
     public void SoftDevQuizQ4() {
         //Initialise options array
-        String[] options = {"a) Null                                                                                                                                                                                        ",
+        String[] options = {"a) Null                                                                                                                                                                                                                                                                                                                                                                                                                                           ",
                 "b) Float",
                 "c) Object",
                 "d) Complex"};
@@ -191,7 +191,7 @@ public class SoftwareDevelopmentQuiz {
 
     public void SoftDevQuizQ5() {
         //Initialise options array
-        String[] options = {"a) Throw                                                                                                                                                                                    ",
+        String[] options = {"a) Throw                                                                                                                                                                                                                                                                                                                                                                                                                                     ",
                 "b) Final",
                 "c) None ",
                 "d) Catch"};
@@ -236,7 +236,7 @@ public class SoftwareDevelopmentQuiz {
 
     public void SoftDevQuizQ6() {
         //Initialises options array
-        String[] options = {"a) Input                                                                                                                                                                                     ",
+        String[] options = {"a) Input                                                                                                                                                                                                                                                                                                                                                                                                                                     ",
                 "b) textBox  ",
                 "c) Scanner ",
                 "d) Applier"};

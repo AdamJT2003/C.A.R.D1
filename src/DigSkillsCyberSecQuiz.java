@@ -12,7 +12,7 @@ public class DigSkillsCyberSecQuiz {
 
     public void DigSkillsCyberSecQuizQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
-        String[] options = {"a) Malware",
+        String[] options = {"a) Malware                                                                                                                                                                                                                                                        ",
                 "b) Phishing",
                 "c) Data backup ",
                 "d) Denial of Service "};
@@ -56,7 +56,7 @@ public class DigSkillsCyberSecQuiz {
 
     public void DigSkillsCyberSecQuizQ2() {
         //Options for the buttons
-        String[] options = {"a) Encryption                                                                                                                                                                                     ",
+        String[] options = {"a) Encryption                                                                                                                                                                                                                                                                                                     ",
                 "b) Decryption",
                 "c) Hashing",
                 "d) Steganography"};
@@ -101,7 +101,7 @@ public class DigSkillsCyberSecQuiz {
 
     public void DigSkillsSoftDevQuizQ3() {
         //Initialises options array
-        String[] options = {"a) Firewall",
+        String[] options = {"a) Firewall                                                                                                                                                                                                                                  ",
                 "b) Locked server room",
                 "c) Password policy",
                 "d) Intrusion detection system "};
@@ -142,7 +142,7 @@ public class DigSkillsCyberSecQuiz {
 
     public void DigSkillsCyberSecQuizQ4() {
         //Initialises options array
-        String[] options = {"a) Image rendering",
+        String[] options = {"a) Image rendering                                                                                                                                                                                                                      ",
                 "b) Steganography",
                 "c) Rootkits",
                 "d) Bitmapping"};
@@ -185,7 +185,7 @@ public class DigSkillsCyberSecQuiz {
 
     public void DigSkillsCyberSecQuizQ5() {
         //Initialises options array
-        String[] options = {"a) WPA",
+        String[] options = {"a) WPA                                                                                                                                                                                                                                                  ",
                 "b) WPA3",
                 "c) WEP",
                 "d) WPA2"};
@@ -230,7 +230,7 @@ public class DigSkillsCyberSecQuiz {
 
     public void DigSkillsCyberSecQuizQ6() {
         //Initialises options array
-        String[] options = {"a) Trap door",
+        String[] options = {"a) Trap door                                                                                                                                                                                                                                   ",
                 "b) Trojan Horse",
                 "c) Virus",
                 "d) Worm"};

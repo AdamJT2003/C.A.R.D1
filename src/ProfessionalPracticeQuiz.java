@@ -12,7 +12,7 @@ public class ProfessionalPracticeQuiz {
 
     public void ProfessionalPracticeQuizQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
-        String[] options = {"a) Focusing ",
+        String[] options = {"a) Focusing                                                                                                                                                                                                                                                ",
                 "b) Adapting",
                 "c) Sense making ",
                 "d) Curiosity"};
@@ -56,7 +56,7 @@ public class ProfessionalPracticeQuiz {
 
     public void ProfessionalPracticeQuizQ2() {
         //Options for the buttons
-        String[] options = {"a) Collaborating                                                                                                                                                                                     ",
+        String[] options = {"a) Collaborating                                                                                                                                                                                                                                                                                                     ",
                 "b) Communicating",
                 "c) Feeling",
                 "d) Leading"};
@@ -96,7 +96,7 @@ public class ProfessionalPracticeQuiz {
 
     public void ProfessionalPracticeQuizQ3() {
         //Initialises options array
-        String[] options = {"a) Initiative",
+        String[] options = {"a) Initiative                                                                                                                                                                                                                                   ",
                 "b) Critical thinking",
                 "c) Integrity",
                 "d) Creativity"};
@@ -137,7 +137,7 @@ public class ProfessionalPracticeQuiz {
 
     public void ProfessionalPracticeQuizQ4() {
         //Initialises options array
-        String[] options = {"a) Coding",
+        String[] options = {"a) Coding                                                                                                                                                                                                                                             ",
                 "b) Design",
                 "c) Testing",
                 "d) Maintenance"};
@@ -180,7 +180,7 @@ public class ProfessionalPracticeQuiz {
 
     public void ProfessionalPracticeQuizQ5() {
         //Initialises options array
-        String[] options = {"a) Product Owner",
+        String[] options = {"a) Product Owner                                                                                                                                                                                                                              ",
                 "b) Scrum Master",
                 "c) Developer",
                 "d) Team Member"};
@@ -225,7 +225,7 @@ public class ProfessionalPracticeQuiz {
 
     public void ProfessionalPracticeQuizQ6() {
         //Initialises options array
-        String[] options = {"a) Sprint planning",
+        String[] options = {"a) Sprint planning                                                                                                                                                                                                                           ",
                 "b) Spring Closure",
                 "c) Sprint Review",
                 "d) Daily Standup"};

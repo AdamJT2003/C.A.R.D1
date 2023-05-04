@@ -13,7 +13,7 @@ public class DigSkillsDataSciQuiz {
 
     public void DigSkillsDataSciQuizQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
-        String[] options = {"a) Categorical data",
+        String[] options = {"a) Categorical data                                                                                                                                                                                                                          ",
                 "b) Numerical data ",
                 "c) Ordinal data",
                 "d) Coded data "};
@@ -57,7 +57,7 @@ public class DigSkillsDataSciQuiz {
 
     public void DigSkillsDataSciQuizQ2() {
         //Options for the buttons
-        String[] options = {"a) Standard deviation                                                                                                                                                                                      ",
+        String[] options = {"a) Standard deviation                                                                                                                                                                                                                                                                                                 ",
                 "b) Variance",
                 "c) Median",
                 "d) Mode"};
@@ -102,7 +102,7 @@ public class DigSkillsDataSciQuiz {
 
     public void DigSkillsDataSciQuizQ3() {
         //Initialises options array
-        String[] options = {"a) Scatter plot",
+        String[] options = {"a) Scatter plot                                                                                                                                                                                                                               ",
                 "b) Line chart",
                 "c) Bar chart",
                 "d) Stacked chart"};
@@ -141,7 +141,7 @@ public class DigSkillsDataSciQuiz {
 
     public void DigSkillsDataSciQuizQ4() {
         //Initialises options array
-        String[] options = {"a) Conclusion                                                                                                                                                                                    ",
+        String[] options = {"a) Conclusion                                                                                                                                                                                                                                                                                                      ",
                 "b) Problem",
                 "c) Data",
                 "d) Plan"};
@@ -182,7 +182,7 @@ public class DigSkillsDataSciQuiz {
 
     public void DigSkillsDataSciQuizQ5() {
         //Initialises options array
-        String[] options = {"a) Probability and statistics                                                                                                                                                                                     ",
+        String[] options = {"a) Probability and statistics                                                                                                                                                                                                                                                                                       ",
                 "b) Machine learning",
                 "c) Data wrangling",
                 "d) All of the above"};
@@ -227,7 +227,7 @@ public class DigSkillsDataSciQuiz {
 
     public void DigSkillsDataSciQuizQ6() {
         //Initialises options array
-        String[] options = {"a) Two                                                                                                                                                                                     ",
+        String[] options = {"a) Two                                                                                                                                                                                                                                                                                                            ",
                 "b) Three",
                 "c) Four",
                 "d) Seven"};

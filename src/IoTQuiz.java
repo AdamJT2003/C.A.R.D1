@@ -12,7 +12,7 @@ public class IoTQuiz {
 
         public void IoTQuizQ1() {
             //initialising options array, creating JRadioButton as radios array and setting it as options array
-            String[] options = {"a) Smartwatch                                                                                                                                                                                        ",
+            String[] options = {"a) Smartwatch                                                                                                                                                                                                                                                                                                                ",
                     "b) Smart fridge",
                     "c) Thermostat",
                     "d) Smart vacuum"};
@@ -56,7 +56,7 @@ public class IoTQuiz {
 
         public void IoTQuizQ2() {
             //Options for the buttons
-            String[] options = {"a) Wi-Fi                                                                                                                                                                                          ",
+            String[] options = {"a) Wi-Fi                                                                                                                                                                                                                                                                                                               ",
                     "b) Bluetooth",
                     "c) RFID",
                     "d) RADIUS"};
@@ -101,7 +101,7 @@ public class IoTQuiz {
 
         public void IoTQuizQ3() {
             //Initialises options array
-            String[] options = {"a) Cyber-physical systems                                                                                                                                                                                   ",
+            String[] options = {"a) Cyber-physical systems                                                                                                                                                                                                                                                                                                             ",
                     "b) Internet of things",
                     "c) Artificial intelligence",
                     "d) Augmented reality"};
@@ -146,7 +146,7 @@ public class IoTQuiz {
 
         public void IoTQuizQ4() {
             //Initialises options array
-            String[] options = {"a)Layer 2 – data link                                                                                                                                                                                         ",
+            String[] options = {"a)Layer 2 – data link                                                                                                                                                                                                                                                                                                 ",
                     "b) Layer 3 – network",
                     "c) Layer 1 – physical",
                     "d) Layer 4 – transport"};
@@ -193,7 +193,7 @@ public class IoTQuiz {
 
         public void IoTQuizQ5() {
             //Initialises options array
-            String[] options = {"a) Configure an authentication                                                                                                                                                                                    ",
+            String[] options = {"a) Configure an authentication                                                                                                                                                                                                                                                                                   ",
                     "b) Configure encryption",
                     "c) Physically secure a network",
                     "d) Configure an acl"};
@@ -238,7 +238,7 @@ public class IoTQuiz {
 
         public void IoTQuizQ6() {
             //Initialises options array
-            String[] options = {"a) Serial                                                                                                                                                                                     ",
+            String[] options = {"a) Serial                                                                                                                                                                                                                                                                                                              ",
                     "b) Parallel  ",
                     "c) Firewire ",
                     "d) USB"};

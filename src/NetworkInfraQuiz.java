@@ -13,7 +13,7 @@ public class NetworkInfraQuiz {
 
         public void NetworkInfraQ1() {
             //initialising options array, creating JRadioButton as radios array and setting it as options array
-            String[] options = {"a)Bus ",
+            String[] options = {"a)Bus                                                                                                                                                                                                                                                    ",
                     "b) Star",
                     "c) Mesh",
                     "d) Route"};
@@ -57,7 +57,7 @@ public class NetworkInfraQuiz {
 
         public void NetworkInfraQ2() {
             //Options for the buttons
-            String[] options = {"a) To prevent unauthorized access to a network                                                                                                                                                                                    ",
+            String[] options = {"a) To prevent unauthorized access to a network                                                                                                                                                                                                                                                                   ",
                     "b) To manage hardware resources",
                     "c) To provide internet connectivity ",
                     "d) To provide a user interface for applications"};
@@ -102,7 +102,7 @@ public class NetworkInfraQuiz {
 
         public void NetworkInfraQ3() {
             //Initialises options array
-            String[] options = {"a) TCP/IP",
+            String[] options = {"a) TCP/IP                                                                                                                                                                                                                                       ",
                     "b) HTTP",
                     "c) SMTP",
                     "d) HTML."};
@@ -141,7 +141,7 @@ public class NetworkInfraQuiz {
 
         public void NetworkInfraQ4() {
             //Initialises options array
-            String[] options = {"a)  Router                                                                                                                                                                                     ",
+            String[] options = {"a) Router                                                                                                                                                                                                                                                                                                                                                                                                                       ",
                     "b) Switch",
                     "c) Artificial Intelligence",
                     "d) Hub"
@@ -183,8 +183,8 @@ public class NetworkInfraQuiz {
 
         public void NetworkInfraQ5() {
             //Initialises options array
-            String[] options = {"a) FTP                                                                                                                                                                                    ",
-                    "b)DNS ",
+            String[] options = {"a) FTP                                                                                                                                                                                                                                                                                                                                                                                                                               ",
+                    "b) DNS ",
                     "c) DHCP  ",
                     "d) SMTP  "};
             //Initialises JRadioButton array radios as the length of options
@@ -228,7 +228,7 @@ public class NetworkInfraQuiz {
 
         public void NetworkInfraQ6() {
             //Initialises options array
-            String[] options = {"a) 64                                                                                                                                                                                      ",
+            String[] options = {"a) 64                                                                                                                                                                                                                                                                                                                                                                                                                                     ",
                     "b) 126   ",
                     "c) 128     ",
                     "d) 254  ",

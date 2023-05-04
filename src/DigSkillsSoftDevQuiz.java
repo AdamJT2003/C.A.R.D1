@@ -13,7 +13,7 @@ public class DigSkillsSoftDevQuiz {
 
     public void DigSkillsSoftDevQuizQ1() {
         //initialising options array, creating JRadioButton as radios array and setting it as options array
-        String[] options = {"a) Software            ",
+        String[] options = {"a) Software                                                                                                                                                                                                                                                         ",
                 "b) Malware",
                 "c) Firmware",
                 "d) Adware"};
@@ -57,7 +57,7 @@ public class DigSkillsSoftDevQuiz {
 
     public void DigSkillsSoftDevQuizQ2() {
         //Options for the buttons
-        String[] options = {"a) Testing                                                                                                                                                                                     ",
+        String[] options = {"a) Testing                                                                                                                                                                                                                                                                                                            ",
                 "b) Development",
                 "c) Planning",
                 "d) Maintenance"};
@@ -102,7 +102,7 @@ public class DigSkillsSoftDevQuiz {
 
     public void DigSkillsSoftDevQuizQ3() {
         //Initialises options array
-        String[] options = {"a) Algorithms are a set of instructions for achieving goals",
+        String[] options = {"a) Algorithms are a set of instructions for achieving goals                                                                                                                                                                                                                              ",
                 "b) Algorithms may be decomposed into component parts (procedures),\n each of which itself contains an algorithm.",
                 "c) A single problem may be solved by several different algorithms.",
                 "d) Different algorithms for the same task will have the same performance characteristics."};
@@ -142,7 +142,7 @@ public class DigSkillsSoftDevQuiz {
 
     public void DigSkillsSoftDevQuizQ4() {
         //Initialises options array
-        String[] options = {"a) GANTT chart                                                                                                                                                                                    ",
+        String[] options = {"a) GANTT chart                                                                                                                                                                                                                                                                                                      ",
                 "b) Software validation plans and scripts",
                 "c) Use case diagrams",
                 "d) Change management plan"};
@@ -185,7 +185,7 @@ public class DigSkillsSoftDevQuiz {
 
     public void DigSkillsSoftDevQuizQ5() {
         //Initialises options array
-        String[] options = {"a) Scrum                                                                                                                                                                                    ",
+        String[] options = {"a) Scrum                                                                                                                                                                                                                                                                                                            ",
                 "b) Extreme Programming",
                 "c) Waterfall",
                 "d) Kanban"};
@@ -230,7 +230,7 @@ public class DigSkillsSoftDevQuiz {
 
     public void DigSkillsSoftDevQuizQ6() {
         //Initialises options array
-        String[] options = {"a) Abstraction                                                                                                                                                                                     ",
+        String[] options = {"a) Abstraction                                                                                                                                                                                                                                                                                                        ",
                 "b) Encapsulation ",
                 "c) Inheritance ",
                 "d) All the above "};
