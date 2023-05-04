@@ -302,7 +302,7 @@ public class StudyBuddy {
                     agree to terms and conditions to continue message.
                     */
                     if (agreeTermsAndConditionsCheckBoxSignUp.isSelected()) {
-                        //Creates File called fileUsernames which represents users.txt
+                        //Creates File called fileUsernames which represents users.txt//
                         File fileUsernames = new File("users.txt");
 
 
