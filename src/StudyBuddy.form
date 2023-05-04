@@ -25,7 +25,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
-              <preferredSize width="300" height="30"/>
+              <preferredSize width="440" height="30"/>
               <text value="Continue"/>
             </properties>
           </component>
@@ -57,6 +57,17 @@
               <editable value="false"/>
               <font size="24" style="1"/>
               <text value="Welcome"/>
+            </properties>
+          </component>
+          <component id="1335" class="javax.swing.JButton" binding="exitBtnWelcome">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <label value="Exit"/>
+              <preferredSize width="250" height="30"/>
+              <text value="Exit"/>
             </properties>
           </component>
         </children>
@@ -105,6 +116,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <preferredSize width="440" height="30"/>
               <text value="Back"/>
             </properties>
           </component>
@@ -114,7 +126,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
-              <preferredSize width="125" height="30"/>
+              <preferredSize width="220" height="30"/>
               <text value="Log In"/>
             </properties>
           </component>
@@ -126,7 +138,7 @@
             <properties>
               <label value="Sign Up"/>
               <name value=""/>
-              <preferredSize width="125" height="30"/>
+              <preferredSize width="220" height="30"/>
               <text value="Sign Up"/>
             </properties>
           </component>
@@ -545,7 +557,7 @@
               <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
-              <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <background color="-9277497"/>
@@ -571,7 +583,7 @@
               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
-              <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <background color="-9277497"/>
@@ -584,7 +596,7 @@
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
-              <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <background color="-9277497"/>
@@ -1822,7 +1834,7 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
-              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+              <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <background color="-9277497"/>
@@ -1996,7 +2008,7 @@
               <text value="Quizzes"/>
             </properties>
           </component>
-          <component id="b34cb" class="javax.swing.JButton">
+          <component id="b34cb" class="javax.swing.JButton" binding="exitBtnResults">
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -2020,7 +2032,7 @@
         <children>
           <component id="c47c" class="javax.swing.JTextPane">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
               <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
@@ -2032,19 +2044,9 @@
               <text value="Quiz Selection"/>
             </properties>
           </component>
-          <component id="ed8ab" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
-            </constraints>
-            <properties>
-              <preferredSize width="220" height="16"/>
-              <text value="Please select a quiz."/>
-            </properties>
-          </component>
           <component id="b787" class="javax.swing.JComboBox" binding="quizSelector">
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -2064,19 +2066,19 @@
               <preferredSize width="220" height="30"/>
             </properties>
           </component>
-          <component id="d113f" class="javax.swing.JButton" binding="backBtnQuizSelection">
+          <component id="32172" class="javax.swing.JButton" binding="resultsBtnQuizSelec">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <preferredSize width="220" height="30"/>
-              <text value="Back"/>
+              <text value="Results"/>
             </properties>
           </component>
           <component id="9bde3" class="javax.swing.JButton" binding="startBtnQuizSelection">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -2086,7 +2088,7 @@
           </component>
           <component id="52286" class="javax.swing.JButton" binding="profileBtnQuizSelec">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -2094,14 +2096,25 @@
               <text value="Profile"/>
             </properties>
           </component>
-          <component id="32172" class="javax.swing.JButton" binding="resultsBtnQuizSelec">
+          <component id="ed8ab" class="javax.swing.JLabel">
             <constraints>
-              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
-              <preferredSize width="220" height="30"/>
-              <text value="Results"/>
+              <preferredSize width="220" height="16"/>
+              <text value="Please select a quiz."/>
+            </properties>
+          </component>
+          <component id="b3922" class="javax.swing.JButton" binding="exitBtnQuizSelec">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <label value="Exit"/>
+              <preferredSize width="440" height="30"/>
+              <text value="Exit"/>
             </properties>
           </component>
         </children>
@@ -2234,6 +2247,17 @@
               <label value="Back"/>
               <preferredSize width="220" height="30"/>
               <text value="Back"/>
+            </properties>
+          </component>
+          <component id="c11c8" class="javax.swing.JButton" binding="exitBtnLecturers">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <label value="Exit"/>
+              <preferredSize width="440" height="30"/>
+              <text value="Exit"/>
             </properties>
           </component>
         </children>

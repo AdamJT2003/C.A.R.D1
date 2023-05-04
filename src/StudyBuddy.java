@@ -151,14 +151,8 @@ public class StudyBuddy {
     private JButton quizBtnResults;
     private JButton signOutBtnResults;
     private JPanel quizSelection;
-    private JButton backBtnQuizSelection;
     private JComboBox quizSelector;
     private JButton startBtnQuizSelection;
-    private JPanel DigSkillsSoftDevQuestion1;
-    private JPanel DigSkillsSoftDevQuiz;
-    private JPanel DigSkillsCyberSecQuiz;
-    private JButton DigSkillsSoftDevQuizStartBtn;
-    private JButton DigSkillsSoftDevQuizBackBtn;
     private JButton IotRetryBtn;
     private JButton DigSkillsDataSciRetryBtn;
     private JButton DigSkillsCompSciRetryBtn;
@@ -178,61 +172,10 @@ public class StudyBuddy {
     private JButton resultsBtnQuizSelec;
     private JButton viewTermsAndConditionsBtn;
     private JCheckBox agreeTermsAndConditionsCheckBox;
-    private JRadioButton ansARadioBtnDigSkillsSoftDevQ1;
-    private JButton confirmAnsBtnsDigSkillsSoftDevQ1;
-    private JButton nextQBtnDigSkillsSoftDevQ1;
-    private JPanel DigSkillsSoftDevQuestion2;
-    private JPanel DigSkillsSoftDevQuestion3;
-    private JPanel DigSkillsSoftDevQuestion4;
-    private JPanel DigSkillsSoftDevQuestion5;
-    private JPanel DigSkillsSoftDevQuestion6;
-    private JRadioButton ansBRadioBtnDigSkillsSoftDevQ1;
-    private JRadioButton ansCRadioBtnDigSkillsSoftDevQ1;
-    private JRadioButton ansDRadioBtnDigSkillsSoftDevQ1;
-    private JRadioButton ansARadioBtnDigSkillsSoftDevQ2;
-    private JRadioButton ansBRadioBtnDigSkillsSoftDevQ2;
-    private JRadioButton ansCRadioBtnDigSkillsSoftDevQ2;
-    private JRadioButton ansDRadioBtnDigSkillsSoftDevQ2;
-    private JRadioButton ansARadioBtnDigSkillsSoftDevQ3;
-    private JRadioButton ansBRadioBtnDigSkillsSoftDevQ3;
-    private JRadioButton ansCRadioBtnDigSkillsSoftDevQ3;
-    private JRadioButton ansDRadioBtnDigSkillsSoftDevQ3;
-    private JButton confirmAnsBtnDigSkillsSoftDevQ3;
-    private JButton nextQBtnDigSkillsSoftDevQ3;
-    private JRadioButton ansARadioBtnDigSkillsSoftDevQ4;
-    private JRadioButton ansBRadioBtnDigSkillsSoftDevQ4;
-    private JRadioButton ansCRadioBtnDigSkillsSoftDevQ4;
-    private JRadioButton ansDRadioBtnDigSkillsSoftDevQ4;
-    private JButton confirmAnsBtnDigSkillsSoftDevQ4;
-    private JButton nextQBtnDigSkillsSoftDevQ4;
-    private JRadioButton ansDRadioBtnDigSkillsSoftDevQ5;
-    private JRadioButton ansCRadioBtnDigSkillsSoftDevQ5;
-    private JRadioButton ansBRadioBtnDigSkillsSoftDevQ5;
-    private JRadioButton ansARadioBtnDigSkillsSoftDevQ5;
-    private JButton confirmAnsBtnDigSkillsSoftDevQ5;
-    private JRadioButton ansARadioBtnDigSkillsSoftDevQ6;
-    private JRadioButton ansBRadioBtnDigSkillsSoftDevQ6;
-    private JRadioButton ansCRadioBtnDigSkillsSoftDevQ6;
-    private JRadioButton ansDRadioBtnDigSkillsSoftDevQ6;
-    private JButton nextQBtnDigSkillsSoftDevQ6;
-    private JButton confirmAnsBtnDigSkillsSoftDevQ6;
-    private JButton confirmAnsBtnDigSkillsSoftDevQ2;
-    private JButton nextQBtnDigSkillsSoftDevQ2;
-    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ3;
-    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ2;
-    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ1;
-    private JButton nextQBtnDigSkillsSoftDevQ5;
-    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ4;
-    private JTextPane correctAnsTxtPaneDigSkillsSoftDevQ5;
-    private JPanel DigSkillsSoftDevQuizScore;
-    private JButton returnToQuizSelectorBtn;
-    private JTextPane quizResultsTxtPane;
-    private JPanel QuizResults;
-    private JLabel ansBLblDigSkillsSoftDevQ2;
-    private JLabel ansALblDigSkillsSoftDevQ3;
-    private JLabel ansBLblDigSkillsSoftDevQ3;
-    private JLabel ansCLblDigSkillsSoftDevQ3;
-    private JButton confirmPasswordBtn;
+    private JButton exitBtnResults;
+    private JButton exitBtnQuizSelec;
+    private JButton exitBtnLecturers;
+    private JButton exitBtnWelcome;
     public String surname;
     public String forename;
     public int total;
@@ -264,8 +207,6 @@ public class StudyBuddy {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-
-
     }
 
 
@@ -294,6 +235,15 @@ public class StudyBuddy {
                 NextBtnSoftDev.setEnabled(false);
                 NextBtnProfPractice.setEnabled(false);
                 NextBtnLogin.setEnabled(false);
+            }
+        });
+
+        //Exit button on welcome page, closes the program when pressed
+        exitBtnWelcome.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Exits the program
+                System.exit(0);
             }
         });
 
@@ -509,97 +459,104 @@ public class StudyBuddy {
                             //Enables next button
                             NextBtnLogin.setEnabled(true);
 
-                            try {
-                                //Creates FileReader called reader which represents LoginStudentRefNumberTxtField input text field
-                                FileReader reader = new FileReader(LoginStudentRefNumberTxtField.getText() + ".txt");
-                                //Creates new BufferedReader called br which represents reader
-                                BufferedReader br = new BufferedReader(reader);
+                            /*Checks whether username is an integer or a string, if it is an integer then it will look for the student
+                            reference number text field and load it, if it is a string then it will just say login successful and enable next
+                            button.
+                            */
+                            if (username.matches("\\d+")) {
+                                try {
+                                    //Creates FileReader called reader which represents LoginStudentRefNumberTxtField input text field
+                                    FileReader reader = new FileReader(LoginStudentRefNumberTxtField.getText() + ".txt");
+                                    //Creates new BufferedReader called br which represents reader
+                                    BufferedReader br = new BufferedReader(reader);
 
-                                //Initialises lineRead as br.readLine() and partsRead array as lineRead.split which would be split by ", "
-                                String lineRead = br.readLine();
-                                String[] partsRead = lineRead.split(", ");
-
-
-                                //Reads the data from the account's text file and sets it to the fullName, grades, total, onTarget and percentagePass variables.
-                                fullName = partsRead[0];
-                                DigSkillsSoftwareDevTheory.setSelectedItem(partsRead[1]);
-                                DigSkillsSoftwareDevPrac.setSelectedItem(partsRead[2]);
-                                DigSkillsCyberGrade.setSelectedItem(partsRead[3]);
-                                DigSkillsCompSciGrade.setSelectedItem(partsRead[4]);
-                                DigSkillsDataGrade.setSelectedItem(partsRead[5]);
-                                iotTheoryGrade.setSelectedItem(partsRead[6]);
-                                iotPracticalGrade.setSelectedItem(partsRead[7]);
-                                networkTheory.setSelectedItem(partsRead[8]);
-                                networkPractical.setSelectedItem(partsRead[9]);
-                                compSciGrade.setSelectedItem(partsRead[10]);
-                                CloudCompTheoryGrade.setSelectedItem(partsRead[11]);
-                                cloudCompPrac.setSelectedItem(partsRead[12]);
-                                SoftDevTheoryGrade.setSelectedItem(partsRead[13]);
-                                SoftDevPracticalGrade.setSelectedItem(partsRead[14]);
-                                ProPractGrade.setSelectedItem(partsRead[15]);
-                                total = Integer.parseInt(partsRead[16]);
-                                index = Integer.parseInt(partsRead[17]);
-                                percentagePass = Integer.parseInt(partsRead[18]);
+                                    //Initialises lineRead as br.readLine() and partsRead array as lineRead.split which would be split by ", "
+                                    String lineRead = br.readLine();
+                                    String[] partsRead = lineRead.split(", ");
 
 
-                                //closes FileReader br
-                                br.close();
-
-                                //Displays a welcome back message.
-
-                                profileWelcomeTxtArea.setText("Welcome back " + fullName + "! You can check your grades and edit them if required. \nAfterwards you will be able to gain some practice through our revision quizzes. \nYour grades are shown below:");
-
-
-                                //Displays all the subjects on the profileSubjectsTxtArea
-                                profileSubjectsTxtArea.setText("\nDigital Skills: Software Development Theory");
-                                profileSubjectsTxtArea.append("\nDigital Skills: Software Development Practical");
-                                profileSubjectsTxtArea.append("\nDigital Skills: Cyber Security");
-                                profileSubjectsTxtArea.append("\nDigital Skills: Computer Science");
-                                profileSubjectsTxtArea.append("\nDigital Skills: Data Science");
-                                profileSubjectsTxtArea.append("\nInternet of Things Theory");
-                                profileSubjectsTxtArea.append("\nInternet of Things Practical");
-                                profileSubjectsTxtArea.append("\nNetwork Infrastructure Theory");
-                                profileSubjectsTxtArea.append("\nNetwork Infrastructure Practical");
-                                profileSubjectsTxtArea.append("\nComputer Science");
-                                profileSubjectsTxtArea.append("\nCloud Computing Theory");
-                                profileSubjectsTxtArea.append("\nCloud Computing Practical");
-                                profileSubjectsTxtArea.append("\nSoftware Development Theory");
-                                profileSubjectsTxtArea.append("\nSoftware Development Practical");
-                                profileSubjectsTxtArea.append("\nProfessional Practice");
+                                    //Reads the data from the account's text file and sets it to the fullName, grades, total, onTarget and percentagePass variables.
+                                    fullName = partsRead[0];
+                                    DigSkillsSoftwareDevTheory.setSelectedItem(partsRead[1]);
+                                    DigSkillsSoftwareDevPrac.setSelectedItem(partsRead[2]);
+                                    DigSkillsCyberGrade.setSelectedItem(partsRead[3]);
+                                    DigSkillsCompSciGrade.setSelectedItem(partsRead[4]);
+                                    DigSkillsDataGrade.setSelectedItem(partsRead[5]);
+                                    iotTheoryGrade.setSelectedItem(partsRead[6]);
+                                    iotPracticalGrade.setSelectedItem(partsRead[7]);
+                                    networkTheory.setSelectedItem(partsRead[8]);
+                                    networkPractical.setSelectedItem(partsRead[9]);
+                                    compSciGrade.setSelectedItem(partsRead[10]);
+                                    CloudCompTheoryGrade.setSelectedItem(partsRead[11]);
+                                    cloudCompPrac.setSelectedItem(partsRead[12]);
+                                    SoftDevTheoryGrade.setSelectedItem(partsRead[13]);
+                                    SoftDevPracticalGrade.setSelectedItem(partsRead[14]);
+                                    ProPractGrade.setSelectedItem(partsRead[15]);
+                                    total = Integer.parseInt(partsRead[16]);
+                                    index = Integer.parseInt(partsRead[17]);
+                                    percentagePass = Integer.parseInt(partsRead[18]);
 
 
-                                //Displays the grades in the profileGradesTxtArea
-                                profileGradesTxtArea.setText("\n   -   " + DigSkillsSoftwareDevTheory.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + DigSkillsSoftwareDevPrac.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + DigSkillsCyberGrade.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + DigSkillsCompSciGrade.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + DigSkillsDataGrade.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + iotTheoryGrade.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + iotPracticalGrade.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + networkTheory.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + networkPractical.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + compSciGrade.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + CloudCompTheoryGrade.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + cloudCompPrac.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + SoftDevTheoryGrade.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + SoftDevPracticalGrade.getSelectedItem());
-                                profileGradesTxtArea.append("\n   -   " + ProPractGrade.getSelectedItem());
+                                    //closes FileReader br
+                                    br.close();
+
+                                    //Displays a welcome back message.
+                                    profileWelcomeTxtArea.setText("Welcome back " + fullName + "! You can check your grades and edit them if required. \nAfterwards you will be able to gain some practice through our revision quizzes. \nYour grades are shown below:");
+
+
+                                    //Displays all the subjects on the profileSubjectsTxtArea
+                                    profileSubjectsTxtArea.setText("\nDigital Skills: Software Development Theory");
+                                    profileSubjectsTxtArea.append("\nDigital Skills: Software Development Practical");
+                                    profileSubjectsTxtArea.append("\nDigital Skills: Cyber Security");
+                                    profileSubjectsTxtArea.append("\nDigital Skills: Computer Science");
+                                    profileSubjectsTxtArea.append("\nDigital Skills: Data Science");
+                                    profileSubjectsTxtArea.append("\nInternet of Things Theory");
+                                    profileSubjectsTxtArea.append("\nInternet of Things Practical");
+                                    profileSubjectsTxtArea.append("\nNetwork Infrastructure Theory");
+                                    profileSubjectsTxtArea.append("\nNetwork Infrastructure Practical");
+                                    profileSubjectsTxtArea.append("\nComputer Science");
+                                    profileSubjectsTxtArea.append("\nCloud Computing Theory");
+                                    profileSubjectsTxtArea.append("\nCloud Computing Practical");
+                                    profileSubjectsTxtArea.append("\nSoftware Development Theory");
+                                    profileSubjectsTxtArea.append("\nSoftware Development Practical");
+                                    profileSubjectsTxtArea.append("\nProfessional Practice");
+
+
+                                    //Displays the grades in the profileGradesTxtArea
+                                    profileGradesTxtArea.setText("\n   -   " + DigSkillsSoftwareDevTheory.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + DigSkillsSoftwareDevPrac.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + DigSkillsCyberGrade.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + DigSkillsCompSciGrade.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + DigSkillsDataGrade.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + iotTheoryGrade.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + iotPracticalGrade.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + networkTheory.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + networkPractical.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + compSciGrade.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + CloudCompTheoryGrade.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + cloudCompPrac.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + SoftDevTheoryGrade.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + SoftDevPracticalGrade.getSelectedItem());
+                                    profileGradesTxtArea.append("\n   -   " + ProPractGrade.getSelectedItem());
 
 
                                 /*Displays fullName in the profileNameTxtArea, total in the profileTotalTxtArea,
                                 onTarget in the profileOnTargetTxtArea and percentagePass in the profilePassPercentageTxtArea.
                                 */
-                                profileNameTxtArea.setText("Name\n" + fullName);
-                                profileTotalTxtArea.setText("Total\n" + total);
-                                profileOnTargetTxtArea.setText("On Target\n" + onTarget[index]);
-                                profilePassPercentageTxtArea.setText("Pass Percentage\n" + percentagePass + "%");
+                                    profileNameTxtArea.setText("Name\n" + fullName);
+                                    profileTotalTxtArea.setText("Total\n" + total);
+                                    profileOnTargetTxtArea.setText("On Target\n" + onTarget[index]);
+                                    profilePassPercentageTxtArea.setText("Pass Percentage\n" + percentagePass + "%");
 
 
-                            }
-                            //If there is an error reading from the file and setting the data to the fullName, grades, total, onTarget and percentagePass variables
-                            catch (Exception e2) {
-                                System.out.println(e2);
+                                }
+                                //If there is an error reading from the file and setting the data to the fullName, grades, total, onTarget and percentagePass variables
+                                catch (Exception e2) {
+                                    System.out.println(e2);
 
+
+                                }
+                            }else{
 
                             }
                             return;
@@ -2264,8 +2221,17 @@ public class StudyBuddy {
             }
         });
 
+        //Exit button on results program, exits the app when pressed
+        exitBtnResults.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Exits the program
+                System.exit(0);
+            }
+        });
+
         //Quiz Selection page quiz
-        //Start button on quiz selection page, starts the selected quiz when pressed.
+        //Start button on quiz selection page, starts the selected quiz when pressed
         startBtnQuizSelection.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2361,6 +2327,15 @@ public class StudyBuddy {
                 Background.add(Results);
                 Background.repaint();
                 Background.revalidate();
+            }
+        });
+
+        //Exit button on quiz selection page, closes the app when pressed
+        exitBtnQuizSelec.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Exits the program
+                System.exit(0);
             }
         });
 
@@ -2504,6 +2479,14 @@ public class StudyBuddy {
             }
         });
 
+        //Exit button on lecturers page, closes the program when pressed
+        exitBtnLecturers.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Exits the program
+                System.exit(0);
+            }
+        });
 
 
     }
