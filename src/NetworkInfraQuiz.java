@@ -13,7 +13,7 @@ public class NetworkInfraQuiz {
 
         public void NetworkInfraQ1() {
             //initialising options array, creating JRadioButton as radios array and setting it as options array
-            String[] options = {"a)Bus                                                                                                                                                                                                                                                    ",
+            String[] options = {"a) Bus                                                                                                                                                                                                                                                    ",
                     "b) Star",
                     "c) Mesh",
                     "d) Route"};
