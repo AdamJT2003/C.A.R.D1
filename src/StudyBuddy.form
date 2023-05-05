@@ -169,7 +169,7 @@
           </component>
           <component id="4483d" class="javax.swing.JCheckBox" binding="agreeTermsAndConditionsCheckBoxSignUp">
             <constraints>
-              <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -181,7 +181,7 @@
           </component>
           <component id="f8d28" class="javax.swing.JButton" binding="backBtnSignUp">
             <constraints>
-              <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -190,7 +190,7 @@
           </component>
           <component id="ccfde" class="javax.swing.JButton" binding="nextBtnSignUp">
             <constraints>
-              <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -199,7 +199,7 @@
           </component>
           <component id="ade0c" class="javax.swing.JLabel">
             <constraints>
-              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -213,7 +213,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
-              <preferredSize width="220" height="30"/>
+              <preferredSize width="220" height="15"/>
               <text value="Enter your student reference number"/>
             </properties>
           </component>
@@ -231,7 +231,7 @@
           </component>
           <component id="c355d" class="javax.swing.JTextField" binding="signUpPasswordTxtField">
             <constraints>
-              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -243,7 +243,7 @@
           </component>
           <component id="54e0b" class="javax.swing.JButton" binding="signUpConfirmUsernameAndPassword">
             <constraints>
-              <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -252,13 +252,23 @@
           </component>
           <component id="87d01" class="javax.swing.JButton" binding="viewTermsAndConditionsBtnSignUp">
             <constraints>
-              <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <background color="-9399905"/>
               <preferredSize width="440" height="30"/>
               <text value="View Terms &#10;and Conditions"/>
+            </properties>
+          </component>
+          <component id="27a65" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <preferredSize width="220" height="15"/>
+              <text value="or lecturers email."/>
             </properties>
           </component>
         </children>
@@ -1113,16 +1123,6 @@
               <text value="Please select your practical grade."/>
             </properties>
           </component>
-          <component id="4292" class="javax.swing.JButton" binding="backButtonIoT">
-            <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
-            </constraints>
-            <properties>
-              <preferredSize width="220" height="30"/>
-              <text value="Back"/>
-            </properties>
-          </component>
           <component id="2a778" class="javax.swing.JButton" binding="nextButtonIoT">
             <constraints>
               <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -1204,6 +1204,16 @@
             <properties>
               <enabled value="false"/>
               <text value="Retry"/>
+            </properties>
+          </component>
+          <component id="4292" class="javax.swing.JButton" binding="backButtonIoT">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <preferredSize width="220" height="30"/>
+              <text value="Back"/>
             </properties>
           </component>
         </children>

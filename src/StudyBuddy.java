@@ -206,7 +206,10 @@ public class StudyBuddy {
         // set exit on close, pack components and make frame visible
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
     }
 
 
