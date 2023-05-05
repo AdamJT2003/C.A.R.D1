@@ -31,7 +31,7 @@ public class DigSkillsSoftDevQuiz {
             group.add(radios[i]);
         }
         //Initialising result as JOptionPane
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 1 - BIOS is a type of ______ware? ", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 1 - BIOS is a type of ______ware? (Choose one)", JOptionPane.OK_CANCEL_OPTION);
 
         //If result = JOptionPane.OK_OPTION then it will check if the answer is correct or incorrect.
         if (result == JOptionPane.OK_OPTION) {
@@ -116,7 +116,7 @@ public class DigSkillsSoftDevQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 3 - Which of these statements CORRECTLY describes algorithms?\n (Select all that apply)", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 3 - Which of these statements CORRECTLY describes algorithms?\n (Choose all that apply)", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
@@ -204,7 +204,7 @@ public class DigSkillsSoftDevQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 5 - Which of the following is NOT an agile software development methodology?", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 5 - Which of the following is NOT an agile software development methodology? (Choose one)", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
@@ -249,7 +249,7 @@ public class DigSkillsSoftDevQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 6 -Choose which of the following is a principle of object-oriented programming?", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 6 -Choose which of the following is a principle of object-oriented programming? (Choose one)", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
