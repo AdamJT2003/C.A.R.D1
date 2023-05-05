@@ -34,13 +34,13 @@ public class ProfessionalPracticeQuiz {
         if (result == JOptionPane.OK_OPTION) {
 
             //If radios[0], AND radios [1] is selected, it will prompt a correct answer message and add 1 to quizTotal.
-            if (radios[0].isSelected() && radios[1].isSelected()) {
+            if (radios[0].isSelected() && radios[1].isSelected() && !radios[2].isSelected() && !radios[3].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 ProfessionalPracticeQuizQ2();
             }
             //If radios[0], radios[1] or radios[3] is selected it will prompt an incorrect message and move onto the next question.
-            else if (radios[2].isSelected() || radios[3].isSelected()) {
+            else if (radios[0].isSelected() || radios[1].isSelected() || radios[2].isSelected() || radios[3].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was a,b.");
                 ProfessionalPracticeQuizQ2();
             }
@@ -77,9 +77,14 @@ public class ProfessionalPracticeQuiz {
         //Checks the answer if result = JOptionPane.OK_OPTION
         if (result == JOptionPane.OK_OPTION) {
             //If radios[3] is selected, it will prompt a correct message, add 1 to quizTotal and moves onto the next question.
-            if (radios[0].isSelected() && radios[1].isSelected() && radios[2].isSelected() && radios[3].isSelected()) {
+            if (radios[0].isSelected() && radios[1].isSelected() && !radios[2].isSelected() && !radios[3].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
+                ProfessionalPracticeQuizQ3();
+            }
+            //If radios[0] OR radios[1] OR radios[2] OR radios[3] is selected then it prompts an incorrect answer message.
+            else if (radios[0].isSelected() || radios[1].isSelected() || radios[2].isSelected() || radios[3].isSelected()){
+                JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was a, b, c and d.");
                 ProfessionalPracticeQuizQ3();
             }
             //If none of the buttons are selected then it will prompt an invalid answer message and repeat the question.
@@ -113,13 +118,13 @@ public class ProfessionalPracticeQuiz {
             /*If radios[1] AND radios[2] is selected AND radios[3] is not selected, it will prompt a correct answer message,
             add 1 to quizTotal and move onto the next question.
             */
-            if (radios[1].isSelected() && radios[2].isSelected()) {
+            if (radios[1].isSelected() && radios[2].isSelected() && !radios[0].isSelected() && !radios[3].isSelected() ) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 ProfessionalPracticeQuizQ4();
             }
             //If radios[0] OR radios[3] it will prompt an incorrect answer message and move onto next question.
-            else if (radios[0].isSelected() || radios[3].isSelected()) {
+            else if (radios[0].isSelected() || radios[1].isSelected() || radios[2].isSelected() || radios[3].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was b,c");
                 ProfessionalPracticeQuizQ4();
             }
