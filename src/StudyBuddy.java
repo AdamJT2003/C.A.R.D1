@@ -357,6 +357,7 @@ public class StudyBuddy {
                             File fileUserRefNo = new File("usersRefNo.txt");
                             if (signUpStudentReferenceTxtField.getText().matches("\\d+")) {
                                 try {
+                                    //Creates a new FileOutputStream called fOut which represents fileUsernames.
                                     FileOutputStream fOut = new FileOutputStream(fileUserRefNo, true);
                                     OutputStreamWriter osw = new OutputStreamWriter(fOut);
                                     osw.write(signUpStudentReferenceTxtField.getText());

@@ -947,31 +947,6 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="1f3e9" class="javax.swing.JButton" binding="confirmBtnDigSkillsCompSci">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
-            </constraints>
-            <properties>
-              <preferredSize width="220" height="30"/>
-              <text value="Confirm"/>
-            </properties>
-          </component>
-          <component id="83f9" class="javax.swing.JComboBox" binding="DigSkillsCompSciGrade">
-            <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
-            </constraints>
-            <properties>
-              <model>
-                <item value="Select Grade."/>
-                <item value="Pass."/>
-                <item value="Fail. (Attempt 1)"/>
-                <item value="Fail. (Attempt 2)"/>
-                <item value="Fail. (Attempt 3)"/>
-              </model>
-            </properties>
-          </component>
           <component id="ec208" class="javax.swing.JLabel">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -990,6 +965,31 @@
             <properties>
               <enabled value="false"/>
               <text value="Retry"/>
+            </properties>
+          </component>
+          <component id="83f9" class="javax.swing.JComboBox" binding="DigSkillsCompSciGrade">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <model>
+                <item value="Select Grade."/>
+                <item value="Pass."/>
+                <item value="Fail. (Attempt 1)"/>
+                <item value="Fail. (Attempt 2)"/>
+                <item value="Fail. (Attempt 3)"/>
+              </model>
+            </properties>
+          </component>
+          <component id="1f3e9" class="javax.swing.JButton" binding="confirmBtnDigSkillsCompSci">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <preferredSize width="220" height="30"/>
+              <text value="Confirm"/>
             </properties>
           </component>
         </children>
@@ -1574,7 +1574,7 @@
         </constraints>
         <properties>
           <background color="-9399905"/>
-          <visible value="true"/>
+          <visible value="false"/>
         </properties>
         <border type="none"/>
         <children>
