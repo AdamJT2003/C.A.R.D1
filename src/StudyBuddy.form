@@ -127,7 +127,7 @@
             </constraints>
             <properties>
               <preferredSize width="220" height="30"/>
-              <text value="Log In"/>
+              <text value="Login"/>
             </properties>
           </component>
           <component id="c81e6" class="javax.swing.JButton" binding="signUpBtnLoginOrSignUp">

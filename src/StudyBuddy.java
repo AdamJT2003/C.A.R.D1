@@ -801,6 +801,8 @@ public class StudyBuddy {
             @Override
 
             public void actionPerformed(ActionEvent e) {
+
+                
                 //Checks if there is an input in the name textField and displays a message saying you must enter a name.
                 if (forenameTxtField.getText().isEmpty() && surnameTxtField.getText().isEmpty()){
                     JOptionPane.showMessageDialog(null,"You must enter a name before you continue.");
