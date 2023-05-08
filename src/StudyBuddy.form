@@ -92,8 +92,8 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
-              <preferredSize width="250" height="50"/>
-              <text value="Hello, before you continue, you must either log in to your account or create a new account. "/>
+              <preferredSize width="250" height="85"/>
+              <text value="Hello, before you continue, you must either log in to your account or create a new account. &#10;&#10;For Student's creating an account use your Student ID, for lecturers use your college E-Mail Address"/>
             </properties>
           </component>
           <component id="8d68f" class="javax.swing.JTextPane" binding="LoginOrSignUpTxtPane">
@@ -204,7 +204,7 @@
             </constraints>
             <properties>
               <preferredSize width="220" height="30"/>
-              <text value="Please create a password."/>
+              <text value="Please create your password."/>
             </properties>
           </component>
           <component id="a0227" class="javax.swing.JLabel" binding="usernameLbl">
@@ -214,7 +214,7 @@
             </constraints>
             <properties>
               <preferredSize width="220" height="15"/>
-              <text value="Enter your student reference number"/>
+              <text value="Please create your username"/>
             </properties>
           </component>
           <component id="fa833" class="javax.swing.JTextField" binding="signUpStudentReferenceTxtField">
@@ -268,7 +268,7 @@
             </constraints>
             <properties>
               <preferredSize width="220" height="15"/>
-              <text value="or lecturers email."/>
+              <text value=""/>
             </properties>
           </component>
         </children>

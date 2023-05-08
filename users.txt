@@ -13,5 +13,5 @@ hi6,hi7
 g,g
 30084168,lol
 h,hi
-t,t
-j,j
+101,lol
+teacher,hi
