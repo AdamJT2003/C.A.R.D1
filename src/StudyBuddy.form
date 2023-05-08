@@ -490,7 +490,7 @@
             </constraints>
             <properties>
               <preferredSize width="220" height="30"/>
-              <text value="Enter your student reference number."/>
+              <text value="Please enter your username"/>
             </properties>
           </component>
         </children>
