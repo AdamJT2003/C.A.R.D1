@@ -299,7 +299,7 @@ public class ProfessionalPracticeQuiz {
         }
 
         //Prompts a JOptionPane to display the users score and percentage
-        JOptionPane.showMessageDialog(null, "Results\nYour total is: " + quizTotal + ".\nYour quiz percentage is: " + roundQuizPercentage + ".\nYou have " + quizGrade + " this quiz.");
+        JOptionPane.showMessageDialog(null, "Results\nYour total is: " + quizTotal + " out of 6.\nYour quiz percentage is: " + roundQuizPercentage + "%.\nYou have " + quizGrade + " this quiz.");
     }}
 
 

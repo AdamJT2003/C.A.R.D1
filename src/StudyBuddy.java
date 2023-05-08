@@ -801,61 +801,66 @@ public class StudyBuddy {
             @Override
 
             public void actionPerformed(ActionEvent e) {
-                //Asks the user to input forename
-                forename = forenameTxtField.getText();
-                //Asks the user to input surname
-                surname = surnameTxtField.getText();
-                fullName = (forename + " " + surname);
+                //Checks if there is an input in the name textField and displays a message saying you must enter a name.
+                if (forenameTxtField.getText().isEmpty() && surnameTxtField.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(null,"You must enter a name before you continue.");
+                }else {
 
-                //Puts the full name together and displays it on the full name label
-                fullNameLbl.setText(fullName);
-                NextBtnName.setEnabled(true);
+                    //Asks the user to input forename
+                    forename = forenameTxtField.getText();
+                    //Asks the user to input surname
+                    surname = surnameTxtField.getText();
+                    fullName = (forename + " " + surname);
 
-                DigSkillsSoftwareDevTheory.setSelectedItem("Select Grade.");
-                DigSkillsSoftwareDevPrac.setSelectedItem("Select Grade.");
-                DigSkillsCyberGrade.setSelectedItem("Select Grade.");
-                DigSkillsCompSciGrade.setSelectedItem("Select Grade.");
-                DigSkillsDataGrade.setSelectedItem("Select Grade.");
-                iotTheoryGrade.setSelectedItem("Select Grade.");
-                iotPracticalGrade.setSelectedItem("Select Grade.");
-                networkTheory.setSelectedItem("Select Grade.");
-                networkPractical.setSelectedItem("Select Grade.");
-                compSciGrade.setSelectedItem("Select Grade.");
-                CloudCompTheoryGrade.setSelectedItem("Select Grade.");
-                cloudCompPrac.setSelectedItem("Select Grade.");
-                SoftDevTheoryGrade.setSelectedItem("Select Grade.");
-                SoftDevPracticalGrade.setSelectedItem("Select Grade.");
-                ProPractGrade.setSelectedItem("Select Grade.");
+                    //Puts the full name together and displays it on the full name label
+                    fullNameLbl.setText(fullName);
+                    NextBtnName.setEnabled(true);
 
-                //If all selected items in the JComboBoxes for grades are "Select Grade." (default option), index, total and percentage pass is set to 0.
-                if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Select Grade." || DigSkillsSoftwareDevPrac.getSelectedItem() == "Select Grade." || DigSkillsCyberGrade.getSelectedItem() == "Select Grade." || DigSkillsCompSciGrade.getSelectedItem() == "Select Grade." || DigSkillsDataGrade.getSelectedItem() == "Select Grade." || iotTheoryGrade.getSelectedItem() == "Select Grade." || iotPracticalGrade.getSelectedItem() == "Select Grade." || networkTheory.getSelectedItem() == "Select Grade." || networkPractical.getSelectedItem() == "Select Grade." || compSciGrade.getSelectedItem() == "Select Grade." || CloudCompTheoryGrade.getSelectedItem() == "Select Grade." || cloudCompPrac.getSelectedItem() == "Select Grade." || SoftDevTheoryGrade.getSelectedItem() == "Select Grade." || SoftDevPracticalGrade.getSelectedItem() == "Select Grade." || ProPractGrade.getSelectedItem() == "Select Grade.") {
-                    index = 0;
-                    total = 0;
-                    percentagePass = 0;
-                }
+                    DigSkillsSoftwareDevTheory.setSelectedItem("Select Grade.");
+                    DigSkillsSoftwareDevPrac.setSelectedItem("Select Grade.");
+                    DigSkillsCyberGrade.setSelectedItem("Select Grade.");
+                    DigSkillsCompSciGrade.setSelectedItem("Select Grade.");
+                    DigSkillsDataGrade.setSelectedItem("Select Grade.");
+                    iotTheoryGrade.setSelectedItem("Select Grade.");
+                    iotPracticalGrade.setSelectedItem("Select Grade.");
+                    networkTheory.setSelectedItem("Select Grade.");
+                    networkPractical.setSelectedItem("Select Grade.");
+                    compSciGrade.setSelectedItem("Select Grade.");
+                    CloudCompTheoryGrade.setSelectedItem("Select Grade.");
+                    cloudCompPrac.setSelectedItem("Select Grade.");
+                    SoftDevTheoryGrade.setSelectedItem("Select Grade.");
+                    SoftDevPracticalGrade.setSelectedItem("Select Grade.");
+                    ProPractGrade.setSelectedItem("Select Grade.");
+
+                    //If all selected items in the JComboBoxes for grades are "Select Grade." (default option), index, total and percentage pass is set to 0.
+                    if (DigSkillsSoftwareDevTheory.getSelectedItem() == "Select Grade." || DigSkillsSoftwareDevPrac.getSelectedItem() == "Select Grade." || DigSkillsCyberGrade.getSelectedItem() == "Select Grade." || DigSkillsCompSciGrade.getSelectedItem() == "Select Grade." || DigSkillsDataGrade.getSelectedItem() == "Select Grade." || iotTheoryGrade.getSelectedItem() == "Select Grade." || iotPracticalGrade.getSelectedItem() == "Select Grade." || networkTheory.getSelectedItem() == "Select Grade." || networkPractical.getSelectedItem() == "Select Grade." || compSciGrade.getSelectedItem() == "Select Grade." || CloudCompTheoryGrade.getSelectedItem() == "Select Grade." || cloudCompPrac.getSelectedItem() == "Select Grade." || SoftDevTheoryGrade.getSelectedItem() == "Select Grade." || SoftDevPracticalGrade.getSelectedItem() == "Select Grade." || ProPractGrade.getSelectedItem() == "Select Grade.") {
+                        index = 0;
+                        total = 0;
+                        percentagePass = 0;
+                    }
 
                 /*Creates a new File called fileNames which represents signUpStudentsReferenceTxtField.getText() text file
                 and writes the users name, grades, total, whether they are on target and pass percentage to the file
                 */
-                File fileNames = new File(signUpStudentReferenceTxtField.getText() + ".txt");
+                    File fileNames = new File(signUpStudentReferenceTxtField.getText() + ".txt");
 
-                try {
-                    //Creates a new FileOutputStream called fOut which represents fileNames and is set to append true
-                    FileOutputStream fOut = new FileOutputStream(fileNames, true);
-                    //Creates a new OutputStreamWriter called osw which represents fOut
-                    OutputStreamWriter osw = new OutputStreamWriter(fOut);
+                    try {
+                        //Creates a new FileOutputStream called fOut which represents fileNames and is set to append true
+                        FileOutputStream fOut = new FileOutputStream(fileNames, true);
+                        //Creates a new OutputStreamWriter called osw which represents fOut
+                        OutputStreamWriter osw = new OutputStreamWriter(fOut);
 
-                    //Writes the users full name, selected grades, total, whether they are on target or not and there percentage pass
-                    osw.write(fullName + ", " + DigSkillsSoftwareDevTheory.getSelectedItem() + ", " + DigSkillsSoftwareDevPrac.getSelectedItem() + ", " + DigSkillsCyberGrade.getSelectedItem() + ", " + DigSkillsCompSciGrade.getSelectedItem() + ", " + DigSkillsDataGrade.getSelectedItem() + ", " + iotTheoryGrade.getSelectedItem() + ", " + iotPracticalGrade.getSelectedItem() + ", " + networkTheory.getSelectedItem() + ", " + networkPractical.getSelectedItem() + ", " + compSciGrade.getSelectedItem() + ", " + CloudCompTheoryGrade.getSelectedItem() + ", " + cloudCompPrac.getSelectedItem() + ", " + SoftDevTheoryGrade.getSelectedItem() + ", " + SoftDevPracticalGrade.getSelectedItem() + ", " + ProPractGrade.getSelectedItem() + ", " + total + ", " + index + ", " + percentagePass + ", ");
-                    //Sends the data from the buffer to the file
-                    osw.flush();
-                    //Closes the output stream called osw
-                    osw.close();
-                } catch (Exception e2) {
+                        //Writes the users full name, selected grades, total, whether they are on target or not and there percentage pass
+                        osw.write(fullName + ", " + DigSkillsSoftwareDevTheory.getSelectedItem() + ", " + DigSkillsSoftwareDevPrac.getSelectedItem() + ", " + DigSkillsCyberGrade.getSelectedItem() + ", " + DigSkillsCompSciGrade.getSelectedItem() + ", " + DigSkillsDataGrade.getSelectedItem() + ", " + iotTheoryGrade.getSelectedItem() + ", " + iotPracticalGrade.getSelectedItem() + ", " + networkTheory.getSelectedItem() + ", " + networkPractical.getSelectedItem() + ", " + compSciGrade.getSelectedItem() + ", " + CloudCompTheoryGrade.getSelectedItem() + ", " + cloudCompPrac.getSelectedItem() + ", " + SoftDevTheoryGrade.getSelectedItem() + ", " + SoftDevPracticalGrade.getSelectedItem() + ", " + ProPractGrade.getSelectedItem() + ", " + total + ", " + index + ", " + percentagePass + ", ");
+                        //Sends the data from the buffer to the file
+                        osw.flush();
+                        //Closes the output stream called osw
+                        osw.close();
+                    } catch (Exception e2) {
+
+                    }
 
                 }
-
-
             }
         });
 
