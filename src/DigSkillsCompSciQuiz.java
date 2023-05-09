@@ -251,7 +251,7 @@ public class DigSkillsCompSciQuiz {
         if (result == JOptionPane.OK_OPTION) {
 
             //If radios[2] is selected, it will prompt a correct message, add 1 to quizTotal and moves onto the next question.
-            if (radios[2].isSelected()) {
+            if (radios[2].isSelected() && !radios[0].isSelected() && !radios[1].isSelected() && !radios[3].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 results();

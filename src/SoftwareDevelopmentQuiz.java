@@ -169,7 +169,7 @@ public class SoftwareDevelopmentQuiz {
 
             /*If radios[0] AND radios[1] is selected
             it will prompt a correct message, add 1 to quizTotal and moves onto the next question.*/
-            if (radios[0].isSelected() && radios[1].isSelected()) {
+            if (radios[0].isSelected() && radios[1].isSelected() && !radios[2].isSelected() && !radios[3].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 SoftDevQuizQ5();

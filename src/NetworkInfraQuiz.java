@@ -116,7 +116,7 @@ public class NetworkInfraQuiz {
             }
 
             //Initialises result as JOptionPane.showConfirmDialog
-            int result = JOptionPane.showConfirmDialog(null, radios, "Question 3 -Which of the following is NOT a type of network protocol? Choose one  ", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(null, radios, "Question 3 -Which of the following is NOT a type of network protocol? (Choose one)  ", JOptionPane.OK_CANCEL_OPTION);
 
             //If result is = JOptionPane.OK_OPTION then it will check the answer selected
             if (result == JOptionPane.OK_OPTION) {
@@ -155,7 +155,7 @@ public class NetworkInfraQuiz {
             }
 
             //Initialises result as JOptionPane.showConfirmDialog
-            int result = JOptionPane.showConfirmDialog(null, radios, "Question 4 - Which of the following is NOT a type of network device? Choose one ", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(null, radios, "Question 4 - Which of the following is NOT a type of network device? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
 
             //If result is = JOptionPane.OK_OPTION then it will check the answer selected
             if (result == JOptionPane.OK_OPTION) {

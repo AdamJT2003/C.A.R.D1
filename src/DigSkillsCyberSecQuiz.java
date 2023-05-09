@@ -249,7 +249,7 @@ public class DigSkillsCyberSecQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 6 -Choose which of the following is a principle of object-oriented programming? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 6 - Choose which of the following is a principle of object-oriented programming? (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {

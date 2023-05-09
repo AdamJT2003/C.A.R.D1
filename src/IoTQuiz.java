@@ -76,7 +76,7 @@ public class IoTQuiz {
         /*Initialises results.
         Sets result as JOptionPane.showConfirmDialog.
          */
-            int result = JOptionPane.showConfirmDialog(null, radios, "Question 2 - At which stage of the Software Development Life Cycle (SDLC) would Software be a deliverable? (Choose one)", JOptionPane.OK_CANCEL_OPTION);
+            int result = JOptionPane.showConfirmDialog(null, radios, "Question 2 - Which of the following is NOT a communication protocol used in IoT devices (Choose one)", JOptionPane.OK_CANCEL_OPTION);
 
             //Checks the answer if result = JOptionPane.OK_OPTION
             if (result == JOptionPane.OK_OPTION) {
