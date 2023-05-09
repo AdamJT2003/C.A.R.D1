@@ -56,6 +56,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Welcome"/>
             </properties>
           </component>
@@ -92,6 +93,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="250" height="85"/>
               <text value="Hello, before you continue, you must either log in to your account or create a new account. &#10;&#10;For Student's creating an account use your Student ID, for lecturers use your college E-Mail Address"/>
             </properties>
@@ -107,6 +109,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Sign up or Login"/>
             </properties>
           </component>
@@ -155,7 +158,7 @@
         <children>
           <component id="28b9b" class="javax.swing.JTextPane">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="7" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="0" column="1" row-span="1" col-span="7" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
               <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
@@ -164,16 +167,18 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Sign-up"/>
             </properties>
           </component>
           <component id="4483d" class="javax.swing.JCheckBox" binding="agreeTermsAndConditionsCheckBoxSignUp">
             <constraints>
-              <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <background color="-9399905"/>
+              <foreground color="-16777216"/>
               <minimumSize width="110" height="21"/>
               <preferredSize width="440" height="30"/>
               <text value="I have read and agreed to the Terms and Conditions."/>
@@ -181,7 +186,7 @@
           </component>
           <component id="f8d28" class="javax.swing.JButton" binding="backBtnSignUp">
             <constraints>
-              <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -190,7 +195,7 @@
           </component>
           <component id="ccfde" class="javax.swing.JButton" binding="nextBtnSignUp">
             <constraints>
-              <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -199,39 +204,18 @@
           </component>
           <component id="ade0c" class="javax.swing.JLabel">
             <constraints>
-              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="30"/>
               <text value="Please create your password."/>
             </properties>
           </component>
-          <component id="a0227" class="javax.swing.JLabel" binding="usernameLbl">
-            <constraints>
-              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
-            </constraints>
-            <properties>
-              <preferredSize width="220" height="15"/>
-              <text value="Please create your username"/>
-            </properties>
-          </component>
-          <component id="fa833" class="javax.swing.JTextField" binding="signUpStudentReferenceTxtField">
-            <constraints>
-              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
-            </constraints>
-            <properties>
-              <preferredSize width="220" height="30"/>
-              <text value=""/>
-            </properties>
-          </component>
           <component id="c355d" class="javax.swing.JTextField" binding="signUpPasswordTxtField">
             <constraints>
-              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
@@ -243,7 +227,7 @@
           </component>
           <component id="54e0b" class="javax.swing.JButton" binding="signUpConfirmUsernameAndPassword">
             <constraints>
-              <grid row="6" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -252,23 +236,47 @@
           </component>
           <component id="87d01" class="javax.swing.JButton" binding="viewTermsAndConditionsBtnSignUp">
             <constraints>
-              <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <background color="-9399905"/>
+              <foreground color="-16777216"/>
               <preferredSize width="440" height="30"/>
               <text value="View Terms &#10;and Conditions"/>
             </properties>
           </component>
           <component id="27a65" class="javax.swing.JLabel">
             <constraints>
-              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <preferredSize width="220" height="15"/>
               <text value=""/>
+            </properties>
+          </component>
+          <component id="fa833" class="javax.swing.JTextField" binding="signUpStudentReferenceTxtField">
+            <constraints>
+              <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <preferredSize width="220" height="30"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="a0227" class="javax.swing.JLabel" binding="usernameLbl">
+            <constraints>
+              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <foreground color="-16777216"/>
+              <preferredSize width="220" height="15"/>
+              <text value="Please create your username"/>
             </properties>
           </component>
         </children>
@@ -294,6 +302,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <minimumSize width="168" height="38"/>
               <preferredSize width="80" height="38"/>
               <text value="Name"/>
@@ -316,6 +325,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="30"/>
               <text value="Please enter your forename."/>
             </properties>
@@ -326,6 +336,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="30"/>
               <text value="Please enter your surname."/>
             </properties>
@@ -415,6 +426,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Login"/>
             </properties>
           </component>
@@ -436,6 +448,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="30"/>
               <text value="Please enter your password."/>
             </properties>
@@ -489,6 +502,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="30"/>
               <text value="Please enter your username"/>
             </properties>
@@ -515,6 +529,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Profile"/>
             </properties>
           </component>
@@ -528,6 +543,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
             </properties>
           </component>
           <component id="cc410" class="javax.swing.JTextArea" binding="profileGradesTxtArea">
@@ -540,6 +556,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
             </properties>
           </component>
           <component id="5237a" class="javax.swing.JButton" binding="BackBtnProfile">
@@ -572,6 +589,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="17"/>
             </properties>
           </component>
@@ -585,6 +603,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="17"/>
             </properties>
           </component>
@@ -598,6 +617,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="17"/>
             </properties>
           </component>
@@ -611,6 +631,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="30"/>
             </properties>
           </component>
@@ -644,8 +665,9 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
-              <background color="-9277497"/>
+              <background color="-9399905"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
             </properties>
           </component>
         </children>
@@ -680,6 +702,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <preferredSize width="440" height="38"/>
               <text value="Digital Skills: Software Development "/>
             </properties>
@@ -721,6 +744,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="30"/>
               <text value="Please select your practical grade."/>
             </properties>
@@ -731,6 +755,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="30"/>
               <text value="Please select your theory grade."/>
             </properties>
@@ -795,6 +820,7 @@
         </constraints>
         <properties>
           <background color="-9399905"/>
+          <foreground color="-16777216"/>
           <preferredSize width="450" height="70"/>
           <visible value="false"/>
         </properties>
@@ -934,6 +960,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Digital Skills: Computer Science"/>
             </properties>
           </component>
@@ -953,6 +980,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="30"/>
               <text value="Please select your grade."/>
             </properties>
@@ -1010,6 +1038,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <text value="Please select your grade."/>
             </properties>
           </component>
@@ -1049,6 +1078,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Digital Skills: Data Science"/>
               <visible value="true"/>
             </properties>
@@ -1111,6 +1141,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <text value="Please select your theory grade."/>
             </properties>
           </component>
@@ -1120,6 +1151,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <text value="Please select your practical grade."/>
             </properties>
           </component>
@@ -1175,6 +1207,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Iot"/>
             </properties>
           </component>
@@ -1280,6 +1313,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value=" Network Infrastructure"/>
             </properties>
           </component>
@@ -1318,6 +1352,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <text value="Please select your practical grade."/>
             </properties>
           </component>
@@ -1327,6 +1362,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <text value="Please select your theory grade."/>
             </properties>
           </component>
@@ -1357,6 +1393,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <text value="Please select your grade."/>
             </properties>
           </component>
@@ -1386,6 +1423,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value=" Computer Science"/>
             </properties>
           </component>
@@ -1457,6 +1495,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="16"/>
               <text value="Please select your theory grade."/>
             </properties>
@@ -1497,6 +1536,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Cloud Computing"/>
             </properties>
           </component>
@@ -1562,6 +1602,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="16"/>
               <text value="Please select your practical grade."/>
             </properties>
@@ -1584,6 +1625,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="16"/>
               <text value="Please select your theory grade."/>
             </properties>
@@ -1609,6 +1651,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="16"/>
               <text value="Please select your practical grade."/>
             </properties>
@@ -1639,6 +1682,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Software Development"/>
             </properties>
           </component>
@@ -1709,6 +1753,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <text value="Please select your grade."/>
             </properties>
           </component>
@@ -1748,6 +1793,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Professional Practice"/>
             </properties>
           </component>
@@ -1814,6 +1860,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Summary"/>
             </properties>
           </component>
@@ -1849,6 +1896,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
             </properties>
           </component>
           <component id="250ff" class="javax.swing.JTextArea" binding="SummaryTxtAreaGrades">
@@ -1861,6 +1909,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
             </properties>
           </component>
           <component id="a1754" class="javax.swing.JTextArea" binding="SummaryTxtAreaInfo">
@@ -1873,6 +1922,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
             </properties>
           </component>
         </children>
@@ -1897,6 +1947,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Results"/>
             </properties>
           </component>
@@ -1920,6 +1971,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
             </properties>
           </component>
           <component id="77998" class="javax.swing.JButton" binding="backBtnResults">
@@ -1954,6 +2006,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="50"/>
             </properties>
           </component>
@@ -1967,6 +2020,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="17"/>
             </properties>
           </component>
@@ -1980,6 +2034,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="17"/>
             </properties>
           </component>
@@ -1993,6 +2048,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="17"/>
             </properties>
           </component>
@@ -2051,6 +2107,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Quiz Selection"/>
             </properties>
           </component>
@@ -2112,6 +2169,7 @@
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <preferredSize width="220" height="16"/>
               <text value="Please select a quiz."/>
             </properties>
@@ -2148,6 +2206,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
             </properties>
           </component>
           <component id="677df" class="javax.swing.JTextPane">
@@ -2161,6 +2220,7 @@
               <background color="-9277497"/>
               <editable value="false"/>
               <font size="24" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Lecturers View"/>
             </properties>
           </component>
@@ -2195,6 +2255,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="30"/>
             </properties>
           </component>
@@ -2208,6 +2269,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="30"/>
             </properties>
           </component>
@@ -2221,6 +2283,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="30"/>
             </properties>
           </component>
@@ -2234,6 +2297,7 @@
             <properties>
               <background color="-9277497"/>
               <editable value="false"/>
+              <foreground color="-16777216"/>
               <preferredSize width="110" height="30"/>
             </properties>
           </component>
