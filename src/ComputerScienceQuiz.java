@@ -160,13 +160,13 @@ public class ComputerScienceQuiz {
         if (result == JOptionPane.OK_OPTION) {
 
             //If radios[3] is selected, it will prompt a correct message, add 1 to quizTotal and moves onto the next question.
-            if (radios[3].isSelected()) {
+            if (radios[2].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 ComputerScienceQuizQ5();
             }
             //If radios[0] OR radios[1] OR radios[1] OR radios[2] is selected, it will prompt an incorrect answer message and move onto next question.
-            else if (radios[0].isSelected() || radios[1].isSelected() || radios[2].isSelected()) {
+            else if (radios[0].isSelected() || radios[1].isSelected() || radios[3].isSelected()) {
                 JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was c");
                 ComputerScienceQuizQ5();
             }
