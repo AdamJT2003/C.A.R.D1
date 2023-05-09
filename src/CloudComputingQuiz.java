@@ -36,7 +36,7 @@ public class CloudComputingQuiz {
         if (result == JOptionPane.OK_OPTION) {
 
             //If radios[0] AND radios[1] is selected, it will prompt a correct answer message and add 1 to quizTotal.
-            if (radios[0].isSelected() && radios[1].isSelected())  {
+            if (radios[0].isSelected() && radios[1].isSelected() && !radios[2].isSelected() && !radios[3].isSelected())  {
                 JOptionPane.showMessageDialog(null, "Correct answer");
                 quizTotal++;
                 CloudComputingQuizQ2();
