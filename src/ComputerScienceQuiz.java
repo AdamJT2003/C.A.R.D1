@@ -227,10 +227,10 @@ public class ComputerScienceQuiz {
 
     public void ComputerScienceQuizQ6() {
         //Initialises options array
-        String[] options = {"a) Two                                                                                                                                                                                                                                                                                                          ",
-                "b) Three",
-                "c) Four",
-                "d) Seven"};
+        String[] options = {"a) D6                                                                                                                                                                                                                                                                                                          ",
+                "b) 6D",
+                "c) 7E",
+                "d) A5"};
         //Initialises JRadioButton array radios as the length of options
         JRadioButton[] radios = new JRadioButton[options.length];
 
@@ -246,7 +246,7 @@ public class ComputerScienceQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, " Question 6 - Data can be broken down into __________ groups. (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, " Question 6 - What is the hexadecimal value of the Unicode character m (Choose one) ", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
