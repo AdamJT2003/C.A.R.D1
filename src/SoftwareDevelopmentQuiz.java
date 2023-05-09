@@ -255,7 +255,7 @@ public class SoftwareDevelopmentQuiz {
         }
 
         //Initialises result as JOptionPane.showConfirmDialog
-        int result = JOptionPane.showConfirmDialog(null, radios, "Question 6 - Out of these options, which is the fastest port for data transfer (Choose one)", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(null, radios, "Question 6 - In Java, which class is used to take an input from the user of your program. (Choose one)", JOptionPane.OK_CANCEL_OPTION);
 
         //If result is = JOptionPane.OK_OPTION then it will check the answer selected
         if (result == JOptionPane.OK_OPTION) {
