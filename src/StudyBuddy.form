@@ -276,7 +276,7 @@
             <properties>
               <foreground color="-16777216"/>
               <preferredSize width="220" height="15"/>
-              <text value="Please create your username"/>
+              <text value="Please create your username."/>
             </properties>
           </component>
         </children>
@@ -504,7 +504,7 @@
             <properties>
               <foreground color="-16777216"/>
               <preferredSize width="220" height="30"/>
-              <text value="Please enter your username"/>
+              <text value="Please enter your username."/>
             </properties>
           </component>
         </children>
