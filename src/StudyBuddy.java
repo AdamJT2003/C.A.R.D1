@@ -218,6 +218,7 @@ public class StudyBuddy {
 
 
     public StudyBuddy() {
+        //Set image to logo.png
         image = new ImageIcon(getClass().getClassLoader().getResource("resources/logo.png"));
 
         //Welcome page
