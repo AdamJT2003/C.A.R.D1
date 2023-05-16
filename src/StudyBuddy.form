@@ -21,7 +21,7 @@
         <children>
           <component id="91e77" class="javax.swing.JButton" binding="continueBtnWelcome">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
@@ -31,7 +31,7 @@
           </component>
           <component id="c04de" class="javax.swing.JTextPane" binding="welcomeTxtPane">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
               <gridbag top="0" left="0" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
@@ -47,7 +47,7 @@
           </component>
           <component id="20a73" class="javax.swing.JTextPane" binding="WelcomeTxtPane">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
               </grid>
               <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
@@ -62,13 +62,22 @@
           </component>
           <component id="1335" class="javax.swing.JButton" binding="exitBtnWelcome">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
               <label value="Exit"/>
               <preferredSize width="250" height="30"/>
               <text value="Exit"/>
+            </properties>
+          </component>
+          <component id="75e8b" class="javax.swing.JLabel" binding="logoLblWelcome">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value=""/>
             </properties>
           </component>
         </children>

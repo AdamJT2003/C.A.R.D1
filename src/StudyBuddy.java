@@ -176,6 +176,7 @@ public class StudyBuddy {
     private JButton exitBtnQuizSelec;
     private JButton exitBtnLecturers;
     private JButton exitBtnWelcome;
+    private JLabel logoLblWelcome;
     public String surname;
     public String forename;
     public int total;
@@ -189,6 +190,7 @@ public class StudyBuddy {
 
     public int percentagePass;
     public int quizTotal;
+    static ImageIcon image;
 
     /*
     main method
@@ -209,11 +211,15 @@ public class StudyBuddy {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        frame.setIconImage(image.getImage());
+
 
     }
 
 
     public StudyBuddy() {
+        image = new ImageIcon(getClass().getClassLoader().getResource("resources/logo.png"));
+
         //Welcome page
         //action listener for continue button, takes user to Login or sign-up panel
         continueBtnWelcome.addActionListener(new ActionListener() {
