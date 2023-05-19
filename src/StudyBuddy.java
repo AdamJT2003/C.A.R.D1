@@ -806,7 +806,6 @@ public class StudyBuddy {
         //Confirms and displays the users full name when pressed
         confirmBtnName.addActionListener(new ActionListener() {
             @Override
-
             public void actionPerformed(ActionEvent e) {
 
                 
