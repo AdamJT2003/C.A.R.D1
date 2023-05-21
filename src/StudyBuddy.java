@@ -2379,7 +2379,7 @@ public class StudyBuddy {
                     int index = Integer.parseInt(partsRead[17]);
 
                     //Displays all the subjects on the profileSubjectsTxtArea
-                    userDataTxtAreaDataLecturers.setText(partsRead[0] + "file.\n" +
+                    userDataTxtAreaDataLecturers.setText(partsRead[0] + "\n" +
                             "\nDigital Skills: Software Development Theory\t-   " + partsRead[1] +
                             "\nDigital Skills: Software Development Practical\t-   " + partsRead[2] +
                             "\nDigital Skills: Cyber Security\t\t-   " + partsRead[3] +
