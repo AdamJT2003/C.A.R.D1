@@ -110,6 +110,9 @@ public class ComputerScienceQuiz {
         //Initialises JRadioButton array radios as the length of options
         JRadioButton[] radios = new JRadioButton[options.length];
 
+        //Creates a button group called group.
+        ButtonGroup group = new ButtonGroup();
+
         //Loops to create a new radio button for every option
         for (int i = 0; i < options.length; i++) {
             radios[i] = new JRadioButton(options[i]);
@@ -148,9 +151,15 @@ public class ComputerScienceQuiz {
         //Initialises JRadioButton array radios as the length of options
         JRadioButton[] radios = new JRadioButton[options.length];
 
+        //Creates a button group called group.
+        ButtonGroup group = new ButtonGroup();
+
         //Loops to create a new radio button for every option
         for (int i = 0; i < options.length; i++) {
             radios[i] = new JRadioButton(options[i]);
+
+            //adds all radio buttons to the group so that only one can be selected at once.
+            group.add(radios[i]);
         }
 
         //Initialises result as JOptionPane.showConfirmDialog

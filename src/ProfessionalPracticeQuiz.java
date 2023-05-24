@@ -82,6 +82,11 @@ public class ProfessionalPracticeQuiz {
                 quizTotal++;
                 ProfessionalPracticeQuizQ3();
             }
+            //If radios[2] or radios[3] is selected it will prompt an incorrect message and move onto the next question.
+            else if (radios[0].isSelected() || radios[1].isSelected() || radios[2].isSelected() || radios[3].isSelected()){
+                JOptionPane.showMessageDialog(null, "Incorrect answer. The correct answer was a,b,c and d.");
+                ProfessionalPracticeQuizQ3();
+            }
             //If none of the buttons are selected then it will prompt an invalid answer message and repeat the question.
             else {
                 JOptionPane.showMessageDialog(null, "Invalid answer! One button must be selected before pressing 'ok'.");
